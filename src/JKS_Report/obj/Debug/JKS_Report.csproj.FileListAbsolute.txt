@@ -1,0 +1,786 @@
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csprojResolveAssemblyReference.cache
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.Cache
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.AssemblyReference.cache
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.cache
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileInputs.cache
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.AssemblyReference.cache
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.SuggestedBindingRedirects.cache
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Configuration.g.cs
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\App.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Configuration.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.cache
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileInputs.cache
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+C:\Users\yog\OneDrive\Documents\Work\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\App.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.cache
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileInputs.cache
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+C:\Users\TC\Dropbox\JKS report\jks_cleaxcel_reporting\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+Y:\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.cache
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileInputs.cache
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+C:\Users\Moon\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csprojResolveAssemblyReference.cache
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\App.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+Z:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.Cache
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\App.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.cache
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileInputs.cache
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb
+D:\work\JKS\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.AssemblyReference.cache
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe.config
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.exe
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\JKS_Report.pdb
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Dapper.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\itextsharp.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\MySql.Data.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Buffers.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Memory.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\ZstdNet.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Dapper.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.pdb
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Google.Protobuf.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.pdb
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\HtmlRenderer.PdfSharp.pdb
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\itextsharp.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\MySql.Data.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Converters.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Core.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Css.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Dom.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Model.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Gdi.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Rendering.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Buffers.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Memory.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.AssemblyReference.cache
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.SuggestedBindingRedirects.cache
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\FormControls.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\App.g.cs
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.cache
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report_MarkupCompile.lref
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\App.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Animations.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Buttons.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Colors.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\DataGrid.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Dimensions.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Fonts.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Graph.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Info.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ManualModeStyle.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\RangeSlider.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\ScrollViewer.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Dictionaries\Texts.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\MainWindow.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Report.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Home.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\Pages\Index.baml
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.g.resources
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.Properties.Resources.resources
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.GenerateResource.cache
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileInputs.cache
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.exe
+C:\Users\Moon\Dropbox\JKS report\latest\JKS_report_1\JKS_Report\JKS_Report\obj\Debug\JKS_Report.pdb

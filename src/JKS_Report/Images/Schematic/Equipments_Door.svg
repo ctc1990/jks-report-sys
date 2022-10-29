@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Door" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1200" style="enable-background:new 0 0 1400 1200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<circle class="st0" cx="700" cy="450" r="80"/>
+<circle class="st1" cx="700" cy="450" r="50"/>
+<g>
+	<circle class="st0" cx="2200" cy="400" r="100"/>
+	<circle class="st1" cx="2200" cy="400" r="62.5"/>
+</g>
+<g>
+	<circle class="st0" cx="2250" cy="200" r="30"/>
+	<line class="st0" x1="2249.5" y1="170" x2="2249.5" y2="150"/>
+	<line class="st0" x1="2220" y1="150.5" x2="2280" y2="150.5"/>
+</g>
+<g>
+	<circle class="st0" cx="2200" cy="650" r="30"/>
+	<line class="st0" x1="2250" y1="650.5" x2="2230" y2="650.5"/>
+	<line class="st0" x1="2249.5" y1="620" x2="2249.5" y2="680"/>
+</g>
+<g>
+	<circle class="st0" cx="2500" cy="650" r="30"/>
+	<line class="st0" x1="2550" y1="650.5" x2="2530" y2="650.5"/>
+	<line class="st0" x1="2549.5" y1="620" x2="2549.5" y2="680"/>
+</g>
+<g>
+	<circle class="st0" cx="2500" cy="300" r="30"/>
+	<line class="st0" x1="2499.5" y1="270" x2="2499.5" y2="250"/>
+	<line class="st0" x1="2470" y1="250.5" x2="2530" y2="250.5"/>
+</g>
+<g>
+	<circle class="st0" cx="2600" cy="250" r="30"/>
+	<line class="st0" x1="2599.5" y1="220" x2="2599.5" y2="200"/>
+	<line class="st0" x1="2570" y1="200.5" x2="2630" y2="200.5"/>
+</g>
+<g>
+	<circle class="st0" cx="2600" cy="500" r="30"/>
+	<line class="st0" x1="2599.5" y1="470" x2="2599.5" y2="450"/>
+	<line class="st0" x1="2570" y1="450.5" x2="2630" y2="450.5"/>
+</g>
+<g>
+	<circle class="st0" cx="2700" cy="150" r="30"/>
+	<line class="st0" x1="2699.5" y1="120" x2="2699.5" y2="100"/>
+	<line class="st0" x1="2670" y1="100.5" x2="2730" y2="100.5"/>
+</g>
+<g>
+	<circle class="st0" cx="2700" cy="350" r="30"/>
+	<line class="st0" x1="2699.5" y1="320" x2="2699.5" y2="300"/>
+	<line class="st0" x1="2670" y1="300.5" x2="2730" y2="300.5"/>
+</g>
+<circle class="st0" cx="2200" cy="850" r="50"/>
+<g>
+	<circle class="st0" cx="2350" cy="850" r="30"/>
+	<line class="st0" x1="2349.5" y1="820" x2="2349.5" y2="800"/>
+	<line class="st0" x1="2320" y1="800.5" x2="2380" y2="800.5"/>
+</g>
+</svg>

@@ -1,0 +1,263 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CLEANXCEL2._2.Dictionaries">
+
+    <Style x:Key="H1" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="H2" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="21px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="H3" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="24px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="H4" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Typography.Capitals" Value="AllPetiteCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="H5" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllPetiteCaps" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="H6" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Typography.Capitals" Value="AllPetiteCaps" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border"
+                            Background="Transparent"
+                            BorderThickness="0,0,0,1"
+                            BorderBrush="{StaticResource SecondaryColor}"
+                            SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" 
+                                      VerticalAlignment="Center"
+                                Focusable="false" 
+                                HorizontalScrollBarVisibility="Hidden" 
+                                VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" TargetName="border"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,3" TargetName="border" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="H7" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource CWhite}"/>
+        <Setter Property="Typography.Capitals" Value="AllPetiteCaps" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border"
+                            Background="Transparent"
+                            BorderThickness="0,0,0,1"
+                            BorderBrush="{StaticResource PrimaryColor}"
+                            SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" 
+                                      VerticalAlignment="Center"
+                                Focusable="false" 
+                                HorizontalScrollBarVisibility="Hidden" 
+                                VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource SecondaryColor}" TargetName="border"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,3" TargetName="border" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="H8" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Typography.Capitals" Value="AllPetiteCaps" />
+        <Setter Property="Foreground" Value="{StaticResource CWhite}" />
+    </Style>
+
+    <Style x:Key="RadialBarTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="62px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Typography.Capitals" Value="AllPetiteCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="DDTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="24px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="DDSubTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="12px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="DDActualValue" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="Desc" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="18px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="Label" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="18px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}" />
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="SubMenuActive" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="14px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+    
+    <Style x:Key="SubMenu" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="18px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource CWhite}" />
+    </Style>
+
+    <Style x:Key="SubMenu2" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="21px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="SubMenu2Active" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="21px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="MainControl" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="MainMenuTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="21px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource CWhite}" />
+    </Style>
+
+    <Style x:Key="MainMenuDesc" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="15px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Foreground" Value="{StaticResource CWhite}" />
+    </Style>
+
+    <Style x:Key="PageHeader" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Proxima}" />
+        <Setter Property="FontSize" Value="42px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="PageDesc" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="Opacity" Value="0.5"/>
+        <Setter Property="FontSize" Value="21px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+    
+    <Style x:Key="DialDisplay" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="72px" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="DialUnit" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="24px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="InputText" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+        <Setter Property="FontSize" Value="18px" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+</ResourceDictionary>

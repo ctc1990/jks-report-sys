@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8">
+    <title></title>
+    <style type="text/css">
+      @page {
+        size: 21cm 29.7cm;
+        margin: 30mm 45mm 30mm 45mm;
+      }
+
+      p {
+        color: black;
+        font-family: Arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 10pt;
+        margin: 0pt;
+      }
+
+      .s1 {
+        color: black;
+        font-family: Arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 10pt;
+      }
+
+      th {
+        border: 1px solid black;
+        text-align: middle;
+        padding-left: 3px;
+        padding-right: 3px;
+        background-color: #E5E4E2;
+        width: 50pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-style: solid;
+        border-right-style: solid;
+      }
+
+      td {
+        border: 1px solid black;
+        text-align: middle;
+        padding-left: 3px;
+        padding-right: 3px;
+        width: 50pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-style: solid;
+        border-right-style: solid;
+      }
+
+      table,
+      tbody {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>    
+      <p style="padding-top:0pt;padding-left:0pt;text-indent:0;text-align:Right">
+        <a name="bookmark0">~{formatstring}~</a>
+      </p>
+      <p>
+        <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+      </p>     
+    <table border="0" width="100%">
+      <tbody>
+        <tr>
+          <td>
+            <table id="main" style="height: 50px;" border="0" width="100%">
+              <tr style="height:8pt">
+                <th>
+                  <p>User</p>
+                </th>
+                <td>
+                  <p>~{user}~</p>
+                </td>
+                <td>
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <th>
+                  <p>Page</p>
+                </th>
+                <td>
+                  <p>~{pageno}~</p>
+                </td>
+              </tr>
+              <tr style="height:8pt">
+                <th>
+                  <p>Basket Number</p>
+                </th>
+                <td>
+                  <p>~{basketno}~</p>
+                </td>
+                <td>
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <th>
+                  <p>Date</p>
+                </th>
+                <td>
+                  <p>~{date}~</p>
+                </td>
+              </tr>
+              <tr style="height:8pt">
+                <th>
+                  <p>Recipe No</p>
+                </th>
+                <td>
+                  <p>~{recipeno}~</p>
+                </td>
+                <td>
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <th>
+                  <p>Time</p>
+                </th>
+                <td>
+                  <p>~{time}~</p>
+                </td>
+              </tr>
+              <tr style="height:8pt">
+                <th>
+                  <p>Loading No</p>
+                </th>
+                <td>
+                  <p>~{loadingno}~</p>
+                </td>
+                <td>
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <th>
+                  <p>Loding No Total</p>
+                </th>
+                <td>
+                  <p>~{loadingnototal}~</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <table border="0" width="100%">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table id="report" border="0" width="100%">
+              <tr style="height:8pt">
+                <th style="width:250pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="8">
+                  <p style="text-align:left">Position</p>
+                </th>
+              </tr>
+              <tr>
+                <th style="text-align:center; width:50pt;">
+                  <p>Time</p>
+                </th>
+                <th style="text-align:center; width: 50pt;">
+                  <p>Station</p>
+                </th>
+                <th style="text-align:center; width: 50pt;">
+                  <p>Minimum Time</p>
+                </th>
+                <th style="text-align:center; width: 50pt;">
+                  <p>Effective Time</p>
+                </th>
+                <th style="text-align: center; width: 50pt;">
+                  <p>Maximum Time</p>
+                </th>
+                <th style="text-align: center; width: 50pt;">
+                  <p>Temperature PV</p>
+                </th>
+                <th style="text-align: center; width: 50pt;">
+                  <p>Conductivity</p>
+                </th>
+                <th style="text-align: center; width: 50pt;">
+                  <p>Quality</p>
+                </th>
+              </tr> ~{ReportVariableTable}~
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <table border="0" width="100%">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table style="height: 50px;" border="0" width="100%">
+              <tbody>
+                <tr style="height: 50px;">
+                  <td style="height: 50px; width: 100px;">
+                    <table id="pallet01" style="border-collapse:collapse; float: left;" cellspacing="0">
+                      <tbody>
+                        <tr style="height:8pt">
+                          <td style="width:108pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="2">
+                            <p class="s1" style="padding-left: 42pt;padding-right: 42pt;text-indent: 0pt;line-height: 6pt;text-align: center;">~{palletname}~</p>
+                          </td>
+                        </tr>
+                        <tr style="height:8pt">
+                          <td style="width:52pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                            <p class="s1" style="text-indent: 0pt;line-height: 6pt;text-align: left;">~{palletcomparmentname}~</p>
+                          </td>
+                          <td style="width:56pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                            <p class="s1" style="text-indent: 0pt;line-height: 6pt;text-align: right;">~{palletbarcodename}~</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="padding-left:54pt;text-indent:0;text-align:left">
+      <span style="color:#000;font-family:Arial,sans-serif;font-style:normal;font-weight:400;text-decoration:none;font-size:10pt"></span>
+    </p>
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <p style="padding-left:0pt;text-indent:0;text-align:center">~{cleaningstatus}~</p>
+    <p style="padding-left:0pt;text-indent:0;line-height:8pt;text-align:left">
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <p style="padding-left:0pt;text-indent:0;text-align:center">Seite 1</p>
+  </body>
+</html>

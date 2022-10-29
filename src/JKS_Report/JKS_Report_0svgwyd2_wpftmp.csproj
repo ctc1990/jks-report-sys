@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EE0AEC6-BF5B-41ED-A048-CAD97C887567}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JKS_Report</RootNamespace>
+    <AssemblyName>JKS_Report</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Function\ADS\ADS_ReadWrtite.cs" />
+    <Compile Include="Function\API\DateReport.cs" />
+    <Compile Include="Function\API\PLCMapping.cs" />
+    <Compile Include="Function\API\PLCReportProcess.cs" />
+    <Compile Include="Function\API\SingleReport.cs" />
+    <Compile Include="Function\DB\cmStoreProcedure.cs" />
+    <Compile Include="Function\DB\LibDBHelper.cs" />
+    <Compile Include="Function\EventNotifier\ADSEventNotification.cs" />
+    <Compile Include="Function\Tools\CSVFunction.cs" />
+    <Compile Include="Function\Tools\FastReplacer.cs" />
+    <Compile Include="Function\Tools\FastReplacerSnippet.cs" />
+    <Compile Include="Function\Tools\PDFFunction.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\clsModel.cs" />
+    <Compile Include="Pages\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Index.xaml.cs">
+      <DependentUpon>Index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTML\JKS_Report_v1.html" />
+    <EmbeddedResource Include="Text\CsvColumnMain_Full.txt" />
+    <EmbeddedResource Include="Text\CsvColumnSymbol_Main.txt" />
+    <EmbeddedResource Include="Text\CsvColumn_NamePLC_Full.txt" />
+    <EmbeddedResource Include="Text\CsvColumn_SymbolPLC_Full.txt" />
+    <Content Include="Images\Backgrounds\hivetheme.svg" />
+    <Content Include="Images\Icons\icon_Add.svg" />
+    <Content Include="Images\Icons\icon_Alarms.svg" />
+    <Content Include="Images\Icons\icon_Alarms_Active.svg" />
+    <Content Include="Images\Icons\icon_Credits.svg" />
+    <Content Include="Images\Icons\icon_Credits_Active.svg" />
+    <Content Include="Images\Icons\icon_CurrentStatus.svg" />
+    <Content Include="Images\Icons\icon_CurrentStatus_Active.svg" />
+    <Content Include="Images\Icons\icon_DefaultSettings.svg" />
+    <Content Include="Images\Icons\icon_DefaultSettings_Active.svg" />
+    <Content Include="Images\Icons\icon_Delete.svg" />
+    <Content Include="Images\Icons\icon_KnowledgeBase.svg" />
+    <Content Include="Images\Icons\icon_KnowledgeBase_Active.svg" />
+    <Content Include="Images\Icons\icon_LogIn.svg" />
+    <Content Include="Images\Icons\icon_LogIn_Active.svg" />
+    <Content Include="Images\Icons\icon_LogOut.svg" />
+    <Content Include="Images\Icons\icon_LogOut_Active.svg" />
+    <Content Include="Images\Icons\icon_MaintenanceMode.svg" />
+    <Content Include="Images\Icons\icon_MaintenanceMode_Active.svg" />
+    <Content Include="Images\Icons\icon_Manuals.svg" />
+    <Content Include="Images\Icons\icon_Manuals_Active.svg" />
+    <Content Include="Images\Icons\icon_OperationMode.svg" />
+    <Content Include="Images\Icons\icon_OperationMode_Active.svg" />
+    <Content Include="Images\Icons\icon_Password.svg" />
+    <Content Include="Images\Icons\icon_Password_Active.svg" />
+    <Content Include="Images\Icons\icon_RecipeManagement.svg" />
+    <Content Include="Images\Icons\icon_RecipeManagement_Active.svg" />
+    <Content Include="Images\Icons\icon_Register.svg" />
+    <Content Include="Images\Icons\icon_Register_Active.svg" />
+    <Content Include="Images\Icons\icon_Version.svg" />
+    <Content Include="Images\Icons\icon_Version_Active.svg" />
+    <Content Include="Images\Logos\logo_CX.svg" />
+    <Content Include="Images\Logos\logo_JKS.svg" />
+    <Content Include="Images\Schematic\Arrow.svg" />
+    <Content Include="Images\Schematic\Config.svg" />
+    <Content Include="Images\Schematic\CXIcon.svg" />
+    <Content Include="Images\Schematic\CXLogo.svg" />
+    <Content Include="Images\Schematic\Equipments_Door.svg" />
+    <Content Include="Images\Schematic\Equipments_Door_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_Door_Inactive.svg" />
+    <Content Include="Images\Schematic\Equipments_GeneralDevice.svg" />
+    <Content Include="Images\Schematic\Equipments_GeneralDevice_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_GeneralDevice_Inactive.svg" />
+    <Content Include="Images\Schematic\Equipments_Heater.svg" />
+    <Content Include="Images\Schematic\Equipments_Heater_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_Heater_Inactive.svg" />
+    <Content Include="Images\Schematic\Equipments_PistonValve.svg" />
+    <Content Include="Images\Schematic\Equipments_PistonValve_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_PistonValve_Inactive.svg" />
+    <Content Include="Images\Schematic\Equipments_Refrigerator.svg" />
+    <Content Include="Images\Schematic\Equipments_Refrigerator_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_Refrigerator_Inactive.svg" />
+    <Content Include="Images\Schematic\Equipments_Sensor.svg" />
+    <Content Include="Images\Schematic\Equipments_Sensor_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_Ultrasonic.svg" />
+    <Content Include="Images\Schematic\Equipments_Ultrasonic_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_Ultrasonic_Inactive.svg" />
+    <Content Include="Images\Schematic\Equipments_Valve.svg" />
+    <Content Include="Images\Schematic\Equipments_Valve_Active.svg" />
+    <Content Include="Images\Schematic\Equipments_Valve_Inactive.svg" />
+    <Content Include="Images\Schematic\JKSLogoFooter.svg" />
+    <Content Include="Images\Schematic\Logo.svg" />
+    <Content Include="Images\Schematic\Schematic.svg" />
+    <Content Include="Images\uc-01.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Window\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\Dapper.2.0.123\lib\net461\Dapper.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\Hardcodet.NotifyIcon.Wpf.1.1.0\lib\net472\Hardcodet.NotifyIcon.Wpf.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\HtmlRenderer.Core.1.5.0.5\lib\net45\HtmlRenderer.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\MySql.Data.8.0.28\lib\net452\MySql.Data.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Converters.Wpf.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Core.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Css.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Dom.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Model.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Rendering.Gdi.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Rendering.Wpf.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\SharpVectors.1.7.7\lib\net47\SharpVectors.Runtime.Wpf.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ComponentModel.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\System.ComponentModel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Configuration.Install.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Drawing.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Management.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Numerics.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Transactions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Web.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Windows.Forms.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\External Library\TwinCAT.Ads.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\MySql.Data.8.0.28\lib\net452\Ubiety.Dns.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\WindowsBase.dll" />
+    <ReferencePath Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\packages\MySql.Data.8.0.28\lib\net452\ZstdNet.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Report.g.cs" />
+    <Compile Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Home.g.cs" />
+    <Compile Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\Pages\Index.g.cs" />
+    <Compile Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\App.g.cs" />
+    <Compile Include="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\obj\Debug\JKS_Report_Content.g.cs" />
+  </ItemGroup>
+</Project>

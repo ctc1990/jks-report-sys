@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <style type="text/css">
+     table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.tbl-standard label {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+
+	.tbl-standard tr {
+		border-top: 1px solid black;
+	}
+
+	.tbl-standard td {
+		border: 1px solid black;
+	}
+	
+	.lbl-standard-text {
+		width: 100%;
+		font-size: 12px;
+		font-family: system-ui;
+		font-weight: normal;
+	}
+		
+	.lbl-bold-text {
+		width: 100%;
+		font-size: 12px;
+		font-family: system-ui;
+		font-weight: 700;
+	}
+	
+	.align-middle {
+		text-align: center;
+	}
+    </style>
+  </head>
+  <body>
+    <p style="padding-top:0pt;padding-left:0pt;text-indent:0;text-align:Right">
+      <a name="bookmark0">~{formatstring}~</a>
+    </p>
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <table border="0" width="100%">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table id="main" style="height: 50px;" border="0" width="100%">
+              <tr style="height:8pt">
+                <th style="width:49pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">User</p>
+                </th>
+                <td style="width:52pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{user}~</p>
+                </td>
+                <td style="width:57pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <td style="width:44pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Page</p>
+                </td>
+                <td style="width:45pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{pageno}~</p>
+                </td>
+              </tr>
+              <tr style="height:8pt">
+                <td style="width:49pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Basket Number</p>
+                </td>
+                <td style="width:52pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{basketno}~</p>
+                </td>
+                <td style="width:57pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <td style="width:44pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Date</p>
+                </td>
+                <td style="width:45pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{date}~</p>
+                </td>
+              </tr>
+              <tr style="height:8pt">
+                <td style="width:49pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Recipe No</p>
+                </td>
+                <td style="width:52pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{recipeno}~</p>
+                </td>
+                <td style="width:57pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <td style="width:44pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Time</p>
+                </td>
+                <td style="width:45pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{time}~</p>
+                </td>
+              </tr>
+              <tr style="height:8pt">
+                <td style="width:49pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Loading No</p>
+                </td>
+                <td style="width:52pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{loadingno}~</p>
+                </td>
+                <td style="width:57pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p style="text-indent:0;text-align:left">
+                    <br>
+                  </p>
+                </td>
+                <td style="width:44pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:left">Loding No Total</p>
+                </td>
+                <td style="width:45pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" bgcolor="#FFFFD6">
+                  <p class="s1" style="text-indent:0;line-height:6pt;text-align:right">~{loadingnototal}~</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <table border="0" width="100%">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table id="report" style="height: 50px;" border="0" width="100%">
+              <tr style="height:8pt">
+                <th style="width:478pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="8">
+                  <p style="text-align:left">Position</p>
+                </th>
+              </tr>
+              <tr style="height:8pt">
+                <th>
+                  <p>Time</p>
+                </th>
+                <th>
+                  <p>Station</p>
+                </th>
+                <th>
+                  <p>Minimum Time</p>
+                </th>
+                <th>
+                  <p>Effective Time</p>
+                </th>
+                <th>
+                  <p>Maximum Time</p>
+                </th>               
+                <th>
+                  <p>Temperature PV</p>
+                </th>
+                <th>
+                  <p>Conductivity</p>
+                </th>
+                <th>
+                  <p>Quality</p>
+                </th>
+              </tr>				
+				~{ReportVariableTable}~			  			  
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" width="100%">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table style="height: 50px;" border="0" width="100%">
+              <tbody>
+                <tr style="height: 50px;">
+                  <td style="height: 50px; width: 100px;">
+                    <table id="pallet01" style="border-collapse:collapse; float: left;" cellspacing="0">
+                      <tbody>
+                        <tr style="height:8pt">
+                          <td style="width:108pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="2">
+                            <p class="s1" style="padding-left: 42pt;padding-right: 42pt;text-indent: 0pt;line-height: 6pt;text-align: center;">~{palletname}~</p>
+                          </td>
+                        </tr>
+                        <tr style="height:8pt">
+                          <td style="width:52pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                            <p class="s1" style="text-indent: 0pt;line-height: 6pt;text-align: left;">~{palletcomparmentname}~</p>
+                          </td>
+                          <td style="width:56pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                            <p class="s1" style="text-indent: 0pt;line-height: 6pt;text-align: right;">~{palletbarcodename}~</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="padding-left:54pt;text-indent:0;text-align:left">
+      <span style="color:#000;font-family:Arial,sans-serif;font-style:normal;font-weight:400;text-decoration:none;font-size:10pt"></span>
+    </p>
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <p style="padding-left:0pt;text-indent:0;text-align:center">~{cleaningstatus}~</p>
+    <p style="padding-left:0pt;text-indent:0;line-height:8pt;text-align:left">
+    <p style="text-indent:0;text-align:left">
+      <br>
+    </p>
+    <p style="padding-left:0pt;text-indent:0;text-align:center">Seite 1</p>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CLEANXCEL2._2.Dictionaries">
+
+    <!-- Brush Colors -->
+    <SolidColorBrush x:Key="PrimaryColor" Color="#2A313B" />
+    <SolidColorBrush x:Key="SecondaryColor" Color="#7F8389" />
+    <SolidColorBrush x:Key="TertiaryColor" Color="#FFF2F2F2" />
+    <SolidColorBrush x:Key="LightGreyColor" Color="#BFC1C4" />
+    <SolidColorBrush x:Key="GreenBlueColor" Color="#00AF93" />
+    <SolidColorBrush x:Key="DarkGreenBlueColor" Color="#007378" />
+    <SolidColorBrush x:Key="RedPinkColor" Color="#FF2F63" />
+    <SolidColorBrush x:Key="CWhite" Color="White" />
+    <SolidColorBrush x:Key="CBlack" Color="Black" />
+    <SolidColorBrush x:Key="Transparent" Color="Transparent" />
+
+    <SolidColorBrush x:Key="AlarmPinkH1" Color="#8B285A"/>
+    <SolidColorBrush x:Key="AlarmPinkH2" Color="#BC2369"/>
+    <SolidColorBrush x:Key="AlarmPinkH3" Color="#ED1E79"/>
+    
+    <!-- Cbx -->
+    <SolidColorBrush x:Key="ComboBoxNormalBorderBrush" Color="#7F8389" />
+    <SolidColorBrush x:Key="ComboBoxNormalBackgroundBrush" Color="White" />
+    <SolidColorBrush x:Key="ComboBoxDisabledForegroundBrush" Color="#888" />
+    <SolidColorBrush x:Key="ComboBoxDisabledBackgroundBrush" Color="#eee" />
+    <SolidColorBrush x:Key="ComboBoxDisabledBorderBrush" Color="#888" />
+    <Color x:Key="SelectedBackgroundColor">#00AF93</Color>
+    <!--<Color x:Key="SelectedBackgroundColor">#FF09D8D6</Color>-->
+    <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+
+    <!-- Color -->
+    <Color x:Key="ControlMouseOutColor">#FF2A313B</Color>
+    <Color x:Key="ControlMouseOverColor">#00AF93</Color>
+    <!--<Color x:Key="ControlMouseOverColor">#FF09D8D6</Color>-->
+    <Color x:Key="DisabledControlColor">#FFF2F2F2</Color>
+    <Color x:Key="DisabledForegroundColor">#FFBFBFBF</Color>
+    <Color x:Key="ControlPressedColor">#00AF93</Color>
+    <!--<Color x:Key="ControlPressedColor">#FF09D8D6</Color>-->
+
+</ResourceDictionary>

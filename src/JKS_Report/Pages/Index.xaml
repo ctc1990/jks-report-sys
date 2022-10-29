@@ -1,0 +1,172 @@
+﻿<Page x:Class="JKS_Report.Pages.Index"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JKS_Report.Pages" xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Index">
+
+    <Page.Resources>
+        <Storyboard x:Key="ShowMenu">
+
+            <!-- Transparent Tray -->
+            <ThicknessAnimation
+                Storyboard.TargetName="MenuContainer"
+                Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                BeginTime="0:0:0"
+                From="-20,0,0,0" To="0,0,0,0"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+            <DoubleAnimation
+                Storyboard.TargetName="MenuContainer"
+                Storyboard.TargetProperty="(UIElement.Opacity)"
+                BeginTime="0:0:0"
+                From="0" To="1"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+
+            <!-- Show the menu -->
+            <ThicknessAnimation
+                Storyboard.TargetName="MMHome"
+                Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                BeginTime="0:0:0.1"
+                From="-20,0,0,0" To="0,0,0,0"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+            <DoubleAnimation
+                Storyboard.TargetName="MMHome"
+                Storyboard.TargetProperty="(UIElement.Opacity)"
+                BeginTime="0:0:0.1"
+                From="0" To="1"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+
+            <ThicknessAnimation
+                Storyboard.TargetName="MMReport"
+                Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                BeginTime="0:0:0.2"
+                From="-20,0,0,0" To="0,0,0,0"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+            <DoubleAnimation
+                Storyboard.TargetName="MMReport"
+                Storyboard.TargetProperty="(UIElement.Opacity)"
+                BeginTime="0:0:0.2"
+                From="0" To="1"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+           
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid>
+        <Grid Name="Loading" Panel.ZIndex="200" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource PrimaryColor}" Height="102px" Visibility="Hidden">
+            <Grid Margin="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <svgc:SvgViewbox Grid.Column="0" Source="/JKS_Report;component/Images/Logos/logo_CXSymbol.svg" Width="50"/>
+                <!--<fa:ImageAwesome Grid.Column="0" Icon="Spinner" Spin="True" Foreground="{StaticResource CWhite}" SpinDuration="5" Width="30" Margin="20,0"/>-->
+                <TextBlock Name="LoadingDesc" Grid.Column="1" Text="Loading" Margin="20,0,0,0"
+                       Style="{StaticResource H1}"
+                       Foreground="{StaticResource CWhite}"
+                       VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+
+        <Border Height="120" Background="{StaticResource PrimaryColor}" VerticalAlignment="Top" Opacity="0.2"/>
+        <Border 
+            Panel.ZIndex="152"
+            Padding="20"
+            Width="130" Height="130" 
+            HorizontalAlignment="Right" VerticalAlignment="Top">
+            <ToggleButton x:Name="MainMenu" Click="MainMenu_Click" Width="80" Style="{StaticResource TBMainMenu}">
+                <DockPanel x:Name="MenuLogo"
+                    Width="70"
+                    VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <svgc:SvgViewbox Source="/JKS_Report;component/Images/Logos/logo_CXSymbol.svg"/>
+                </DockPanel>
+
+            </ToggleButton>
+
+        </Border>
+
+        <DockPanel x:Name="MenuContainer" Margin="0"
+            Visibility="Hidden" Opacity="0" Panel.ZIndex="151">
+            <DockPanel.Background>
+                <ImageBrush
+                    AlignmentY="Top" 
+                    ImageSource="C:\Users\TC\Dropbox\JKS report\Source Code\JKS_Report\JKS_Report\Images\Backgrounds\black_spot.png" 
+                    Stretch="None" 
+                    TileMode="Tile" 
+                    ViewportUnits="Absolute"
+                    Viewport="0,0,2,2"/>
+            </DockPanel.Background>
+
+            <!--<Border>
+                <UserControls:Dial />
+            </Border>-->
+
+            <Border Padding="30">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="1" Grid.Column="1" 
+                            BorderThickness="0,0,5,5" BorderBrush="Transparent">
+                        <RadioButton x:Name="MMHome"
+                            Opacity="0" IsChecked="False"
+                            Style="{StaticResource RBMainMenu}"
+                            GroupName="Menu" Checked="MMSelections_Checked">
+                            <StackPanel>
+                                <TextBlock Style="{StaticResource MainMenuTitle}" Name="MMHomeTitle"
+                                    Text="Home"/>
+                                <TextBlock Padding="0,10,0,0" Name="MMHomeDesc"
+                                    Style="{StaticResource MainMenuDesc}"
+                                    TextWrapping="Wrap"
+                                    Text="Current process and equipment status of the system."/>
+                            </StackPanel>
+                        </RadioButton>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2" 
+                            BorderThickness="0,0,5,5" BorderBrush="Transparent">
+                        <RadioButton x:Name="MMReport"
+                            Style="{StaticResource RBMainMenu}"
+                            Opacity="0"
+                            GroupName="Menu"
+                            IsChecked="False" Checked="MMSelections_Checked">
+                            <StackPanel>
+                                <TextBlock Style="{StaticResource MainMenuTitle}" Name="MMReportTitle"
+                                    Text="Report"/>
+                                <TextBlock Padding="0,10,0,0" Name="MMReportsDesc"
+                                    Style="{StaticResource MainMenuDesc}"
+                                    TextWrapping="Wrap"
+                                    Text="Customize process and handling presets."/>
+                            </StackPanel>
+                        </RadioButton>
+                    </Border>
+                </Grid>
+            </Border>
+
+        </DockPanel>
+
+    </Grid>
+</Page>
+
+    

@@ -1,0 +1,315 @@
+﻿<Page x:Class="JKS_Report.Pages.Report"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JKS_Report.Pages" xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      mc:Ignorable="d" 
+      Unloaded="Page_Unloaded"
+      Loaded="Page_loaded"
+      d:DesignHeight="650" d:DesignWidth="850"
+      Title="Report"
+      >
+
+    <Page.Resources>
+        <Storyboard x:Key="ShowMenu">
+
+            <!-- Transparent Tray -->
+            <ThicknessAnimation
+                Storyboard.TargetName="MenuContainer"
+                Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                BeginTime="0:0:0"
+                From="-20,0,0,0" To="0,0,0,0"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+            <DoubleAnimation
+                Storyboard.TargetName="MenuContainer"
+                Storyboard.TargetProperty="(UIElement.Opacity)"
+                BeginTime="0:0:0"
+                From="0" To="1"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+
+            <!-- Show the menu -->
+            <ThicknessAnimation
+                Storyboard.TargetName="MMConfiguration"
+                Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                BeginTime="0:0:0.1"
+                From="-20,0,0,0" To="0,0,0,0"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+            <DoubleAnimation
+                Storyboard.TargetName="MMConfiguration"
+                Storyboard.TargetProperty="(UIElement.Opacity)"
+                BeginTime="0:0:0.1"
+                From="0" To="1"
+                Duration="{StaticResource GeneralDuration}"
+                DecelerationRatio="0.9"/>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="659*"/>
+                <ColumnDefinition Width="191*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="TBMainTitle" Grid.Row="0" Text="Report Generation" Width="600" Style="{StaticResource H4}" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+            <Border Height="120"  Background="{StaticResource PrimaryColor}" VerticalAlignment="Top" Opacity="0.2" Grid.ColumnSpan="2"/>
+            <Border 
+            Panel.ZIndex="152"
+            Padding="20"
+            Width="130" Height="130" 
+            HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1">
+                <ToggleButton x:Name="MainMenu" 
+                              Width="80" 
+                              Style="{StaticResource TBMainMenu}" 
+                              Click="MainMenu_Click">
+                    <DockPanel x:Name="MenuLogo"
+                    Width="70"
+                    VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <svgc:SvgViewbox Source="/Images/Logos/logo_CXSymbol.svg"/>
+                    </DockPanel>
+                </ToggleButton>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,0,0,0">
+            <Grid Grid.Column="0" Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Name="Label11"  
+                Content="Report Generation Configuration"
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="16" FontFamily="Georgia"  
+                FontWeight="Bold"
+                Grid.Row="0" Grid.Column="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+                <Label Name="Label12"  
+                Content="Report Variable Configuration"
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="16" FontFamily="Georgia"  
+                FontWeight="Bold"
+                Grid.Row="0" Grid.Column="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+                <Label Name="Label13"  
+                Content="Report Generation Control"
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="16" FontFamily="Georgia"  
+                FontWeight="Bold"
+                Grid.Row="0" Grid.Column="2"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+                <Label Name="Label1"  
+                Content="Date From :"
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold"
+                Grid.Row="1" Grid.Column="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <Label Name="Label2"  
+                Content="Date To :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="0" Grid.Row="2"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <Label Name="Label3"  
+                Content="Loading Number :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="0" Grid.Row="3"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <Label Name="Label5"  
+                Content="Title :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="1" Grid.Row="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <Label Name="Label6"  
+                Content="Machine :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="1" Grid.Row="2"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <Label Name="Label7"  
+                Content="Software :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="1" Grid.Row="3"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <Label Name="Label4"  
+                Content="Report Language :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="10" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="0" Grid.Row="5"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="250,10,0,0"/>
+
+                <Label Name="Label8"  
+                Content="Saving Path :"                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="1" Grid.Row="4"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+
+                <DatePicker Name="DateFrom" 
+                 Height="30" 
+                 Width="200"
+                HorizontalAlignment="Left"
+                Grid.Column="0" Grid.Row="1" 
+                Margin="150,10,0,0"
+                VerticalAlignment="Top"/>
+
+                <DatePicker Name="DateTo" 
+                 Height="30" 
+                 Width="200"                
+                HorizontalAlignment="Left"
+                Grid.Column="0" Grid.Row="2" 
+                Margin="150,10,0,0"
+                VerticalAlignment="Top"               
+                />
+
+                <TextBox Name="LoadingNumber"
+                Height="30" 
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="0" Grid.Row="3" 
+                Margin="150,10,0,105"
+                PreviewTextInput="PreviewTextInput"
+                />
+
+                <TextBox Name="Title"
+                Height="30" 
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="1" Grid.Row="1" 
+                Margin="150,10,0,0"               
+                />
+
+                <TextBox Name="Machine"
+                Height="30" 
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="1" Grid.Row="2"
+                Margin="150,10,0,0"
+                />
+
+                <TextBox Name="Software"
+                Height="30" 
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="1" Grid.Row="3"
+                Margin="150,10,0,0"
+                />
+
+                <TextBox Name="SavePath"
+                Height="30" 
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="1" Grid.Row="4"
+                Margin="150,10,0,0"
+                />
+
+                <CheckBox
+                Content="Stop Logging Service"
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="0" Grid.Row="5"
+                HorizontalAlignment="Left"
+                Margin="10,10,0,0"
+                VerticalAlignment="Top"
+                Checked="CheckBox_Checked"
+                Unchecked="CheckBox_Unchecked"/>
+
+                <ComboBox Name="combo1"
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="14" FontFamily="Georgia"  
+                FontWeight="Bold" Grid.Column="0" Grid.Row="5"
+                HorizontalAlignment="Left"
+                Margin="255,35,0,0"
+                VerticalAlignment="Top">
+                    <ComboBoxItem IsSelected="True">Deutsch</ComboBoxItem>
+                    <ComboBoxItem>English</ComboBoxItem>
+                </ComboBox>
+
+                <Button Content="save"
+                Name="btnSave"
+                Style="{StaticResource StandardButton}"
+                IsEnabled="True" 
+                Grid.Column="1" Grid.Row="3"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,90,10,10"
+                Click="Save_Click"/>
+
+                <Button Content="Browse"
+                Name="btnBrowse"
+                Style="{StaticResource StandardButton}"
+                IsEnabled="True" 
+                Grid.Column="1" Grid.Row="5"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,10"
+                Click="Browse_Click"/>
+
+
+                <StackPanel Grid.Row="3" Grid.Column="3" Grid.RowSpan="1" Orientation="Vertical" HorizontalAlignment="Right">
+                    <Button Content="PDF"
+                Name="btnPDFGenerate"
+                Style="{StaticResource StandardButton}"
+                IsEnabled="True"
+                Grid.Row="0" Grid.Column="2"
+                VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"
+                Click="PDF_Click"/>
+                    <Button Content="CSV"
+                Name="btnCSVGenerate"
+                Style="{StaticResource StandardButton}"
+                IsEnabled="True"
+                Grid.Row="1" Grid.Column="2"
+                VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10"
+                Click="CSV_Click"/>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

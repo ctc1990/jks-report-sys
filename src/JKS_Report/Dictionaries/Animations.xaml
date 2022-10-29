@@ -1,0 +1,91 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CLEANXCEL2._2.Dictionaries"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <Duration x:Key="GeneralDuration">0:0:0.25</Duration>
+    <sys:Int32 x:Key="DesiredFrameRate">30</sys:Int32>
+    <sys:Double x:Key="DesiredDecelerationRatio">0.9</sys:Double>
+
+    <ThicknessAnimation x:Key="SlideInLeft"
+        Storyboard.TargetProperty="(FrameworkElement.Margin)"                        
+        From="-20,0,0,0" To="0,0,0,0"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <ThicknessAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseIn" />
+        </ThicknessAnimation.EasingFunction>
+    </ThicknessAnimation>
+
+    <ThicknessAnimation x:Key="SlideOutRight"
+        Storyboard.TargetProperty="(FrameworkElement.Margin)"                        
+        From="0,0,0,0" To="20,0,0,0"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <ThicknessAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseOut" />
+        </ThicknessAnimation.EasingFunction>
+    </ThicknessAnimation>
+
+    <DoubleAnimation x:Key="FadeIn"
+        Storyboard.TargetProperty="(FrameworkElement.Opacity)"  
+        From="0" To="1"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <DoubleAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseIn" />
+        </DoubleAnimation.EasingFunction>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="FadeOut"
+        Storyboard.TargetProperty="(FrameworkElement.Opacity)"  
+        From="1" To="0"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <DoubleAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseOut" />
+        </DoubleAnimation.EasingFunction>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="FadeInHalf"
+        Storyboard.TargetProperty="(FrameworkElement.Opacity)"  
+        From="0" To="0.92"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <DoubleAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseIn" />
+        </DoubleAnimation.EasingFunction>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="FadeOutHalf"
+        Storyboard.TargetProperty="(FrameworkElement.Opacity)"  
+        From="0.92" To="0"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <DoubleAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseOut" />
+        </DoubleAnimation.EasingFunction>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="Blur"
+        Storyboard.TargetName="blurEffect"  
+        Storyboard.TargetProperty="Radius"  
+        From="0" To="20"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <DoubleAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseIn" />
+        </DoubleAnimation.EasingFunction>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="Unblur"
+        Storyboard.TargetName="blurEffect"  
+        Storyboard.TargetProperty="Radius"  
+        From="20" To="0"
+        Timeline.DesiredFrameRate="{StaticResource DesiredFrameRate}"
+        Duration="{StaticResource GeneralDuration}">
+        <DoubleAnimation.EasingFunction>
+            <ExponentialEase EasingMode="EaseIn" />
+        </DoubleAnimation.EasingFunction>
+    </DoubleAnimation>
+</ResourceDictionary>
