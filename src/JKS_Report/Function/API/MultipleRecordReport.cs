@@ -14,7 +14,8 @@ namespace JKS_Report.Function.API
     public class MultipleRecordReport
     {
 
-        string filename; Document doc; PdfWriter write; // string variable;
+        string filename; Document doc; 
+        static PdfWriter writer; // string variable;
         static iTextSharp.text.Font rprttitle = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 15, BaseColor.BLACK);
         static iTextSharp.text.Font rprtcond = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 13, BaseColor.BLACK);
         static iTextSharp.text.Font seconds = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10, BaseColor.WHITE);
@@ -37,11 +38,12 @@ namespace JKS_Report.Function.API
             string filePath = LibDBHelper.CreatePdfFile("Amsonic", Info, language,true);
             Document document = new Document();
             //document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Append, FileAccess.Write));
+            writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Append, FileAccess.Write));
+            writer.PageEvent = new PDFTemplate();
             document.Open();
             iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);
 
-            Stream inputimg = new FileStream("test1.png", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream inputimg = new FileStream("CompanyLogo.PNG", FileMode.Open, FileAccess.Read, FileShare.Read);
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(inputimg);
             image.Alignment = Image.ALIGN_MIDDLE;
             image.ScalePercent(55f);
@@ -96,7 +98,7 @@ namespace JKS_Report.Function.API
                 BackgroundColor = Colour,
                 HorizontalAlignment = 2
             };
-            PdfPCell tb1cell14 = new PdfPCell(new Phrase("1 of 1", first))
+            PdfPCell tb1cell14 = new PdfPCell(new Phrase(writer.CurrentPageNumber.ToString() + " of " + writer.PageNumber.ToString(), first))
             {
                 Border = iTextSharp.text.Rectangle.TOP_BORDER | iTextSharp.text.Rectangle.RIGHT_BORDER,
                 FixedHeight = 15f,
@@ -911,6 +913,57 @@ namespace JKS_Report.Function.API
             catch
             {
                 throw;
+            }
+        }
+
+
+        public class PDFTemplate : PdfPageEventHelper
+        {
+            PdfContentByte contentbyte;
+            PdfTemplate pdffooter; BaseFont bf = null;
+            public override void OnOpenDocument(PdfWriter writer, Document document)
+            {
+                try
+                {
+                    contentbyte = writer.DirectContent;
+                    base.OnOpenDocument(writer, document);
+                    bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                    pdffooter = contentbyte.CreateTemplate(30, 30);
+                }
+                catch
+                {
+                    throw;
+                }
+               
+            }
+            public override void OnStartPage(PdfWriter writer, Document document)
+            {
+                iTextSharp.text.Font headerfontbold = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 15, BaseColor.BLACK);
+                iTextSharp.text.Font headerfont = FontFactory.GetFont(BaseFont.HELVETICA, 14, BaseColor.BLACK);
+                base.OnStartPage(writer, document);             
+            }
+
+            // Write the footer
+            public override void OnEndPage(PdfWriter writer, Document document)
+            {
+                string text = "Page " + writer.PageNumber + "/";
+                base.OnEndPage(writer, document);
+                contentbyte.BeginText();
+                contentbyte.SetFontAndSize(bf, 10);
+                contentbyte.SetTextMatrix(document.PageSize.GetRight(70), document.PageSize.GetBottom(20));
+                contentbyte.ShowText(text);
+                contentbyte.EndText();
+                float len = bf.GetWidthPoint(text, 10);
+                contentbyte.AddTemplate(pdffooter, document.PageSize.GetRight(70) + len, document.PageSize.GetBottom(20));
+            }
+            public override void OnCloseDocument(PdfWriter writer, Document document)
+            {
+                base.OnCloseDocument(writer, document);
+                pdffooter.BeginText();
+                pdffooter.SetFontAndSize(bf, 10);
+                pdffooter.SetTextMatrix(0, 0);
+                pdffooter.ShowText((writer.PageNumber).ToString());
+                pdffooter.EndText();
             }
         }
     }
