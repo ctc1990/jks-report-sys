@@ -96,7 +96,7 @@ namespace JKS_Report.Pages
                     if (LoadingNo > 0)
                     {
                         SingleReport.CSVGenerate(LoadingNo);
-                        MessageBoxResult result = System.Windows.MessageBox.Show("PDF Success Generated.", "Success");
+                        MessageBoxResult result = System.Windows.MessageBox.Show("CSV Success Generated.", "Success");
                     }
                     else
                     {

@@ -40,7 +40,7 @@ namespace JKS_Report.Function.API
 
                     Query = "Select * from plcvariable where ReferenceId = @ReferenceId";
                     parameters = new DynamicParameters();
-                    parameters.Add("@ReferenceId", _clsMainVariable.Id, DbType.Int32, ParameterDirection.Input);
+                    parameters.Add("@ReferenceId", _clsMainVariable.Id, DbType.Int32, ParameterDirection.Input);                   
                     List<clsStationVariable> _clsPlcVariableList = connection.Query<clsStationVariable>(Query, parameters).ToList();
 
                     Query = @"SELECT * FROM partmemory WHERE ReferenceId = @ReferenceId";
@@ -57,8 +57,8 @@ namespace JKS_Report.Function.API
                     clsPdfMainVariable.LoadingNo = _clsMainVariable.LoadingNo.ToString();
                     clsPdfMainVariable.RecipeNo = _clsMainVariable.RecipeNo.ToString();
                     clsPdfMainVariable.RecipeDescription = _clsMainVariable.RecipeDescription.ToString();
-                    clsPdfMainVariable.TimeStart = _clsMainVariable.TimeStart.ToString();
-                    clsPdfMainVariable.TimeEnd = _clsMainVariable.TimeEnd.ToString();
+                    clsPdfMainVariable.TimeStart = _clsMainVariable.TimeIn;
+                    clsPdfMainVariable.TimeEnd = _clsMainVariable.TimeOut;
                     clsPdfMainVariable.NumberOfBasket = _clsMainVariable.NumberOfBasket.ToString();
 
 
@@ -69,8 +69,8 @@ namespace JKS_Report.Function.API
                     foreach (var item in _clsPlcVariableList)
                     {
                         clsPdfPlcVariable _clsPdfPlcVariable = new clsPdfPlcVariable();
-                        _clsPdfPlcVariable.TimeIn = item.TimeIn.ToShortTimeString();
-                        _clsPdfPlcVariable.TimeOut = item.TimeOut.ToShortTimeString();
+                        _clsPdfPlcVariable.TimeIn = item.TimeIn;
+                        _clsPdfPlcVariable.TimeOut = item.TimeOut;
                         _clsPdfPlcVariable.StationNo = item.StationNo.ToString() + "-" + item.Description.ToString();
                         _clsPdfPlcVariable.Quality = item.Quality;
                         _clsPdfPlcVariable.SequenceRecipe = item.SequenceRecipe.ToString();
@@ -170,6 +170,14 @@ namespace JKS_Report.Function.API
             plcCsvVariable _plcCsvVariable = new plcCsvVariable();
             DataTable dtMain;
             DataTable dtPLC;
+            DataTable dtPalletA;
+            DataTable dtPalletB;
+            DataTable dtPalletC;
+            DataTable dtPalletD;
+            DataTable dtAfterPalletMerge;
+            DataTable dtAfterPalletMergebc;
+            List<DataTable> dtBeforePalletList = new List<DataTable>();
+            List<DataTable> dtBeforePalletListbc = new List<DataTable>();
             List<DataTable> DtList = new List<DataTable>();
 
             try
@@ -192,7 +200,7 @@ namespace JKS_Report.Function.API
                     clsPartMemory _clsPartMemory = connection.Query<clsPartMemory>(Query, parameters).FirstOrDefault();
 
 
-                    plcMainVariable clsCSVMainVariable = new plcMainVariable();
+                    clsCsvMainVariableSingle clsCSVMainVariable = new clsCsvMainVariableSingle();
                     clsCSVMainVariable.Username = _clsMainVariable.Username;
                     clsCSVMainVariable.LoadingId = _clsMainVariable.LoadingId.ToString();
                     clsCSVMainVariable.UnloadingId = _clsMainVariable.UnloadingId.ToString();
@@ -204,43 +212,60 @@ namespace JKS_Report.Function.API
                     clsCSVMainVariable.ProgrammeNo = _clsMainVariable.ProgrammeNumber;
                     clsCSVMainVariable.BasketBarcode = _clsMainVariable.BasketBarcode.ToString();
                     clsCSVMainVariable.BasketNumber = _clsMainVariable.BasketNumber.ToString();
+                    clsCSVMainVariable.CreatedOn = _clsMainVariable.CreatedOn.ToShortDateString();
 
-                    clsCSVMainVariable.PalletA = _clsPartMemory.PalletA;
-                    clsCSVMainVariable.PalletA_WO1 = _clsPartMemory.PalletA_WO1;
-                    clsCSVMainVariable.PalletA_WO2 = _clsPartMemory.PalletA_WO2;
-                    clsCSVMainVariable.PalletA_WO3 = _clsPartMemory.PalletA_WO3;
-                    clsCSVMainVariable.PalletA_WO4 = _clsPartMemory.PalletA_WO4;
-                    clsCSVMainVariable.PalletA_WO5 = _clsPartMemory.PalletA_WO5;
-                    clsCSVMainVariable.PalletA_WO6 = _clsPartMemory.PalletA_WO6;
-                    clsCSVMainVariable.PalletA_WO7 = _clsPartMemory.PalletA_WO7;
-                    clsCSVMainVariable.PalletA_WO8 = _clsPartMemory.PalletA_WO8;
-                    clsCSVMainVariable.PalletB = _clsPartMemory.PalletB;
-                    clsCSVMainVariable.PalletB_WO1 = _clsPartMemory.PalletB_WO1;
-                    clsCSVMainVariable.PalletB_WO2 = _clsPartMemory.PalletB_WO2;
-                    clsCSVMainVariable.PalletB_WO3 = _clsPartMemory.PalletB_WO3;
-                    clsCSVMainVariable.PalletB_WO4 = _clsPartMemory.PalletB_WO4;
-                    clsCSVMainVariable.PalletB_WO5 = _clsPartMemory.PalletB_WO5;
-                    clsCSVMainVariable.PalletB_WO6 = _clsPartMemory.PalletB_WO6;
-                    clsCSVMainVariable.PalletB_WO7 = _clsPartMemory.PalletB_WO7;
-                    clsCSVMainVariable.PalletB_WO8 = _clsPartMemory.PalletB_WO8;
-                    clsCSVMainVariable.PalletC = _clsPartMemory.PalletC;
-                    clsCSVMainVariable.PalletC_WO1 = _clsPartMemory.PalletC_WO1;
-                    clsCSVMainVariable.PalletC_WO2 = _clsPartMemory.PalletC_WO2;
-                    clsCSVMainVariable.PalletC_WO3 = _clsPartMemory.PalletC_WO3;
-                    clsCSVMainVariable.PalletC_WO4 = _clsPartMemory.PalletC_WO4;
-                    clsCSVMainVariable.PalletC_WO5 = _clsPartMemory.PalletC_WO5;
-                    clsCSVMainVariable.PalletC_WO6 = _clsPartMemory.PalletC_WO6;
-                    clsCSVMainVariable.PalletC_WO7 = _clsPartMemory.PalletC_WO7;
-                    clsCSVMainVariable.PalletC_WO8 = _clsPartMemory.PalletC_WO8;
-                    clsCSVMainVariable.PalletD = _clsPartMemory.PalletD;
-                    clsCSVMainVariable.PalletD_WO1 = _clsPartMemory.PalletD_WO1;
-                    clsCSVMainVariable.PalletD_WO2 = _clsPartMemory.PalletD_WO2;
-                    clsCSVMainVariable.PalletD_WO3 = _clsPartMemory.PalletD_WO3;
-                    clsCSVMainVariable.PalletD_WO4 = _clsPartMemory.PalletD_WO4;
-                    clsCSVMainVariable.PalletD_WO5 = _clsPartMemory.PalletD_WO5;
-                    clsCSVMainVariable.PalletD_WO6 = _clsPartMemory.PalletD_WO6;
-                    clsCSVMainVariable.PalletD_WO7 = _clsPartMemory.PalletD_WO7;
-                    clsCSVMainVariable.PalletD_WO8 = _clsPartMemory.PalletD_WO8;
+                    if (!string.IsNullOrEmpty(_clsPartMemory.PalletA))
+                    {
+                        _plcCsvVariable.csvBarcodePalletA = new clsPdfBarcodePalletA();
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO1 = _clsPartMemory.PalletA_WO1;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO2 = _clsPartMemory.PalletA_WO2;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO3 = _clsPartMemory.PalletA_WO3;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO4 = _clsPartMemory.PalletA_WO4;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO5 = _clsPartMemory.PalletA_WO5;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO6 = _clsPartMemory.PalletA_WO6;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO7 = _clsPartMemory.PalletA_WO7;
+                        _plcCsvVariable.csvBarcodePalletA.PalletA_WO8 = _clsPartMemory.PalletA_WO8;
+                    }
+
+                    if (!string.IsNullOrEmpty(_clsPartMemory.PalletB))
+                    {
+                        _plcCsvVariable.csvBarcodePalletB = new clsPdfBarcodePalletB();
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO1 = _clsPartMemory.PalletB_WO1;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO2 = _clsPartMemory.PalletB_WO2;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO3 = _clsPartMemory.PalletB_WO3;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO4 = _clsPartMemory.PalletB_WO4;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO5 = _clsPartMemory.PalletB_WO5;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO6 = _clsPartMemory.PalletB_WO6;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO7 = _clsPartMemory.PalletB_WO7;
+                        _plcCsvVariable.csvBarcodePalletB.PalletB_WO8 = _clsPartMemory.PalletB_WO8;
+                    }
+
+                    if (!string.IsNullOrEmpty(_clsPartMemory.PalletC))
+                    {
+                        _plcCsvVariable.csvBarcodePalletC = new clsPdfBarcodePalletC();
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO1 = _clsPartMemory.PalletC_WO1;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO2 = _clsPartMemory.PalletC_WO2;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO3 = _clsPartMemory.PalletC_WO3;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO4 = _clsPartMemory.PalletC_WO4;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO5 = _clsPartMemory.PalletC_WO5;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO6 = _clsPartMemory.PalletC_WO6;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO7 = _clsPartMemory.PalletC_WO7;
+                        _plcCsvVariable.csvBarcodePalletC.PalletC_WO8 = _clsPartMemory.PalletC_WO8;
+                    }
+
+                    if (!string.IsNullOrEmpty(_clsPartMemory.PalletD))
+                    {
+                        _plcCsvVariable.csvBarcodePalletD = new clsPdfBarcodePalletD();
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO1 = _clsPartMemory.PalletD_WO1;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO2 = _clsPartMemory.PalletD_WO2;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO3 = _clsPartMemory.PalletD_WO3;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO4 = _clsPartMemory.PalletD_WO4;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO5 = _clsPartMemory.PalletD_WO5;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO6 = _clsPartMemory.PalletD_WO6;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO7 = _clsPartMemory.PalletD_WO7;
+                        _plcCsvVariable.csvBarcodePalletD.PalletD_WO8 = _clsPartMemory.PalletD_WO8;
+                    }
+
 
                     _plcCsvVariable.csvMainVariable = clsCSVMainVariable;
 
@@ -250,8 +275,6 @@ namespace JKS_Report.Function.API
                         clsCsvStation clsCsvStation = new clsCsvStation();
                         clsCsvStation.CreatedOn = item.CreatedOn.ToShortTimeString();
                         clsCsvStation.StationNo = item.StationNo;
-                        clsCsvStation.SequenceRecipe = item.SequenceRecipe;
-                        clsCsvStation.SubRecipe = item.SubRecipe;
                         clsCsvStation.MinimumTime = item.MinimumTime;
                         clsCsvStation.MaximumTime = item.MaximumTime;
                         clsCsvStation.EffectiveTime = item.EffectiveTime;
@@ -259,42 +282,81 @@ namespace JKS_Report.Function.API
                         clsCsvStation.TemperaturePV = item.TemperaturePV;
                         clsCsvStation.USonicSideAPowerSV = item.USonicSideAPowerSV;
                         clsCsvStation.USonicSideAPowerPV = item.USonicSideAPowerPV;
-                        clsCsvStation.USonicSideAFrequency = item.USonicSideAFrequency;
                         clsCsvStation.USonicSideBPowerSV = item.USonicSideBPowerSV;
                         clsCsvStation.USonicSideBPowerPV = item.USonicSideBPowerPV;
-                        clsCsvStation.USonicSideBFrequency = item.USonicSideBFrequency;
                         clsCsvStation.USonicBottomAPowerSV = item.USonicBottomAPowerSV;
                         clsCsvStation.USonicBottomAPowerPV = item.USonicBottomAPowerPV;
-                        clsCsvStation.USonicBottomAFrequency = item.USonicBottomAFrequency;
                         clsCsvStation.USonicBottomBPowerSV = item.USonicBottomBPowerSV;
                         clsCsvStation.USonicBottomBPowerPV = item.USonicBottomBPowerPV;
-                        clsCsvStation.USonicBottomBFrequency = item.USonicBottomBFrequency;
                         clsCsvStation.ConductivityPV = item.ConductivityPV;
-                        clsCsvStation.VacuumSV = item.VacuumSV;
-                        clsCsvStation.VacuumPV = item.VacuumPV;
-                        clsCsvStation.ResistivityPV = item.ResistivityPV;
-                        clsCsvStation.PhPV = item.PhPV;
                         clsCsvStation.Quality = item.Quality;
-                        clsCsvStation.ActualTime = item.ActualTime;
 
                         _plcCsvVariable.csvStationVariable.Add(clsCsvStation);
                     }
 
-                    dtMain = CSVFunction.CreateMainDataCsvTable(_plcCsvVariable.csvMainVariable, "JKS_Report.Text.CsvColumnMain_Full.txt");
-                    dtPLC = CSVFunction.CreatePLCDataCsvTable(_plcCsvVariable.csvStationVariable, "JKS_Report.Text.CsvColumn_SymbolPLC_Full.txt", "JKS_Report.Text.CsvColumn_NamePLC_Full.txt");
 
-                    DtList.Add(dtMain);
-                    DtList.Add(dtPLC);
+                    if (_plcCsvVariable.csvMainVariable != null)
+                    {
+                        dtMain = CSVFunction.CreateSingleMainDataTable(_plcCsvVariable.csvMainVariable, "Record");
+                        DtList.Add(dtMain);
+                    }
+                    if (_plcCsvVariable.csvStationVariable.Count > 0)
+                    {
+                        dtPLC = CSVFunction.CreateSinglePLCDataTable(_plcCsvVariable.csvStationVariable, "Record", "JKS_Report.Text.CsvColumnSymbol_Main_Single.txt");
+                        DtList.Add(dtPLC);
+                    }
+                    if (_plcCsvVariable.csvBarcodePalletA != null)
+                    {
+                        dtPalletA = SinglePDFFunction.CreatePalletADataTable(_plcCsvVariable.csvBarcodePalletA);
+                        dtBeforePalletList.Add(dtPalletA);
+                    }
+                    if (_plcCsvVariable.csvBarcodePalletB != null)
+                    {
+                        dtPalletB = SinglePDFFunction.CreatePalletBDataTable(_plcCsvVariable.csvBarcodePalletB);
+                        dtBeforePalletList.Add(dtPalletB);
+                    }
+                    if (_plcCsvVariable.csvBarcodePalletC != null)
+                    {
+                        dtPalletC = SinglePDFFunction.CreatePalletCDataTable(_plcCsvVariable.csvBarcodePalletC);
+                        dtBeforePalletListbc.Add(dtPalletC);
+                    }
+                    if (_plcCsvVariable.csvBarcodePalletD != null)
+                    {
+                        dtPalletD = SinglePDFFunction.CreatePalletDDataTable(_plcCsvVariable.csvBarcodePalletD);
+                        dtBeforePalletListbc.Add(dtPalletD);
+                    }
 
-                    CSVFunction.ToCSV(DtList, LoadingNo.ToString());
+                    if (dtBeforePalletList.Count > 0)
+                    {
+                        dtAfterPalletMerge = SinglePDFFunction.DataTableMerge(dtBeforePalletList, "Record");
+
+                        if (dtAfterPalletMerge != null)
+                        {
+                            DtList.Add(dtAfterPalletMerge);
+                        }
+
+                    }
+                    if (dtBeforePalletListbc.Count > 0)
+                    {
+                        dtAfterPalletMergebc = SinglePDFFunction.DataTableMerge(dtBeforePalletListbc, "Record");
+                        if (dtAfterPalletMergebc != null)
+                        {
+                            DtList.Add(dtAfterPalletMergebc);
+                        }
+                    }
+
+                    if (DtList.Count > 0)
+                    {
+                        CSVFunction.ToCSV(DtList, LoadingNo.ToString(),false);
+                    }
                 }
             }
             catch
             {
                 throw;
             }
-            
-        }     
+
+        }
         public static clsLang ReportLanguage(string lang)
         {
             clsLang result = null;

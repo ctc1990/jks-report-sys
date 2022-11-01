@@ -51,7 +51,7 @@ namespace JKS_Report.Function.Tools
             document.Open();
             iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);
 
-            Stream inputimg = new FileStream("test1.png", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream inputimg = new FileStream("CompanyLogo.PNG", FileMode.Open, FileAccess.Read, FileShare.Read);
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(inputimg);
             image.Alignment = Image.ALIGN_MIDDLE;
             image.ScalePercent(55f);
@@ -905,6 +905,233 @@ namespace JKS_Report.Function.Tools
             {
                 throw;
             }
+        }
+
+
+
+        public static DataTable CreatePalletADataTable(clsPdfBarcodePalletA list)
+        {
+            Type type = typeof(clsPdfBarcodePalletA);
+            var properties = type.GetProperties();
+
+            DataTable dataTable = new DataTable();
+            dataTable.TableName = "PalletA";
+            var j = 0;
+            foreach (PropertyInfo info in properties)
+            {
+                dataTable.Columns.Add(info.Name);
+            }
+
+            object[] values = new object[properties.Length];
+            for (int i = 0; i < properties.Length; i++)
+            {
+                values[i] = properties[i].GetValue(list);
+            }
+
+            dataTable.Rows.Add(values);
+
+            DataTable dtnew = new DataTable();
+
+            string[] columnname = { "PalletA", " " };
+            //Convert all the rows to columns
+            for (int i = 0; i <= dataTable.Rows.Count; i++)
+            {
+                dtnew.Columns.Add(columnname[i]);
+                //dtnew.Columns.Add(Convert.ToString(i));
+            }
+            // Convert All the Columns to Rows
+            for (int m = 0; m < dataTable.Columns.Count; m++)
+            {
+                var dr = dtnew.NewRow();
+                dr[0] = dataTable.Columns[m].ToString();
+                for (int k = 1; k <= dataTable.Rows.Count; k++)
+                    dr[k] = dataTable.Rows[k - 1][m];
+                dtnew.Rows.Add(dr);
+            }
+            return dtnew;
+        }
+        public static DataTable CreatePalletBDataTable(clsPdfBarcodePalletB list)
+        {
+            Type type = typeof(clsPdfBarcodePalletB);
+            var properties = type.GetProperties();
+
+            DataTable dataTable = new DataTable();
+            dataTable.TableName = "PalletB";
+            var j = 0;
+            foreach (PropertyInfo info in properties)
+            {
+
+                dataTable.Columns.Add(info.Name);
+
+            }
+
+            object[] values = new object[properties.Length];
+            for (int i = 0; i < properties.Length; i++)
+            {
+                values[i] = properties[i].GetValue(list);
+            }
+
+            dataTable.Rows.Add(values);
+
+            DataTable dtnew = new DataTable();
+            string[] columnname = { "PalletB", "  " };
+            //Convert all the rows to columns
+            for (int i = 0; i <= dataTable.Rows.Count; i++)
+            {
+                dtnew.Columns.Add(columnname[i]);
+                //dtnew.Columns.Add(Convert.ToString(i));
+            }
+            // Convert All the Columns to Rows
+            for (int m = 0; m < dataTable.Columns.Count; m++)
+            {
+                var dr = dtnew.NewRow();
+                dr[0] = dataTable.Columns[m].ToString();
+                for (int k = 1; k <= dataTable.Rows.Count; k++)
+                    dr[k] = dataTable.Rows[k - 1][m];
+                dtnew.Rows.Add(dr);
+            }
+            return dtnew;
+        }
+        public static DataTable CreatePalletCDataTable(clsPdfBarcodePalletC list)
+        {
+            Type type = typeof(clsPdfBarcodePalletC);
+            var properties = type.GetProperties();
+
+            DataTable dataTable = new DataTable();
+            dataTable.TableName = "PalletC";
+            var j = 0;
+            foreach (PropertyInfo info in properties)
+            {
+
+                dataTable.Columns.Add(info.Name);
+
+            }
+
+            object[] values = new object[properties.Length];
+            for (int i = 0; i < properties.Length; i++)
+            {
+                values[i] = properties[i].GetValue(list);
+            }
+
+            dataTable.Rows.Add(values);
+
+            DataTable dtnew = new DataTable();
+            string[] columnname = { "PalletC", "   " };
+            //Convert all the rows to columns
+            for (int i = 0; i <= dataTable.Rows.Count; i++)
+            {
+                dtnew.Columns.Add(columnname[i]);
+                //dtnew.Columns.Add(Convert.ToString(i));
+            }
+            // Convert All the Columns to Rows
+            for (int m = 0; m < dataTable.Columns.Count; m++)
+            {
+                var dr = dtnew.NewRow();
+                dr[0] = dataTable.Columns[m].ToString();
+                for (int k = 1; k <= dataTable.Rows.Count; k++)
+                    dr[k] = dataTable.Rows[k - 1][m];
+                dtnew.Rows.Add(dr);
+            }
+            return dtnew;
+        }
+        public static DataTable CreatePalletDDataTable(clsPdfBarcodePalletD list)
+        {
+            Type type = typeof(clsPdfBarcodePalletD);
+            var properties = type.GetProperties();
+
+            DataTable dataTable = new DataTable();
+            dataTable.TableName = "PalletD";
+            var j = 0;
+            foreach (PropertyInfo info in properties)
+            {
+
+                dataTable.Columns.Add(info.Name);
+
+            }
+
+            object[] values = new object[properties.Length];
+            for (int i = 0; i < properties.Length; i++)
+            {
+                values[i] = properties[i].GetValue(list);
+            }
+
+            dataTable.Rows.Add(values);
+
+            DataTable dtnew = new DataTable();
+            string[] columnname = { "PalletD", "    " };
+            //Convert all the rows to columns
+            for (int i = 0; i <= dataTable.Rows.Count; i++)
+            {
+                dtnew.Columns.Add(columnname[i]);
+                //dtnew.Columns.Add(Convert.ToString(i));
+            }
+            // Convert All the Columns to Rows
+            for (int m = 0; m < dataTable.Columns.Count; m++)
+            {
+                var dr = dtnew.NewRow();
+                dr[0] = dataTable.Columns[m].ToString();
+                for (int k = 1; k <= dataTable.Rows.Count; k++)
+                    dr[k] = dataTable.Rows[k - 1][m];
+                dtnew.Rows.Add(dr);
+            }
+            return dtnew;
+        }
+        public static DataTable DataTableMerge(List<DataTable> dataTables, string recordName)
+        {
+            List<int> oList = new List<int>();
+            DataTable mergedDataTable = new DataTable();
+            mergedDataTable.TableName = recordName + "- barcode";
+            foreach (DataTable dt in dataTables)
+            {
+                oList.Add(dt.Rows.Count);
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    mergedDataTable.Columns.Add(dc.ColumnName);
+                }
+                //mergedDataTable.Columns.Add(dt.TableName + "-" + "Space");
+            }
+            int temp = 0;
+            for (int m = 0; m < oList.Count; m++)
+            {
+                for (int n = 0; n < oList.Count - 1; n++)
+                {
+                    if (oList[n] > oList[n + 1])
+                    {
+                        temp = oList[n + 1];
+                        oList[n + 1] = oList[n];
+                        oList[n] = temp;
+                    }
+                }
+            }
+            int maxRow = oList[oList.Count - 1];
+            for (int o = 0; o < maxRow; o++)
+            {
+                DataRow newRow = mergedDataTable.NewRow();
+                int mergedDataTableColumn = 0;
+                foreach (DataTable dt in dataTables)
+                {
+                    if (dt.Rows.Count > o)
+                    {
+                        for (int k = 0; k < dt.Columns.Count; k++)
+                        {
+                            newRow[mergedDataTableColumn] = dt.Rows[o][k];
+                            mergedDataTableColumn++;
+                        }
+                    }
+                    else
+                    {
+                        for (int k = 0; k < dt.Columns.Count; k++)
+                        {
+                            newRow[mergedDataTableColumn] = DBNull.Value;
+                            mergedDataTableColumn++;
+                        }
+                    }
+                    //newRow[mergedDataTableColumn] = DBNull.Value;
+                    //mergedDataTableColumn++;
+                }
+                mergedDataTable.Rows.Add(newRow);
+            }
+            return mergedDataTable;
         }
     }
 }

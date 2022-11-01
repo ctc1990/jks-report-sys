@@ -67,12 +67,12 @@ namespace JKS_Report.Function.DB
             if (!dateReport)
             {
                  latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                 todayLogFilePath = LogPath + sourceName + "_" + Info + "_" + logFileDateStr + "_" + lang + ".pdf";
+                 todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + "_" + lang + ".pdf";
             }
             else
             {
                 latestFileName = sourceName + "_" + Info ;
-                todayLogFilePath = LogPath + sourceName + "_" + Info  + "_" + lang + ".pdf";
+                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info  + "_" + lang + ".pdf";
             }
             
 
@@ -142,16 +142,31 @@ namespace JKS_Report.Function.DB
 
             return todayLogFilePath;
         }
-        public static string CreateCsvFile(string sourceName, string Info)
+        public static string CreateCsvFile(string sourceName, string Info, bool dateReport)
         {
             bool writeLogHaveError = false;
-            string LogPath = WebConfigurationManager.AppSettings.Get("CSVFilePath");
+            //string LogPath = WebConfigurationManager.AppSettings.Get("CSVFilePath");
+
+            clsSystemSetting filepath = LibDBHelper.getFilePath();
+
+            string LogPath = filepath.Name;
 
             string logFileDateStr = DateTime.Now.ToString("yyyyMMdd");
+            string latestFileName = "", todayLogFilePath = "";
 
             int fileNameIdentityNum = 1;
-            string latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-            string todayLogFilePath = LogPath + sourceName + "_" + Info + "_" + logFileDateStr + ".csv";
+
+            if(!dateReport)
+            {
+                 latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
+                 todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + ".csv";
+            }
+            else
+            {
+                latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
+                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info  + ".csv";
+            }
+            
 
             if (!Directory.Exists(LogPath))
             {
@@ -243,11 +258,12 @@ namespace JKS_Report.Function.DB
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     string Query = @"INSERT IGNORE INTO mainvariable "
-                                + "(`UserName`, `LoadingId`, `UnloadingId`, `BasketNumber`, `RecipeNo`, `RecipeDescription`, `LoadingNo`, `ProgrammeBarcode`, `ProgrammeNumber`, `BasketBarcode`, `LoadingTotalNo`, `CreatedOn`) VALUES "
+                                + "(`UserName`,`TimeIn`, `LoadingId`, `UnloadingId`, `BasketNumber`, `RecipeNo`, `RecipeDescription`, `LoadingNo`, `ProgrammeBarcode`, `ProgrammeNumber`, `BasketBarcode`, `LoadingTotalNo`, `CreatedOn`) VALUES "
                                 + "(@Username, @LoadingId,@UnloadingId,@BasketNumber, @RecipeNo,@RecipeDescription ,@LoadingNo,@ProgrammeBarcode,@ProgrammeNumber,@BasketBarcode, @LoadingTotalNo, @CreatedOn); SELECT LAST_INSERT_ID();";
 
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@Username", _clsMainVariable.Username, DbType.String, ParameterDirection.Input);
+                    parameters.Add("@TimeIn", _clsMainVariable.TimeIn, DbType.String, ParameterDirection.Input);
                     parameters.Add("@LoadingId", _clsMainVariable.LoadingId, DbType.Int32, ParameterDirection.Input);
                     parameters.Add("@UnloadingId", _clsMainVariable.UnloadingId, DbType.Int32, ParameterDirection.Input);
                     parameters.Add("@BasketNumber", _clsMainVariable.BasketNumber, DbType.String, ParameterDirection.Input);
@@ -269,7 +285,7 @@ namespace JKS_Report.Function.DB
             }
 
             return result;
-        }
+        }       
         public static int SingleStationRecord(clsStationVariable _clsPlcVariable)
         {
             int result = 0;
@@ -546,6 +562,84 @@ namespace JKS_Report.Function.DB
                     {
                         result++;
                     }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+            return result;
+        }
+        public static int UpdateMainTimeRecord(string RecipeNo, string LoadingNo ,string TimeOut)
+        {
+            int result = 0;
+            try
+            {
+                if(!string.IsNullOrEmpty(RecipeNo))
+                {
+                    using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                    {
+                        
+                            string query = @"UPDATE mainvariable SET TimeOut = @TimeOut WHERE RecipeNo = @RecipeNo AND LoadingNo = @LoadingNo ";
+
+                            DynamicParameters parameters = new DynamicParameters();
+                            parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
+                            parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
+                            parameters.Add("@LoadingNo", LoadingNo, DbType.Int16, ParameterDirection.Input);
+
+                            result = connection.Query<int>(query, parameters).FirstOrDefault();
+                        
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            return result;
+        }
+        public static int UpdateStationTimeRecord(string RecipeNo, string LoadingNo,  string TimeOut)
+        {
+            int result = 0;
+            try
+            {
+                if (!string.IsNullOrEmpty(RecipeNo))
+                {
+                    using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                    {
+                       
+                            string query = @"UPDATE plcvariable SET TimeIn = @TimeIn WHERE ReferenceId = @RecipeNo AND RefLoadingNo = @LoadingNo ";
+
+                            DynamicParameters parameters = new DynamicParameters();
+                            parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
+                            parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
+                            parameters.Add("@LoadingNo", LoadingNo, DbType.Int16, ParameterDirection.Input);
+
+                            result = connection.Query<int>(query, parameters).FirstOrDefault();
+                        
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            return result;
+        }
+        public static clsStationVariable GetStationRecord(string RecipeNo, string LoadngNo)
+        {
+            clsStationVariable result = null;
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                {
+                    DynamicParameters parameters = new DynamicParameters();
+                    parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
+                    parameters.Add("@LoadngNo", LoadngNo, DbType.Int64, ParameterDirection.Input);
+
+                    string query = @"SELECT * FROM plcvariable WHERE ReferenceId = @RecipeNo AND RefLoadingNo = @LoadingNo";
+                    result = connection.Query<clsStationVariable>(query).FirstOrDefault();
                 }
             }
             catch

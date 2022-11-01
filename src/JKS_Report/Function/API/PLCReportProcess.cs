@@ -76,7 +76,7 @@ namespace JKS_Report.Function.API
                 {
                     switch (mapping[i].input)
                     {
-                        case "Log_Configuration.fbBarcode_dataLog.bActivate":
+                        case "Log_Configuration.bfbBarcodeActivate_Loading":
                             if (binRead.ReadBoolean())
                             {
                                 _plcMainVariable = PLCMapping.PlcMainStationMapping(adsClient);
@@ -97,6 +97,7 @@ namespace JKS_Report.Function.API
                                     _clsMainVariable.BasketBarcode = string.IsNullOrEmpty(_plcMainVariable.BasketBarcode) ? "" : _plcMainVariable.BasketBarcode;
                                     _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
                                     _clsMainVariable.CreatedOn = DateTime.Now;
+                                    _clsMainVariable.TimeIn = DateTime.Now.ToShortTimeString();
 
                                     _clsPartMemory = new clsPartMemory();
                                     _clsPartMemory.PalletA = string.IsNullOrEmpty(_plcMainVariable.PalletA) ? "" : _plcMainVariable.PalletA;
@@ -344,6 +345,220 @@ namespace JKS_Report.Function.API
                                     }
                                 }
                             }
+                            break;                        
+                        case "ARbUldBasketInActivate[1]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime(adsClient, 1);
+
+                                if(clsStnUpdate != null)
+                                {
+                                    int done = LibDBHelper.UpdateMainTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo,clsStnUpdate.TimeOut);
+                                }
+                            }
+                            break;
+                        case "ARbUldBasketInActivate[2]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime(adsClient, 2);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    int done = LibDBHelper.UpdateMainTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                }
+                            }
+                            break;                       
+                        case "ARtsStnBasketOutTime[1]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 1);
+
+                                if(clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if(record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[2]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 2);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[3]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 3);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[4]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 4);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[5]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 5);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[6]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 6);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[7]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 7);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[8]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 8);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[9]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 9);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[10]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 10);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[11]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 11);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
+                            break;
+                        case "ARtsStnBasketOutTime[12]":
+                            if (binRead.ReadBoolean())
+                            {
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 12);
+
+                                if (clsStnUpdate != null)
+                                {
+                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+
+                                    if (record != null)
+                                    {
+                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                    }
+                                }
+                            }
                             break;
                         default:
                             binRead.ReadBoolean();
@@ -356,12 +571,14 @@ namespace JKS_Report.Function.API
         {
             clsStationVariable result = new clsStationVariable();
 
-            //clsMainVariable mainRecord = LibDBHelper.getMainRecord(Convert.ToInt32(_plcStationVariable.RecipeNo), Convert.ToInt32(_plcStationVariable.LoadingNo));
+            clsMainVariable mainRecord = LibDBHelper.getMainRecord(Convert.ToInt32(_plcStationVariable.RecipeNo), Convert.ToInt32(_plcStationVariable.LoadingNo));
 
             try
             {
-                //result.ReferenceID = mainRecord.Id;
-                result.ReferenceID = string.IsNullOrEmpty(_plcStationVariable.RecipeNo) ? 0 : Convert.ToUInt16(_plcStationVariable.RecipeNo);
+                result.ReferenceID = mainRecord.Id;
+                //result.ReferenceID = string.IsNullOrEmpty(_plcStationVariable.RecipeNo) ? 0 : Convert.ToUInt16(_plcStationVariable.RecipeNo);
+                result.TimeIn = string.IsNullOrEmpty(_plcStationVariable.TimeIn) ? "0" : _plcStationVariable.TimeIn;
+                result.RefLoadingNo = string.IsNullOrEmpty(_plcStationVariable.LoadingNo) ? "0" : _plcStationVariable.LoadingNo;
 
                 result.StationNo = _plcStationVariable.StationNo < 0 ? 0 : _plcStationVariable.StationNo;
                 result.Description = string.IsNullOrEmpty(_plcStationVariable.StationWithDesc) ? "" : _plcStationVariable.StationWithDesc;
@@ -403,7 +620,7 @@ namespace JKS_Report.Function.API
         public static void InitiateMapping()
         {
             //mapping.Add(new Mapping { description = "test", input = "Log_Configuration.test123" });
-            //mapping.Add(new Mapping { description = "LoadingTrigger", input = "Log_Configuration.fbBarcode_dataLog.bActivate" });
+            mapping.Add(new Mapping { description = "LoadingTrigger", input = "Log_Configuration.bfbBarcodeActivate_Loading" });
             mapping.Add(new Mapping { description = "Stn1Trigger", input = "Log_Configuration.fb1_dataLog.bActivate" });
             mapping.Add(new Mapping { description = "Stn2Trigger", input = "Log_Configuration.fb2_dataLog.bActivate" });
             mapping.Add(new Mapping { description = "Stn3Trigger", input = "Log_Configuration.fb3_dataLog.bActivate" });
@@ -412,10 +629,27 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "Stn6Trigger", input = "Log_Configuration.fb6_dataLog.bActivate" });
             mapping.Add(new Mapping { description = "Stn7Trigger", input = "Log_Configuration.fb7_dataLog.bActivate" });
             mapping.Add(new Mapping { description = "Stn8Trigger", input = "Log_Configuration.fb8_dataLog.bActivate" });
-            //mapping.Add(new Mapping { description = "Stn9Trigger", input = "Log_Configuration.fb9_dataLog.bActivate" });
-            //mapping.Add(new Mapping { description = "Stn10Trigger", input = "Log_Configuration.fb10_dataLog.bActivate" });
-            //mapping.Add(new Mapping { description = "Stn11Trigger", input = "Log_Configuration.fb11_dataLog.bActivate" });
-            //mapping.Add(new Mapping { description = "Stn12Trigger", input = "Log_Configuration.fb12_dataLog.bActivate" });
+            mapping.Add(new Mapping { description = "Stn9Trigger", input = "Log_Configuration.fb9_dataLog.bActivate" });
+            mapping.Add(new Mapping { description = "Stn10Trigger", input = "Log_Configuration.fb10_dataLog.bActivate" });
+            mapping.Add(new Mapping { description = "Stn11Trigger", input = "Log_Configuration.fb11_dataLog.bActivate" });
+            mapping.Add(new Mapping { description = "Stn12Trigger", input = "Log_Configuration.fb12_dataLog.bActivate" });
+
+            mapping.Add(new Mapping { description = "RecipeTimeInTrigger", input = "ARbLdBasketInActivate[1]" });
+            mapping.Add(new Mapping { description = "RecipeTimeOutTrigger1", input = "ARbUldBasketInActivate[1]" });
+            mapping.Add(new Mapping { description = "RecipeTimeOutTrigger2", input = "ARbUldBasketInActivate[2]" });            
+
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger1", input = "ARtsStnBasketOutTime[1]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger2", input = "ARtsStnBasketOutTime[2]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger3", input = "ARtsStnBasketOutTime[3]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger4", input = "ARtsStnBasketOutTime[4]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger5", input = "ARtsStnBasketOutTime[5]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger6", input = "ARtsStnBasketOutTime[6]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger7", input = "ARtsStnBasketOutTime[7]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger8", input = "ARtsStnBasketOutTime[8]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger9", input = "ARtsStnBasketOutTime[9]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger10", input = "ARtsStnBasketOutTime[10]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "ARtsStnBasketOutTime[11]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "ARtsStnBasketOutTime[12]" });
         }
         public static void PlcDispose()
         {

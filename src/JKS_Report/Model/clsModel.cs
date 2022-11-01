@@ -16,6 +16,8 @@ namespace JKS_Report.Model
     {
         public long Id { get; set; }
         public string Username { get; set; }
+        public string TimeIn { get; set; }
+        public string TimeOut { get; set; }
         public int LoadingId { get; set; }
         public int UnloadingId { get; set; }
         public string BasketNumber { get; set; }
@@ -26,14 +28,15 @@ namespace JKS_Report.Model
         public string ProgrammeNumber { get; set; }
         public string BasketBarcode { get; set; }
         public int LoadingTotalNo { get; set; }
-        public int NumberOfBasket { get; set; }
-        public DateTime TimeStart { get; set; }
-        public DateTime TimeEnd { get; set; }
+        public int NumberOfBasket { get; set; }     
         public DateTime CreatedOn { get; set; }
     }
     public class clsStationVariable
     {
         public long ReferenceID { get; set; }
+        public string TimeIn { get; set; }
+        public string TimeOut { get; set; }
+        public string RefLoadingNo {get;set;}
         public int StationNo { get; set; }
         public string Description { get; set; }
         public string SequenceRecipe { get; set; }
@@ -62,9 +65,7 @@ namespace JKS_Report.Model
         public float ResistivityPV { get; set; }
         public float PhPV { get; set; }
         public string Quality { get; set; }
-        public int ActualTime { get; set; }
-        public DateTime TimeIn { get; set; }
-        public DateTime TimeOut { get; set; }
+        public int ActualTime { get; set; }       
         public DateTime CreatedOn { get; set; }
     }
     public class clsPartMemory
@@ -119,7 +120,7 @@ namespace JKS_Report.Model
         public string LoadingTotalNo { get; set; }
         public string ProgrammeBarcode { get; set; }       
         public string ProgrammeNo { get; set; }
-        public string BasketBarcode { get; set; }
+        public string BasketBarcode { get; set; }        
         public string PalletA { get; set; }
         public string PalletA_WO1 { get; set; }
         public string PalletA_WO2 { get; set; }
@@ -189,7 +190,10 @@ namespace JKS_Report.Model
         public string ResistivityPV { get; set; }
         public string PhPV { get; set; }
         public string Quality { get; set; }
-        public string ActualTime { get; set; }
+        public string ActualTime { get; set; } 
+        
+        public string TimeIn { get; set; }
+        public string TimeOut { get; set; }
     }
     public class plcMainStationVariable
     {
@@ -281,14 +285,59 @@ namespace JKS_Report.Model
         public string PalletD_WO7 { get; set; }
         public string PalletD_WO8 { get; set; }
     }
-
     public class plcCsvVariable
     {
-        public plcMainVariable csvMainVariable { get; set; }
+        public clsCsvMainVariableSingle csvMainVariable { get; set; }
         public List<clsCsvStation> csvStationVariable { get; set; }
+        public clsPdfBarcodePalletA csvBarcodePalletA { get; set; }
+        public clsPdfBarcodePalletB csvBarcodePalletB { get; set; }
+        public clsPdfBarcodePalletC csvBarcodePalletC { get; set; }
+        public clsPdfBarcodePalletD csvBarcodePalletD { get; set; }
+    }
+    public class plcCsvMasterVariable
+    {
+        public plcMainVariable csvMainVariable { get; set; }
+        public List<clsCsvMasterStation> csvStationVariable { get; set; }
     }
 
+    public class clsCsvMainVariableSingle
+    {
+        public string Username { get; set; }
+        public string LoadingId { get; set; }
+        public string UnloadingId { get; set; }
+        public string BasketNumber { get; set; }
+        public string RecipeNo { get; set; }
+        public string RecipeDescription { get; set; }
+        public string LoadingNo { get; set; }
+        public string LoadingTotalNo { get; set; }
+        public string ProgrammeBarcode { get; set; }
+        public string ProgrammeNo { get; set; }
+        public string BasketBarcode { get; set; }
+        public string CreatedOn { get; set; }
+    }
     public class clsCsvStation
+    {
+        public string CreatedOn { get; set; }
+        public int StationNo { get; set; }
+        public int MinimumTime { get; set; }
+        public int MaximumTime { get; set; }
+        public int EffectiveTime { get; set; }
+        public int TemperatureSV { get; set; }
+        public float TemperaturePV { get; set; }
+        public int USonicSideAPowerSV { get; set; }
+        public int USonicSideAPowerPV { get; set; }
+        public int USonicSideBPowerSV { get; set; }
+        public int USonicSideBPowerPV { get; set; }
+        public int USonicBottomAPowerSV { get; set; }
+        public int USonicBottomAPowerPV { get; set; }
+        public int USonicBottomBPowerSV { get; set; }
+        public int USonicBottomBPowerPV { get; set; }
+
+        public float PumpFlowPV { get; set; }
+        public float ConductivityPV { get; set; }
+        public string Quality { get; set; }
+    }
+    public class clsCsvMasterStation
     {
         public string CreatedOn { get; set; }
         public int StationNo { get; set; }
@@ -319,9 +368,7 @@ namespace JKS_Report.Model
         public float PhPV { get; set; }
         public string Quality { get; set; }
         public int ActualTime { get; set; }
-
     }
-
     public class clsSystemSetting
     {
         public string ReferenceKey { get; set; }
@@ -330,5 +377,12 @@ namespace JKS_Report.Model
         public string Software { get; set; }
         public string CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
+    }
+
+    public class clsStnUpdate
+    {
+        public string RecipeNo { get; set; }
+        public string LoadingNo { get; set; }
+        public string TimeOut { get; set; }
     }
 }

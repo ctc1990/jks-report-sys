@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JKS_Report"
         mc:Ignorable="d"        
-        Title="MainWindow"
-        d:DesignWidth ="800" d:DesignHeight ="600">
+        Title="Reporting"
+        d:DesignWidth ="800" d:DesignHeight ="600"
+        SizeToContent="WidthAndHeight">
          
     <Grid>
         <Frame x:Name="FrameContainer" 

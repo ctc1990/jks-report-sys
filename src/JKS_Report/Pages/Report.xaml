@@ -181,7 +181,7 @@
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="250,10,0,0"/>
 
-                
+
 
 
                 <DatePicker Name="DateFrom" 
@@ -303,6 +303,9 @@
                 VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10"
                 Click="CSV_Click"/>
                 </StackPanel>
+                <Rectangle Fill="#FFFFFF" HorizontalAlignment="Center" Height="80" Margin="0,38,0,0" Grid.RowSpan="3"  VerticalAlignment="Top" Width="354"/>
+
+
 
             </Grid>
         </Grid>

@@ -54,8 +54,8 @@ namespace JKS_Report.Function.API
                             clsPdfMainVariable.LoadingNo = item.LoadingNo.ToString();
                             clsPdfMainVariable.RecipeNo = item.RecipeNo.ToString();
                             clsPdfMainVariable.RecipeDescription = item.RecipeDescription.ToString();
-                            clsPdfMainVariable.TimeStart = item.TimeStart.ToString();
-                            clsPdfMainVariable.TimeEnd = item.TimeEnd.ToString();
+                            clsPdfMainVariable.TimeStart = item.TimeIn.ToString();
+                            clsPdfMainVariable.TimeEnd = item.TimeOut.ToString();
                             clsPdfMainVariable.NumberOfBasket = item.NumberOfBasket.ToString();
 
                             Query = "Select * from plcvariable where ReferenceId = @ReferenceId";
@@ -74,8 +74,8 @@ namespace JKS_Report.Function.API
                             foreach (var item1 in _clsPlcVariableList)
                             {
                                 clsPdfPlcVariable _clsPdfPlcVariable = new clsPdfPlcVariable();
-                                _clsPdfPlcVariable.TimeIn = item1.TimeIn.ToShortTimeString();
-                                _clsPdfPlcVariable.TimeOut = item1.TimeOut.ToShortTimeString();
+                                _clsPdfPlcVariable.TimeIn = item1.TimeIn;
+                                _clsPdfPlcVariable.TimeOut = item1.TimeOut;
                                 _clsPdfPlcVariable.StationNo = item1.StationNo.ToString() + "-" + item1.Description.ToString();
                                 _clsPdfPlcVariable.Quality = item1.Quality;
                                 _clsPdfPlcVariable.SequenceRecipe = item1.SequenceRecipe.ToString();
@@ -178,7 +178,7 @@ namespace JKS_Report.Function.API
         {
             try
             {
-                List<plcCsvVariable> _plcCsvVariableList = new List<plcCsvVariable>();
+                List<plcCsvMasterVariable> _plcCsvVariableList = new List<plcCsvMasterVariable>();
                 DataTable dtMain;
                 DataTable dtPLC;
                 List<DataTable> DtList = new List<DataTable>();
@@ -197,7 +197,7 @@ namespace JKS_Report.Function.API
 
                         foreach (var item in _clsMainVariable)
                         {
-                            plcCsvVariable _plcCsvVariableItem = new plcCsvVariable();
+                            plcCsvMasterVariable _plcCsvVariableItem = new plcCsvMasterVariable();
                             Query = "Select * from plcvariable where ReferenceId = @ReferenceId";
                             parameters = new DynamicParameters();
                             parameters.Add("@ReferenceId", item.Id, DbType.Int32, ParameterDirection.Input);
@@ -260,10 +260,10 @@ namespace JKS_Report.Function.API
 
                             _plcCsvVariableItem.csvMainVariable = clsCSVMainVariable;
 
-                            _plcCsvVariableItem.csvStationVariable = new List<clsCsvStation>();
+                            _plcCsvVariableItem.csvStationVariable = new List<clsCsvMasterStation>();
                             foreach (var item1 in _clsPlcVariableList)
                             {
-                                clsCsvStation clsCsvStation = new clsCsvStation();
+                                clsCsvMasterStation clsCsvStation = new clsCsvMasterStation();
                                 clsCsvStation.CreatedOn = item1.CreatedOn.ToShortTimeString();
                                 clsCsvStation.StationNo = item1.StationNo;
                                 clsCsvStation.SequenceRecipe = item1.SequenceRecipe;
@@ -312,7 +312,7 @@ namespace JKS_Report.Function.API
 
                         string date1 = dateFrom.ToString("yyyyMMdd");
                         string date2 = dateTo.ToString("yyyyMMdd");
-                        CSVFunction.ToCSV(DtList, date1 + "_" + date2);
+                        CSVFunction.ToCSV(DtList, date1 + "_" + date2,true);
                     }
                 }
             }

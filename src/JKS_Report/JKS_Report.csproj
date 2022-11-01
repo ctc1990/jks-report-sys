@@ -306,6 +306,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HTML\JKS_Report_v1.html" />
+    <EmbeddedResource Include="Text\CsvColumnSymbol_Main_Single.txt" />
     <EmbeddedResource Include="Text\CsvColumnMain_Full.txt" />
     <EmbeddedResource Include="Text\CsvColumnSymbol_Main.txt" />
     <EmbeddedResource Include="Text\CsvColumn_NamePLC_Full.txt" />

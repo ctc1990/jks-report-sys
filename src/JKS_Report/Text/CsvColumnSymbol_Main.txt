@@ -1,1 +1,1 @@
-﻿,,(Sec),(Sec),(Sec),(DegC),(uS),
+﻿N/A,N/A,Sec,Sec,Sec,DegC,uS,N/A
