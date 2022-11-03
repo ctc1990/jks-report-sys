@@ -71,7 +71,7 @@ namespace JKS_Report.Function.API
                         clsPdfPlcVariable _clsPdfPlcVariable = new clsPdfPlcVariable();
                         _clsPdfPlcVariable.TimeIn = item.TimeIn;
                         _clsPdfPlcVariable.TimeOut = item.TimeOut;
-                        _clsPdfPlcVariable.StationNo = item.StationNo.ToString() + "-" + item.Description.ToString();
+                        _clsPdfPlcVariable.StationNo = item.Description.ToString();
                         _clsPdfPlcVariable.Quality = item.Quality;
                         _clsPdfPlcVariable.SequenceRecipe = item.SequenceRecipe.ToString();
                         _clsPdfPlcVariable.EffectiveTime = item.EffectiveTime.ToString();

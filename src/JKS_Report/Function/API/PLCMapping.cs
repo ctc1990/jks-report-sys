@@ -187,9 +187,10 @@ namespace JKS_Report.Function.API
 
             try
             {
+                
                 plcMainVariableDeclaration.Username = ".sUserName";
                 plcMainVariableDeclaration.LoadingId = "1";
-                plcMainVariableDeclaration.UnloadingId = ".DSA1fbPnpSequenceMemoryStore.DsA1inPnpSequenceMemory.iUldGroupNo";
+                plcMainVariableDeclaration.UnloadingId = ".AR2sDSCv_LdConfirmBasketInfo[1, 5].iUnloadingID";
                 plcMainVariableDeclaration.RecipeNo = ".DSV2_BufferBasketInfo.iProductRecipeNo";
                 plcMainVariableDeclaration.RecipeDescription = ".DSV2_BufferBasketInfo.sProgramDescription";
                 plcMainVariableDeclaration.LoadingNo = ".DSV2_BufferBasketInfo.sReservedInt";

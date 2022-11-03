@@ -254,7 +254,7 @@ namespace JKS_Report.Function.DB
             int result = 0;
             try
             {
-
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Insert " + _clsMainVariable.TimeIn + Environment.NewLine);
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     string Query = @"INSERT IGNORE INTO mainvariable "
@@ -291,7 +291,7 @@ namespace JKS_Report.Function.DB
             int result = 0;
             try
             {
-
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Station Insert " + _clsPlcVariable.StationNo + Environment.NewLine);
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     //string Query = @"INSERT IGNORE INTO plcvariable "
@@ -305,8 +305,8 @@ namespace JKS_Report.Function.DB
                     //            + "@USonicBottomAPowerPV, @USonicBottomAFrequency, @USonicBottomBPowerSV, @USonicBottomBPowerPV, @USonicBottomBFrequency, @VacuumSV, "
                     //            + "@VacuumPV, @ConductivityPV, @PumpFlowPV, @ResistivityPV, @PhPV, @Quality, @ActualTime, @CreatedOn); SELECT LAST_INSERT_ID();";
 
-                    string Query = @"INSERT INTO `plcvariable` (`ReferenceId`, `StationNo`,`Description`, `SequenceRecipe`, `SubRecipe`, `MinimumTime`, `MaximumTime`, `EffectiveTime`, `TemperatureSV`, `TemperaturePV`, `USonicSideAPowerSV`, `USonicSideAPowerPV`, `USonicSideAFrequency`, `USonicSideBPowerSV`, `USonicSideBPowerPV`, `USonicSideBFrequency`, `USonicBottomAPowerSV`, `USonicBottomAPowerPV`, `USonicBottomAFrequency`, `USonicBottomBPowerSV`, `USonicBottomBPowerPV`, `USonicBottomBFrequency`, `VacuumSV`, `VacuumPV`, `ConductivityPV`, `PumpFlowPV`, `ResistivityPV`, `PhPV`, `Quality`, `ActualTime`, `CreatedOn`) VALUES "
-                                  + "(@ReferenceId,@StationNo,@StationDesc,@SequenceRecipe,@SubRecipe,@MinimumTime,@MaximumTime,@EffectiveTime,@TemperatureSV, @TemperaturePV, @USonicSideAPowerSV,@USonicSideAPowerPV, @USonicSideAFrequency, @USonicSideBPowerSV, @USonicSideBPowerPV, @USonicSideBFrequency, @USonicBottomAPowerSV,@USonicBottomAPowerPV, @USonicBottomAFrequency, @USonicBottomBPowerSV, @USonicBottomBPowerPV, @USonicBottomBFrequency, @VacuumSV,@VacuumPV, @ConductivityPV, @PumpFlowPV, @ResistivityPV, @PhPV, @Quality, @ActualTime, @CreatedOn); SELECT LAST_INSERT_ID();";
+                    string Query = @"INSERT INTO `plcvariable` (`ReferenceId`,`TimeIn`,`RefLoadingNo`, `StationNo`,`Description`, `SequenceRecipe`, `SubRecipe`, `MinimumTime`, `MaximumTime`, `EffectiveTime`, `TemperatureSV`, `TemperaturePV`, `USonicSideAPowerSV`, `USonicSideAPowerPV`, `USonicSideAFrequency`, `USonicSideBPowerSV`, `USonicSideBPowerPV`, `USonicSideBFrequency`, `USonicBottomAPowerSV`, `USonicBottomAPowerPV`, `USonicBottomAFrequency`, `USonicBottomBPowerSV`, `USonicBottomBPowerPV`, `USonicBottomBFrequency`, `VacuumSV`, `VacuumPV`, `ConductivityPV`, `PumpFlowPV`, `ResistivityPV`, `PhPV`, `Quality`, `ActualTime`, `CreatedOn`) VALUES "
+                                  + "(@ReferenceId,@TimeIn,@RefLoadingNo,@StationNo,@StationDesc,@SequenceRecipe,@SubRecipe,@MinimumTime,@MaximumTime,@EffectiveTime,@TemperatureSV, @TemperaturePV, @USonicSideAPowerSV,@USonicSideAPowerPV, @USonicSideAFrequency, @USonicSideBPowerSV, @USonicSideBPowerPV, @USonicSideBFrequency, @USonicBottomAPowerSV,@USonicBottomAPowerPV, @USonicBottomAFrequency, @USonicBottomBPowerSV, @USonicBottomBPowerPV, @USonicBottomBFrequency, @VacuumSV,@VacuumPV, @ConductivityPV, @PumpFlowPV, @ResistivityPV, @PhPV, @Quality, @ActualTime, @CreatedOn); SELECT LAST_INSERT_ID();";
 
                     //DynamicParameters parameters = new DynamicParameters();
                     //parameters.Add("@ReferenceId", _clsPlcVariable.ReferenceID, DbType.Int64, ParameterDirection.Input);
@@ -346,6 +346,8 @@ namespace JKS_Report.Function.DB
                     {
                         ReferenceId = _clsPlcVariable.ReferenceID,
                         StationNo = _clsPlcVariable.StationNo,
+                        TimeIn = _clsPlcVariable.TimeIn,
+                        RefLoadingNo = _clsPlcVariable.RefLoadingNo,
                         Description = _clsPlcVariable.Description,
                         SequenceRecipe = _clsPlcVariable.SequenceRecipe,
                         SubRecipe = _clsPlcVariable.SubRecipe,

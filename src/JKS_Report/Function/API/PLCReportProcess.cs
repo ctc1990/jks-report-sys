@@ -37,16 +37,23 @@ namespace JKS_Report.Function.API
             try
             {
                 InitiateMapping();
-                //File.AppendAllText(@"C:\Users\Administrator\Desktop\jks report\debug.txt", DateTime.Now.ToString() + "mapping done" + Environment.NewLine);
+                //File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + "mapping done" + Environment.NewLine);
                 adsClient = new TcAdsClient();
                 adsDataStream = new AdsStream(mapping.Count());
                 hconnect = new int[mapping.Count()];
                 bitMap = new bool[mapping.Count()];
 
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + adsDataStream.ToString() + Environment.NewLine);
+
                 binRead = new BinaryReader(adsDataStream, Encoding.ASCII);
                 adsClient.Connect(AMSNetID,Convert.ToInt32(AMSPort));
                 for (int i = 0; i < mapping.Count(); i++)
+                {                   
                     hconnect[i] = adsClient.AddDeviceNotification(mapping[i].input, adsDataStream, i, 1, AdsTransMode.OnChange, 50, 0, null);
+                    //File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + hconnect[i].ToString() + Environment.NewLine);
+                }
+                    
+
 
                 adsClient.AdsNotification += new AdsNotificationEventHandler(StatusOnChange);
 
@@ -79,6 +86,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.bfbBarcodeActivate_Loading":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "bfbBarcodeActivate_Loading" + Environment.NewLine);
                                 _plcMainVariable = PLCMapping.PlcMainStationMapping(adsClient);
 
                                 if (_plcMainVariable != null)
@@ -156,7 +164,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb1_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
-                                
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb1_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("1", adsClient);
                                 
                                 if (_plStationVariable != null)
@@ -173,6 +181,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb2_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb2_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("2", adsClient);
 
                                 if (_plStationVariable != null)
@@ -189,6 +198,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb3_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb3_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("3", adsClient);
 
                                 if (_plStationVariable != null)
@@ -205,6 +215,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb4_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb4_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("4", adsClient);
 
                                 if (_plStationVariable != null)
@@ -221,6 +232,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb5_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb5_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("5", adsClient);
 
                                 if (_plStationVariable != null)
@@ -237,6 +249,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb6_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb6_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("6", adsClient);
 
                                 if (_plStationVariable != null)
@@ -253,6 +266,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb7_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb7_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("7", adsClient);
 
                                 if (_plStationVariable != null)
@@ -269,6 +283,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb8_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb8_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("8", adsClient);
 
                                 if (_plStationVariable != null)
@@ -285,6 +300,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb9_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb9_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("9", adsClient);
 
                                 if (_plStationVariable != null)
@@ -301,6 +317,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb10_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb10_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("10", adsClient);
 
                                 if (_plStationVariable != null)
@@ -317,6 +334,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb11_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb11_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("11", adsClient);
 
                                 if (_plStationVariable != null)
@@ -333,6 +351,7 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb12_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb12_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("12", adsClient);
 
                                 if (_plStationVariable != null)
@@ -346,9 +365,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;                        
-                        case "ARbUldBasketInActivate[1]":
+                        case "Log_BasketTimeInOut.ARbUldBasketInActivate[1]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARbUldBasketInActivate1" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime(adsClient, 1);
 
                                 if(clsStnUpdate != null)
@@ -357,9 +377,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARbUldBasketInActivate[2]":
+                        case "Log_BasketTimeInOut.ARbUldBasketInActivate[2]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARbUldBasketInActivate2" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime(adsClient, 2);
 
                                 if (clsStnUpdate != null)
@@ -368,9 +389,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;                       
-                        case "ARtsStnBasketOutTime[1]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[1]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[1]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 1);
 
                                 if(clsStnUpdate != null)
@@ -384,9 +406,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[2]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[2]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[2]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 2);
 
                                 if (clsStnUpdate != null)
@@ -400,9 +423,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[3]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[3]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[3]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 3);
 
                                 if (clsStnUpdate != null)
@@ -416,9 +440,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[4]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[4]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[4]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 4);
 
                                 if (clsStnUpdate != null)
@@ -432,9 +457,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[5]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[5]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[5]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 5);
 
                                 if (clsStnUpdate != null)
@@ -448,9 +474,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[6]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[6]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[6]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 6);
 
                                 if (clsStnUpdate != null)
@@ -464,9 +491,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[7]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[7]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[7]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 7);
 
                                 if (clsStnUpdate != null)
@@ -480,9 +508,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[8]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[8]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[8]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 8);
 
                                 if (clsStnUpdate != null)
@@ -496,9 +525,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[9]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[9]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[9]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 9);
 
                                 if (clsStnUpdate != null)
@@ -512,9 +542,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[10]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[10]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 10);
 
                                 if (clsStnUpdate != null)
@@ -528,9 +559,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[11]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[11]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 11);
 
                                 if (clsStnUpdate != null)
@@ -544,9 +576,10 @@ namespace JKS_Report.Function.API
                                 }
                             }
                             break;
-                        case "ARtsStnBasketOutTime[12]":
+                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]":
                             if (binRead.ReadBoolean())
                             {
+                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[12]" + Environment.NewLine);
                                 clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 12);
 
                                 if (clsStnUpdate != null)
@@ -634,22 +667,22 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "Stn11Trigger", input = "Log_Configuration.fb11_dataLog.bActivate" });
             mapping.Add(new Mapping { description = "Stn12Trigger", input = "Log_Configuration.fb12_dataLog.bActivate" });
 
-            mapping.Add(new Mapping { description = "RecipeTimeInTrigger", input = "ARbLdBasketInActivate[1]" });
-            mapping.Add(new Mapping { description = "RecipeTimeOutTrigger1", input = "ARbUldBasketInActivate[1]" });
-            mapping.Add(new Mapping { description = "RecipeTimeOutTrigger2", input = "ARbUldBasketInActivate[2]" });            
+            //mapping.Add(new Mapping { description = "RecipeTimeInTrigger", input = "Log_BasketTimeInOut.ARbLdBasketInActivate[1]" });
+            mapping.Add(new Mapping { description = "RecipeTimeOutTrigger1", input = "Log_BasketTimeInOut.ARbUldBasketInActivate[1]" });
+            mapping.Add(new Mapping { description = "RecipeTimeOutTrigger2", input = "Log_BasketTimeInOut.ARbUldBasketInActivate[2]" });
 
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger1", input = "ARtsStnBasketOutTime[1]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger2", input = "ARtsStnBasketOutTime[2]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger3", input = "ARtsStnBasketOutTime[3]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger4", input = "ARtsStnBasketOutTime[4]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger5", input = "ARtsStnBasketOutTime[5]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger6", input = "ARtsStnBasketOutTime[6]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger7", input = "ARtsStnBasketOutTime[7]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger8", input = "ARtsStnBasketOutTime[8]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger9", input = "ARtsStnBasketOutTime[9]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger10", input = "ARtsStnBasketOutTime[10]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "ARtsStnBasketOutTime[11]" });
-            mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "ARtsStnBasketOutTime[12]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger1", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[1]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger2", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[2]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger3", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[3]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger4", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[4]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger5", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[5]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger6", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[6]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger7", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[7]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger8", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[8]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger9", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[9]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger10", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]" });
+            mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]" });
         }
         public static void PlcDispose()
         {
