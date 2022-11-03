@@ -253,13 +253,12 @@ namespace JKS_Report.Function.DB
         {
             int result = 0;
             try
-            {
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Insert " + _clsMainVariable.TimeIn + Environment.NewLine);
+            {               
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     string Query = @"INSERT IGNORE INTO mainvariable "
                                 + "(`UserName`,`TimeIn`, `LoadingId`, `UnloadingId`, `BasketNumber`, `RecipeNo`, `RecipeDescription`, `LoadingNo`, `ProgrammeBarcode`, `ProgrammeNumber`, `BasketBarcode`, `LoadingTotalNo`, `CreatedOn`) VALUES "
-                                + "(@Username, @LoadingId,@UnloadingId,@BasketNumber, @RecipeNo,@RecipeDescription ,@LoadingNo,@ProgrammeBarcode,@ProgrammeNumber,@BasketBarcode, @LoadingTotalNo, @CreatedOn); SELECT LAST_INSERT_ID();";
+                                + "(@Username,@TimeIn ,@LoadingId,@UnloadingId,@BasketNumber, @RecipeNo,@RecipeDescription ,@LoadingNo,@ProgrammeBarcode,@ProgrammeNumber,@BasketBarcode, @LoadingTotalNo, @CreatedOn); SELECT LAST_INSERT_ID();";
 
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@Username", _clsMainVariable.Username, DbType.String, ParameterDirection.Input);
@@ -290,8 +289,7 @@ namespace JKS_Report.Function.DB
         {
             int result = 0;
             try
-            {
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Station Insert " + _clsPlcVariable.StationNo + Environment.NewLine);
+            {              
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     //string Query = @"INSERT IGNORE INTO plcvariable "
@@ -306,7 +304,7 @@ namespace JKS_Report.Function.DB
                     //            + "@VacuumPV, @ConductivityPV, @PumpFlowPV, @ResistivityPV, @PhPV, @Quality, @ActualTime, @CreatedOn); SELECT LAST_INSERT_ID();";
 
                     string Query = @"INSERT INTO `plcvariable` (`ReferenceId`,`TimeIn`,`RefLoadingNo`, `StationNo`,`Description`, `SequenceRecipe`, `SubRecipe`, `MinimumTime`, `MaximumTime`, `EffectiveTime`, `TemperatureSV`, `TemperaturePV`, `USonicSideAPowerSV`, `USonicSideAPowerPV`, `USonicSideAFrequency`, `USonicSideBPowerSV`, `USonicSideBPowerPV`, `USonicSideBFrequency`, `USonicBottomAPowerSV`, `USonicBottomAPowerPV`, `USonicBottomAFrequency`, `USonicBottomBPowerSV`, `USonicBottomBPowerPV`, `USonicBottomBFrequency`, `VacuumSV`, `VacuumPV`, `ConductivityPV`, `PumpFlowPV`, `ResistivityPV`, `PhPV`, `Quality`, `ActualTime`, `CreatedOn`) VALUES "
-                                  + "(@ReferenceId,@TimeIn,@RefLoadingNo,@StationNo,@StationDesc,@SequenceRecipe,@SubRecipe,@MinimumTime,@MaximumTime,@EffectiveTime,@TemperatureSV, @TemperaturePV, @USonicSideAPowerSV,@USonicSideAPowerPV, @USonicSideAFrequency, @USonicSideBPowerSV, @USonicSideBPowerPV, @USonicSideBFrequency, @USonicBottomAPowerSV,@USonicBottomAPowerPV, @USonicBottomAFrequency, @USonicBottomBPowerSV, @USonicBottomBPowerPV, @USonicBottomBFrequency, @VacuumSV,@VacuumPV, @ConductivityPV, @PumpFlowPV, @ResistivityPV, @PhPV, @Quality, @ActualTime, @CreatedOn); SELECT LAST_INSERT_ID();";
+                                  + "(@ReferenceId,@TimeIn,@RefLoadingNo,@StationNo,@Description,@SequenceRecipe,@SubRecipe,@MinimumTime,@MaximumTime,@EffectiveTime,@TemperatureSV, @TemperaturePV, @USonicSideAPowerSV,@USonicSideAPowerPV, @USonicSideAFrequency, @USonicSideBPowerSV, @USonicSideBPowerPV, @USonicSideBFrequency, @USonicBottomAPowerSV,@USonicBottomAPowerPV, @USonicBottomAFrequency, @USonicBottomBPowerSV, @USonicBottomBPowerPV, @USonicBottomBFrequency, @VacuumSV,@VacuumPV, @ConductivityPV, @PumpFlowPV, @ResistivityPV, @PhPV, @Quality, @ActualTime, @CreatedOn); SELECT LAST_INSERT_ID();";
 
                     //DynamicParameters parameters = new DynamicParameters();
                     //parameters.Add("@ReferenceId", _clsPlcVariable.ReferenceID, DbType.Int64, ParameterDirection.Input);

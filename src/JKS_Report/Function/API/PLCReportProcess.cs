@@ -42,9 +42,7 @@ namespace JKS_Report.Function.API
                 adsDataStream = new AdsStream(mapping.Count());
                 hconnect = new int[mapping.Count()];
                 bitMap = new bool[mapping.Count()];
-
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + adsDataStream.ToString() + Environment.NewLine);
-
+              
                 binRead = new BinaryReader(adsDataStream, Encoding.ASCII);
                 adsClient.Connect(AMSNetID,Convert.ToInt32(AMSPort));
                 for (int i = 0; i < mapping.Count(); i++)
@@ -85,8 +83,7 @@ namespace JKS_Report.Function.API
                     {
                         case "Log_Configuration.bfbBarcodeActivate_Loading":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "bfbBarcodeActivate_Loading" + Environment.NewLine);
+                            {                               
                                 _plcMainVariable = PLCMapping.PlcMainStationMapping(adsClient);
 
                                 if (_plcMainVariable != null)
@@ -105,7 +102,7 @@ namespace JKS_Report.Function.API
                                     _clsMainVariable.BasketBarcode = string.IsNullOrEmpty(_plcMainVariable.BasketBarcode) ? "" : _plcMainVariable.BasketBarcode;
                                     _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
                                     _clsMainVariable.CreatedOn = DateTime.Now;
-                                    _clsMainVariable.TimeIn = DateTime.Now.ToShortTimeString();
+                                    _clsMainVariable.TimeIn = DateTime.Now.ToString("HH:mm");
 
                                     _clsPartMemory = new clsPartMemory();
                                     _clsPartMemory.PalletA = string.IsNullOrEmpty(_plcMainVariable.PalletA) ? "" : _plcMainVariable.PalletA;
@@ -163,8 +160,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb1_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb1_dataLog" + Environment.NewLine);
+                            {                              
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("1", adsClient);
                                 
                                 if (_plStationVariable != null)
@@ -180,8 +176,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb2_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb2_dataLog" + Environment.NewLine);
+                            {                              
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("2", adsClient);
 
                                 if (_plStationVariable != null)
@@ -197,8 +192,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb3_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb3_dataLog" + Environment.NewLine);
+                            {                             
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("3", adsClient);
 
                                 if (_plStationVariable != null)
@@ -214,8 +208,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb4_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb4_dataLog" + Environment.NewLine);
+                            {                                
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("4", adsClient);
 
                                 if (_plStationVariable != null)
@@ -231,8 +224,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb5_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb5_dataLog" + Environment.NewLine);
+                            {                               
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("5", adsClient);
 
                                 if (_plStationVariable != null)
@@ -248,8 +240,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb6_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb6_dataLog" + Environment.NewLine);
+                            {                             
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("6", adsClient);
 
                                 if (_plStationVariable != null)
@@ -265,8 +256,7 @@ namespace JKS_Report.Function.API
                             break;
                         case "Log_Configuration.fb7_dataLog.bActivate":
                             if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb7_dataLog" + Environment.NewLine);
+                            {                              
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("7", adsClient);
 
                                 if (_plStationVariable != null)
@@ -283,7 +273,6 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb8_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb8_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("8", adsClient);
 
                                 if (_plStationVariable != null)
@@ -300,7 +289,6 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb9_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb9_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("9", adsClient);
 
                                 if (_plStationVariable != null)
@@ -317,7 +305,6 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb10_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb10_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("10", adsClient);
 
                                 if (_plStationVariable != null)
@@ -334,7 +321,6 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb11_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb11_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("11", adsClient);
 
                                 if (_plStationVariable != null)
@@ -351,7 +337,6 @@ namespace JKS_Report.Function.API
                         case "Log_Configuration.fb12_dataLog.bActivate":
                             if (binRead.ReadBoolean())
                             {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "fb12_dataLog" + Environment.NewLine);
                                 _plStationVariable = PLCMapping.PlcSingleStationMapping("12", adsClient);
 
                                 if (_plStationVariable != null)
@@ -369,7 +354,7 @@ namespace JKS_Report.Function.API
                             if (binRead.ReadBoolean())
                             {
                                 File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARbUldBasketInActivate1" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime(adsClient, 1);
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime1(adsClient);
 
                                 if(clsStnUpdate != null)
                                 {
@@ -381,7 +366,7 @@ namespace JKS_Report.Function.API
                             if (binRead.ReadBoolean())
                             {
                                 File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARbUldBasketInActivate2" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime(adsClient, 2);
+                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime2(adsClient);
 
                                 if (clsStnUpdate != null)
                                 {

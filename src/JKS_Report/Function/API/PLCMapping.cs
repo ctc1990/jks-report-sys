@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Configuration;
 using TwinCAT.Ads;
@@ -140,10 +141,11 @@ namespace JKS_Report.Function.API
                     //_plcStationVariable.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].iBasketNo")).ToString();
                     _plcStationVariable.RecipeNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].iProductRecipeNo")).ToString();
 
-                    _plcStationVariable.TimeIn = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARtsStnBasketInTime[" + stationNo + "]")).ToString();
+                    Regex regex = new Regex("([0-9]+(:[0-9]+)+)", RegexOptions.IgnoreCase);
+                    Match match = regex.Match(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARsStnBasketInTime[" + stationNo + "]")).ToString());
+                    _plcStationVariable.TimeIn = match.Value;
+                  
                     _plcStationVariable.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARsStnBasketNoBuffer[" + stationNo + "]")).ToString();
-
-
                     _plcStationVariable.SequenceRecipe = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSHmiStationDisplayInfo[" + stationNo + "].sStationSequenceRecipeDescription")).ToString();
                     _plcStationVariable.SubRecipe = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSHmiStationDisplayInfo[" + stationNo + "].sStationSubDescription")).ToString();
                     _plcStationVariable.MinimumTime = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARDsStnMinMaxEffTimeDisplay[" + stationNo + "].iMinTime")).ToString();
@@ -298,20 +300,21 @@ namespace JKS_Report.Function.API
             return result;
         }
 
-        public static clsStnUpdate PlcMasterReadLdEndTime(TcAdsClient adsClient)
+        public static clsStnUpdate PlcMasterReadUldEndTime1(TcAdsClient adsClient)
         {
             clsStnUpdate result = null;
             try
             {
                 clsStnUpdate _clsStnUpdate = new clsStnUpdate();
-                _clsStnUpdate.RecipeNo = ".ARiLdBasketProductRecipeBuffer[1]";
-                _clsStnUpdate.LoadingNo = ".ARsLdBasketNoBuffer[1]";
-                _clsStnUpdate.TimeOut = ".ARbUldBasketInActivate[1]" ;
-
+                _clsStnUpdate.RecipeNo = ".ARiUldBasketProductRecipeBuffer[1]";
+                _clsStnUpdate.LoadingNo = ".ARsUldBasketNoBuffer[1]";
+                
                 result = new clsStnUpdate();
                 result.RecipeNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.RecipeNo)).ToString();
                 result.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.LoadingNo)).ToString();
-                result.TimeOut = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.TimeOut)).ToString();
+                Regex regex = new Regex("([0-9]+(:[0-9]+)+)", RegexOptions.IgnoreCase);
+                Match match = regex.Match(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARsUldBasketInTime[1]")).ToString());
+                result.TimeOut = match.Value;
 
             }
             catch
@@ -321,20 +324,22 @@ namespace JKS_Report.Function.API
             return result;
         }
 
-        public static clsStnUpdate PlcMasterReadUldEndTime(TcAdsClient adsClient, int stationNo)
+        public static clsStnUpdate PlcMasterReadUldEndTime2(TcAdsClient adsClient)
         {
             clsStnUpdate result = null;
             try
             {
                 clsStnUpdate _clsStnUpdate = new clsStnUpdate();
-                _clsStnUpdate.RecipeNo = ".ARiUldBasketProductRecipeBuffer[" + stationNo + "]";
-                _clsStnUpdate.LoadingNo = ".ARsUldBasketNoBuffer[" + stationNo + "]";
-                _clsStnUpdate.TimeOut = ".ARtsUldBasketInTime[" + stationNo + "]";
-
+                _clsStnUpdate.RecipeNo = ".ARiUldBasketProductRecipeBuffer[2]";
+                _clsStnUpdate.LoadingNo = ".ARsUldBasketNoBuffer[2]";
+                
                 result = new clsStnUpdate();
                 result.RecipeNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.RecipeNo)).ToString();
                 result.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.LoadingNo)).ToString();
-                result.TimeOut = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.TimeOut)).ToString();
+                
+                Regex regex = new Regex("([0-9]+(:[0-9]+)+)", RegexOptions.IgnoreCase);
+                Match match = regex.Match(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARsUldBasketInTime[2]")).ToString());
+                result.TimeOut = match.Value;
 
             }
             catch
@@ -352,13 +357,14 @@ namespace JKS_Report.Function.API
                 clsStnUpdate _clsStnUpdate = new clsStnUpdate();
                 _clsStnUpdate.RecipeNo = ".ARiStnBasketProductRecipeBuffer[" + stationNo + "]";
                 _clsStnUpdate.LoadingNo = ".ARsStnBasketNoBuffer[" + stationNo + "]";
-                _clsStnUpdate.TimeOut = ".ARtsStnBasketOutTime[" + stationNo + "]";
-
+              
                 result = new clsStnUpdate();
                 result.RecipeNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.RecipeNo)).ToString();
                 result.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.LoadingNo)).ToString();
-                result.TimeOut = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(_clsStnUpdate.TimeOut)).ToString();
 
+                Regex regex = new Regex("([0-9]+(:[0-9]+)+)", RegexOptions.IgnoreCase);
+                Match match = regex.Match(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARsStnBasketOutTime[" + stationNo + "]")).ToString());
+                result.TimeOut = match.Value;
             }
             catch
             {
