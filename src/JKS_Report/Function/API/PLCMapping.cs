@@ -136,6 +136,7 @@ namespace JKS_Report.Function.API
             {
                 if (!string.IsNullOrEmpty(stationNo))
                 {
+                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station mapping start" + Environment.NewLine);
                     _plcStationVariable.StationNo = Convert.ToInt32(stationNo);
                     _plcStationVariable.StationWithDesc = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".a" + stationNo + "_datalink[2].svalue")).ToString();
                     //_plcStationVariable.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].iBasketNo")).ToString();
@@ -173,6 +174,8 @@ namespace JKS_Report.Function.API
                     _plcStationVariable.PhPV = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARrStnPhPV[" + stationNo + "]")).ToString();
                     _plcStationVariable.Quality = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].sProductQuality")).ToString();
                     _plcStationVariable.ActualTime = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARDsStnSeqProcessCtrl[" + stationNo + "].Out_iCurrentProcessTime")).ToString();
+
+                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station mapping end" + Environment.NewLine);
                 }
             }
             catch
@@ -189,10 +192,11 @@ namespace JKS_Report.Function.API
 
             try
             {
-                
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station mapping start" + Environment.NewLine);
+
                 plcMainVariableDeclaration.Username = ".sUserName";
                 plcMainVariableDeclaration.LoadingId = "1";
-                plcMainVariableDeclaration.UnloadingId = ".AR2sDSCv_LdConfirmBasketInfo[1, 5].iUnloadingID";
+                plcMainVariableDeclaration.UnloadingId = ".AR2sDSCv_LdConfirmBasketInfo[1,5].iUnloadingID";
                 plcMainVariableDeclaration.RecipeNo = ".DSV2_BufferBasketInfo.iProductRecipeNo";
                 plcMainVariableDeclaration.RecipeDescription = ".DSV2_BufferBasketInfo.sProgramDescription";
                 plcMainVariableDeclaration.LoadingNo = ".DSV2_BufferBasketInfo.sReservedInt";
@@ -291,6 +295,8 @@ namespace JKS_Report.Function.API
                 result.PalletD_WO6 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO6)).ToString();
                 result.PalletD_WO7 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO7)).ToString();
                 result.PalletD_WO8 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO8)).ToString();
+
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station mapping End" + Environment.NewLine);
             }
             catch
             {

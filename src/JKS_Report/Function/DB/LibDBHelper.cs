@@ -256,6 +256,9 @@ namespace JKS_Report.Function.DB
             {               
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
+                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station insert start" + Environment.NewLine);
+
+
                     string Query = @"INSERT IGNORE INTO mainvariable "
                                 + "(`UserName`,`TimeIn`, `LoadingId`, `UnloadingId`, `BasketNumber`, `RecipeNo`, `RecipeDescription`, `LoadingNo`, `ProgrammeBarcode`, `ProgrammeNumber`, `BasketBarcode`, `LoadingTotalNo`, `CreatedOn`) VALUES "
                                 + "(@Username,@TimeIn ,@LoadingId,@UnloadingId,@BasketNumber, @RecipeNo,@RecipeDescription ,@LoadingNo,@ProgrammeBarcode,@ProgrammeNumber,@BasketBarcode, @LoadingTotalNo, @CreatedOn); SELECT LAST_INSERT_ID();";
@@ -276,6 +279,8 @@ namespace JKS_Report.Function.DB
                     parameters.Add("@CreatedOn", _clsMainVariable.CreatedOn, DbType.DateTime, ParameterDirection.Input);
 
                     result = connection.Query<int>(Query, parameters).FirstOrDefault();
+
+                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station insert end" + Environment.NewLine);
                 }
             }
             catch
@@ -292,6 +297,7 @@ namespace JKS_Report.Function.DB
             {              
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
+                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station insert start" + Environment.NewLine);
                     //string Query = @"INSERT IGNORE INTO plcvariable "
                     //            + "(ReferenceId, StationNo, SequenceRecipe, SubRecipe, MinimumTime, MaximumTime, EffectiveTime,"
                     //            + " TemperatureSV, TemperaturePV, USonicSideAPowerSV, USonicSideAPowerPV, USonicSideAFrequency, USonicSideBPowerSV, USonicSideBPowerPV, "
@@ -377,6 +383,7 @@ namespace JKS_Report.Function.DB
                         CreatedOn = _clsPlcVariable.CreatedOn
                     }).FirstOrDefault();
 
+                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station insert end" + Environment.NewLine);
                 }
             }
             catch (Exception ex)
