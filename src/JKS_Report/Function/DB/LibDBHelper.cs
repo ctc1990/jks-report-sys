@@ -49,7 +49,7 @@ namespace JKS_Report.Function.DB
         {
             DataBaseConnection.Open();
         }
-        public static string CreatePdfFile(string sourceName, string Info, string lang,bool dateReport)
+        public static string CreatePdfFile(string sourceName, string Info, string lang, bool dateReport)
         {
             bool writeLogHaveError = false;
 
@@ -66,15 +66,15 @@ namespace JKS_Report.Function.DB
 
             if (!dateReport)
             {
-                 latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                 todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + "_" + lang + ".pdf";
+                latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
+                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + "_" + lang + ".pdf";
             }
             else
             {
-                latestFileName = sourceName + "_" + Info ;
-                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info  + "_" + lang + ".pdf";
+                latestFileName = sourceName + "_" + Info;
+                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + lang + ".pdf";
             }
-            
+
 
             if (!Directory.Exists(LogPath))
             {
@@ -156,17 +156,17 @@ namespace JKS_Report.Function.DB
 
             int fileNameIdentityNum = 1;
 
-            if(!dateReport)
+            if (!dateReport)
             {
-                 latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                 todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + ".csv";
+                latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
+                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + ".csv";
             }
             else
             {
                 latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info  + ".csv";
+                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + ".csv";
             }
-            
+
 
             if (!Directory.Exists(LogPath))
             {
@@ -253,7 +253,7 @@ namespace JKS_Report.Function.DB
         {
             int result = 0;
             try
-            {               
+            {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station insert start" + Environment.NewLine);
@@ -289,12 +289,12 @@ namespace JKS_Report.Function.DB
             }
 
             return result;
-        }       
+        }
         public static int SingleStationRecord(clsStationVariable _clsPlcVariable)
         {
             int result = 0;
             try
-            {              
+            {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station insert start" + Environment.NewLine);
@@ -471,7 +471,7 @@ namespace JKS_Report.Function.DB
 
                     string Query = @"UPDATE systemsetting SET Machine = @Machine, Name = @Name, Software = @Software, ModifiedOn = @ModifiedOn WHERE ReferenceKey = 'PDFHeaderSetting';";
 
-                    DynamicParameters parameters = new DynamicParameters();                   
+                    DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@Machine", _clsSystemSetting.Machine, DbType.String, ParameterDirection.Input);
                     parameters.Add("@Name", _clsSystemSetting.Name, DbType.String, ParameterDirection.Input);
                     parameters.Add("@Software", _clsSystemSetting.Software, DbType.String, ParameterDirection.Input);
@@ -578,25 +578,25 @@ namespace JKS_Report.Function.DB
 
             return result;
         }
-        public static int UpdateMainTimeRecord(string RecipeNo, string LoadingNo ,string TimeOut)
+        public static int UpdateMainTimeRecord(string RecipeNo, string LoadingNo, string TimeOut)
         {
             int result = 0;
             try
             {
-                if(!string.IsNullOrEmpty(RecipeNo))
+                if (!string.IsNullOrEmpty(RecipeNo))
                 {
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                     {
-                        
-                            string query = @"UPDATE mainvariable SET TimeOut = @TimeOut WHERE RecipeNo = @RecipeNo AND LoadingNo = @LoadingNo ";
 
-                            DynamicParameters parameters = new DynamicParameters();
-                            parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
-                            parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
-                            parameters.Add("@LoadingNo", LoadingNo, DbType.Int16, ParameterDirection.Input);
+                        string query = @"UPDATE mainvariable SET TimeOut = @TimeOut WHERE RecipeNo = @RecipeNo AND LoadingNo = @LoadingNo ";
 
-                            result = connection.Query<int>(query, parameters).FirstOrDefault();
-                        
+                        DynamicParameters parameters = new DynamicParameters();
+                        parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
+                        parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
+                        parameters.Add("@LoadingNo", LoadingNo, DbType.Int16, ParameterDirection.Input);
+
+                        result = connection.Query<int>(query, parameters).FirstOrDefault();
+
                     }
                 }
             }
@@ -606,24 +606,24 @@ namespace JKS_Report.Function.DB
             }
             return result;
         }
-        public static int UpdateStationTimeRecord(int StationNo, string LoadingNo,  string TimeOut)
+        public static int UpdateStationTimeRecord(int StationNo, string LoadingNo, string TimeOut)
         {
             int result = 0;
             try
-            {                
+            {
                 if (!string.IsNullOrEmpty(LoadingNo))
                 {
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
-                    {                      
+                    {
                         string query = @"UPDATE plcvariable SET TimeOut = @TimeOut WHERE StationNo = @StationNo AND RefLoadingNo = @LoadingNo ";
 
-                            DynamicParameters parameters = new DynamicParameters();
-                            parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
-                            parameters.Add("@StationNo", StationNo, DbType.Int16, ParameterDirection.Input);
-                            parameters.Add("@LoadingNo", LoadingNo, DbType.String, ParameterDirection.Input);
+                        DynamicParameters parameters = new DynamicParameters();
+                        parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
+                        parameters.Add("@StationNo", StationNo, DbType.Int16, ParameterDirection.Input);
+                        parameters.Add("@LoadingNo", LoadingNo, DbType.String, ParameterDirection.Input);
 
-                            result = connection.Query<int>(query, parameters).FirstOrDefault();
-                        
+                        result = connection.Query<int>(query, parameters).FirstOrDefault();
+
                     }
                 }
             }
@@ -633,18 +633,20 @@ namespace JKS_Report.Function.DB
             }
             return result;
         }
-        public static clsStationVariable GetStationRecord(int StationNo, string LoadngNo)
+        public static clsStationVariable GetStationRecord(int StationNo, string LoadingNo)
         {
             clsStationVariable result = null;
             try
             {
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + StationNo.ToString() + " " + LoadingNo + Environment.NewLine);
+
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@StationNo", StationNo, DbType.Int16, ParameterDirection.Input);
-                    parameters.Add("@RefLoadngNo", LoadngNo, DbType.String, ParameterDirection.Input);
+                    parameters.Add("@RefLoadingNo", LoadingNo, DbType.String, ParameterDirection.Input);
 
-                    string query = @"SELECT * FROM plcvariable WHERE RefLoadingNo = @LoadingNo AND StationNo = @StationNo";
+                    string query = @"SELECT * FROM plcvariable WHERE RefLoadingNo = @RefLoadingNo AND StationNo = @StationNo";
                     result = connection.Query<clsStationVariable>(query).FirstOrDefault();
                 }
             }
