@@ -381,11 +381,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(1, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(1, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -397,11 +397,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(2, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(2, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -413,11 +413,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(3, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(3, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -429,11 +429,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(4, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(4, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -445,11 +445,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(5, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(5, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -461,11 +461,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(6, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(6, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -477,11 +477,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(7, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(7, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -493,11 +493,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(8, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(8, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -509,11 +509,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(9, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(9, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -525,11 +525,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(10, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(10, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -541,11 +541,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(11, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(11, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }
@@ -557,11 +557,11 @@ namespace JKS_Report.Function.API
 
                                     if (clsStnUpdate != null)
                                     {
-                                        clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(12, clsStnUpdate.LoadingNo);
 
                                         if (record != null)
                                         {
-                                            int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                            int done = LibDBHelper.UpdateStationTimeRecord(12, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                         }
                                     }
                                 }

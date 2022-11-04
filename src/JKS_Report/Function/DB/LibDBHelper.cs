@@ -606,22 +606,21 @@ namespace JKS_Report.Function.DB
             }
             return result;
         }
-        public static int UpdateStationTimeRecord(string RecipeNo, string LoadingNo,  string TimeOut)
+        public static int UpdateStationTimeRecord(int StationNo, string LoadingNo,  string TimeOut)
         {
             int result = 0;
             try
-            {
-                if (!string.IsNullOrEmpty(RecipeNo))
+            {                
+                if (!string.IsNullOrEmpty(LoadingNo))
                 {
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
-                    {
-                       
-                            string query = @"UPDATE plcvariable SET TimeIn = @TimeIn WHERE ReferenceId = @RecipeNo AND RefLoadingNo = @LoadingNo ";
+                    {                      
+                        string query = @"UPDATE plcvariable SET TimeOut = @TimeOut WHERE StationNo = @StationNo AND RefLoadingNo = @LoadingNo ";
 
                             DynamicParameters parameters = new DynamicParameters();
                             parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
-                            parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
-                            parameters.Add("@LoadingNo", LoadingNo, DbType.Int16, ParameterDirection.Input);
+                            parameters.Add("@StationNo", StationNo, DbType.Int16, ParameterDirection.Input);
+                            parameters.Add("@LoadingNo", LoadingNo, DbType.String, ParameterDirection.Input);
 
                             result = connection.Query<int>(query, parameters).FirstOrDefault();
                         
@@ -634,7 +633,7 @@ namespace JKS_Report.Function.DB
             }
             return result;
         }
-        public static clsStationVariable GetStationRecord(string RecipeNo, string LoadngNo)
+        public static clsStationVariable GetStationRecord(int StationNo, string LoadngNo)
         {
             clsStationVariable result = null;
             try
@@ -642,10 +641,10 @@ namespace JKS_Report.Function.DB
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     DynamicParameters parameters = new DynamicParameters();
-                    parameters.Add("@RecipeNo", RecipeNo, DbType.Int16, ParameterDirection.Input);
-                    parameters.Add("@LoadngNo", LoadngNo, DbType.Int64, ParameterDirection.Input);
+                    parameters.Add("@StationNo", StationNo, DbType.Int16, ParameterDirection.Input);
+                    parameters.Add("@RefLoadngNo", LoadngNo, DbType.String, ParameterDirection.Input);
 
-                    string query = @"SELECT * FROM plcvariable WHERE ReferenceId = @RecipeNo AND RefLoadingNo = @LoadingNo";
+                    string query = @"SELECT * FROM plcvariable WHERE RefLoadingNo = @LoadingNo AND StationNo = @StationNo";
                     result = connection.Query<clsStationVariable>(query).FirstOrDefault();
                 }
             }
