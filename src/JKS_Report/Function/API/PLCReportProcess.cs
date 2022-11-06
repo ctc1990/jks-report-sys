@@ -83,6 +83,7 @@ namespace JKS_Report.Function.API
                     {
                         switch (mapping[i].input)
                         {
+                            #region normal log
                             case "Log_Configuration.bfbBarcodeActivate_Loading":
                                 if (binRead.ReadBoolean())
                                 {
@@ -352,6 +353,9 @@ namespace JKS_Report.Function.API
                                     }
                                 }
                                 break;
+                            #endregion
+
+                            #region log end time
                             case "Log_BasketTimeInOut.ARbUldBasketInActivate[1]":
                                 if (binRead.ReadBoolean())
                                 {                                   
@@ -566,6 +570,21 @@ namespace JKS_Report.Function.API
                                     }
                                 }
                                 break;
+                            #endregion
+
+                            case "ReportTriggerBit":
+                                if (binRead.ReadBoolean())
+                                {
+                                    clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReportAutoMapping(adsClient);
+                                    clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
+
+                                    if (_clsReportAutoGenerate != null && _clsSystemSetting != null)
+                                    {
+                                        SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo,_clsReportAutoGenerate.Language, _clsSystemSetting);
+                                        SingleReport.CSVGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language);
+                                    }
+                                }
+                                break;
                             default:
                                 binRead.ReadBoolean();
                                 break;
@@ -662,14 +681,23 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger10", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]" });
+
+            mapping.Add(new Mapping { description = "ReportTriggerBit", input = "ReportTriggerBit" });
         }
         public static void PlcDispose()
         {
-            if (adsClient != null)
+            try
             {
-                adsClient.Disconnect();
-                adsClient.Dispose();
-                MessageBoxResult result = MessageBox.Show("ADS Disconnected and Dispose.", "Success");
+                if (adsClient != null)
+                {
+                    adsClient.Disconnect();
+                    adsClient.Dispose();
+                    MessageBoxResult result = MessageBox.Show("ADS Disconnected and Dispose.", "Success");
+                }
+            }
+            catch
+            {
+                throw;
             }
         }
     }

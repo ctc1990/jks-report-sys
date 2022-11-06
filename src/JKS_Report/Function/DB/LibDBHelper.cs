@@ -49,7 +49,7 @@ namespace JKS_Report.Function.DB
         {
             DataBaseConnection.Open();
         }
-        public static string CreatePdfFile(string sourceName, string Info, string lang, bool dateReport)
+        public static string CreatePdfFile(string sourceName, string lang, bool dateReport)
         {
             bool writeLogHaveError = false;
 
@@ -57,23 +57,18 @@ namespace JKS_Report.Function.DB
 
             clsSystemSetting filepath = LibDBHelper.getFilePath();
 
-            string LogPath = filepath.Name;
+            string LogPath = filepath.Name + "\\PDF";
 
-            string logFileDateStr = DateTime.Now.ToString("yyyyMMdd");
+            string logFileDateStr = DateTime.Now.ToString("yyyyMMdd'-'HHmm");
 
             int fileNameIdentityNum = 1;
             string latestFileName = "", todayLogFilePath = "";
 
             if (!dateReport)
             {
-                latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + "_" + lang + ".pdf";
-            }
-            else
-            {
-                latestFileName = sourceName + "_" + Info;
-                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + lang + ".pdf";
-            }
+                latestFileName = logFileDateStr + "_" +sourceName ;
+                todayLogFilePath = LogPath + "\\" + latestFileName  + ".pdf";
+            }           
 
 
             if (!Directory.Exists(LogPath))
@@ -142,29 +137,24 @@ namespace JKS_Report.Function.DB
 
             return todayLogFilePath;
         }
-        public static string CreateCsvFile(string sourceName, string Info, bool dateReport)
+        public static string CreateCsvFile(string sourceName, string lang, bool dateReport)
         {
             bool writeLogHaveError = false;
             //string LogPath = WebConfigurationManager.AppSettings.Get("CSVFilePath");
 
             clsSystemSetting filepath = LibDBHelper.getFilePath();
 
-            string LogPath = filepath.Name;
+            string LogPath = filepath.Name + "\\CSV";
 
-            string logFileDateStr = DateTime.Now.ToString("yyyyMMdd");
-            string latestFileName = "", todayLogFilePath = "";
+            string logFileDateStr = DateTime.Now.ToString("yyyyMMdd'-'HHmm");
 
             int fileNameIdentityNum = 1;
+            string latestFileName = "", todayLogFilePath = "";
 
             if (!dateReport)
             {
-                latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + "_" + logFileDateStr + ".csv";
-            }
-            else
-            {
-                latestFileName = sourceName + "_" + Info + "_" + logFileDateStr;
-                todayLogFilePath = LogPath + "\\" + sourceName + "_" + Info + ".csv";
+                latestFileName = logFileDateStr + "_" + sourceName;
+                todayLogFilePath = LogPath + "\\" + latestFileName  + ".csv";
             }
 
 
@@ -647,7 +637,7 @@ namespace JKS_Report.Function.DB
                     parameters.Add("@RefLoadingNo", LoadingNo, DbType.String, ParameterDirection.Input);
 
                     string query = @"SELECT * FROM plcvariable WHERE RefLoadingNo = @RefLoadingNo AND StationNo = @StationNo";
-                    result = connection.Query<clsStationVariable>(query).FirstOrDefault();
+                    result = connection.Query<clsStationVariable>(query, parameters).FirstOrDefault();
                 }
             }
             catch

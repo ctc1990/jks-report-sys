@@ -221,6 +221,8 @@ namespace JKS_Report.Model
         public string RecipeDescription { get; set; }
         public string LoadingNo { get; set; }
         public string NumberOfBasket { get; set; }
+
+        public string BasketBarcode { get; set; }
     }
     public class clsPdfPlcVariable
     {
@@ -385,4 +387,32 @@ namespace JKS_Report.Model
         public string LoadingNo { get; set; }
         public string TimeOut { get; set; }
     }
+
+    public class clsReportAutoGenerate
+    {
+        public int LoadingNo { get; set; }
+        public string Language { get; set; }
+    }
+
+    public class clsCsvMainVariable1
+    {
+        public string Machine { get; set; }
+        public string Name { get; set; }
+        public string Software { get; set; }
+        public string Date { get; set; }
+    }
+
+    public class clsCsvMainVariable2
+    {
+        public string LoadNumber { get; set; }
+        public string TimeStart { get; set; }
+        public string TimeEnd { get; set; }
+        public string RecipeNumber { get; set; }
+        public string RecipeDescription { get; set; }
+        public string LoadingId { get; set; }
+        public string UnloadingId { get; set; }
+        public string Operator { get; set; }
+        public string BasketNumber { get; set; }
+    }
+
 }

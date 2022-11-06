@@ -60,7 +60,7 @@ namespace JKS_Report.Function.API
                     clsPdfMainVariable.TimeStart = _clsMainVariable.TimeIn;
                     clsPdfMainVariable.TimeEnd = _clsMainVariable.TimeOut;
                     clsPdfMainVariable.NumberOfBasket = _clsMainVariable.NumberOfBasket.ToString();
-
+                    clsPdfMainVariable.BasketBarcode = _clsMainVariable.BasketBarcode.ToString();
 
                     clsPdfFullDataVariable.clsPdfMainVariable = clsPdfMainVariable;
 
@@ -165,10 +165,11 @@ namespace JKS_Report.Function.API
                 throw;
             }                      
         }
-        public static void CSVGenerate(int LoadingNo)
+        public static void CSVGenerate(int LoadingNo,string Lang)
         {
             plcCsvVariable _plcCsvVariable = new plcCsvVariable();
-            DataTable dtMain;
+            DataTable dtMain1;
+            DataTable dtMain2;
             DataTable dtPLC;
             DataTable dtPalletA;
             DataTable dtPalletB;
@@ -199,21 +200,22 @@ namespace JKS_Report.Function.API
                     parameters.Add("@ReferenceId", _clsMainVariable.Id, DbType.Int32, ParameterDirection.Input);
                     clsPartMemory _clsPartMemory = connection.Query<clsPartMemory>(Query, parameters).FirstOrDefault();
 
+                    clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
+                    clsCsvMainVariable1 _clsCsvMainVariable1 = new clsCsvMainVariable1();
+                    _clsCsvMainVariable1.Machine = _clsSystemSetting.Machine;
+                    _clsCsvMainVariable1.Name = _clsSystemSetting.Name;
+                    _clsCsvMainVariable1.Software = _clsSystemSetting.Software;
+                    _clsCsvMainVariable1.Date = DateTime.Now.ToString("yyyyMMdd'-'HH:mm");
 
-                    clsCsvMainVariableSingle clsCSVMainVariable = new clsCsvMainVariableSingle();
-                    clsCSVMainVariable.Username = _clsMainVariable.Username;
-                    clsCSVMainVariable.LoadingId = _clsMainVariable.LoadingId.ToString();
-                    clsCSVMainVariable.UnloadingId = _clsMainVariable.UnloadingId.ToString();
-                    clsCSVMainVariable.RecipeNo = _clsMainVariable.RecipeNo.ToString();
-                    clsCSVMainVariable.RecipeDescription = _clsMainVariable.RecipeDescription.ToString();
-                    clsCSVMainVariable.LoadingNo = _clsMainVariable.LoadingNo.ToString();
-                    clsCSVMainVariable.LoadingTotalNo = _clsMainVariable.LoadingTotalNo.ToString();
-                    clsCSVMainVariable.ProgrammeBarcode = _clsMainVariable.ProgrammeBarcode;
-                    clsCSVMainVariable.ProgrammeNo = _clsMainVariable.ProgrammeNumber;
-                    clsCSVMainVariable.BasketBarcode = _clsMainVariable.BasketBarcode.ToString();
-                    clsCSVMainVariable.BasketNumber = _clsMainVariable.BasketNumber.ToString();
-                    clsCSVMainVariable.CreatedOn = _clsMainVariable.CreatedOn.ToShortDateString();
-
+                    clsCsvMainVariable2 _clsCsvMainVariable2 = new clsCsvMainVariable2();
+                    _clsCsvMainVariable2.Operator = _clsMainVariable.Username;
+                    _clsCsvMainVariable2.BasketNumber = _clsMainVariable.BasketNumber;
+                    _clsCsvMainVariable2.LoadingId = _clsMainVariable.LoadingId.ToString();
+                    _clsCsvMainVariable2.UnloadingId = _clsMainVariable.UnloadingId.ToString();                 
+                    _clsCsvMainVariable2.RecipeDescription = _clsMainVariable.RecipeDescription.ToString();
+                    _clsCsvMainVariable2.TimeStart = _clsMainVariable.TimeIn;
+                    _clsCsvMainVariable2.TimeEnd = _clsMainVariable.TimeOut;
+                    
                     if (!string.IsNullOrEmpty(_clsPartMemory.PalletA))
                     {
                         _plcCsvVariable.csvBarcodePalletA = new clsPdfBarcodePalletA();
@@ -266,43 +268,39 @@ namespace JKS_Report.Function.API
                         _plcCsvVariable.csvBarcodePalletD.PalletD_WO8 = _clsPartMemory.PalletD_WO8;
                     }
 
+                    List<clsPdfPlcVariable> clsPdfPlcVariableList = new List<clsPdfPlcVariable>();
 
-                    _plcCsvVariable.csvMainVariable = clsCSVMainVariable;
-
-                    _plcCsvVariable.csvStationVariable = new List<clsCsvStation>();
                     foreach (var item in _clsPlcVariableList)
                     {
-                        clsCsvStation clsCsvStation = new clsCsvStation();
-                        clsCsvStation.CreatedOn = item.CreatedOn.ToShortTimeString();
-                        clsCsvStation.StationNo = item.StationNo;
-                        clsCsvStation.MinimumTime = item.MinimumTime;
-                        clsCsvStation.MaximumTime = item.MaximumTime;
-                        clsCsvStation.EffectiveTime = item.EffectiveTime;
-                        clsCsvStation.TemperatureSV = item.TemperatureSV;
-                        clsCsvStation.TemperaturePV = item.TemperaturePV;
-                        clsCsvStation.USonicSideAPowerSV = item.USonicSideAPowerSV;
-                        clsCsvStation.USonicSideAPowerPV = item.USonicSideAPowerPV;
-                        clsCsvStation.USonicSideBPowerSV = item.USonicSideBPowerSV;
-                        clsCsvStation.USonicSideBPowerPV = item.USonicSideBPowerPV;
-                        clsCsvStation.USonicBottomAPowerSV = item.USonicBottomAPowerSV;
-                        clsCsvStation.USonicBottomAPowerPV = item.USonicBottomAPowerPV;
-                        clsCsvStation.USonicBottomBPowerSV = item.USonicBottomBPowerSV;
-                        clsCsvStation.USonicBottomBPowerPV = item.USonicBottomBPowerPV;
-                        clsCsvStation.ConductivityPV = item.ConductivityPV;
-                        clsCsvStation.Quality = item.Quality;
-
-                        _plcCsvVariable.csvStationVariable.Add(clsCsvStation);
+                        clsPdfPlcVariable _clsPdfPlcVariable = new clsPdfPlcVariable();
+                        _clsPdfPlcVariable.TimeIn = item.TimeIn;
+                        _clsPdfPlcVariable.TimeOut = item.TimeOut;
+                        _clsPdfPlcVariable.StationNo = item.Description.ToString();
+                        _clsPdfPlcVariable.Quality = item.Quality;
+                        _clsPdfPlcVariable.SequenceRecipe = item.SequenceRecipe.ToString();
+                        _clsPdfPlcVariable.EffectiveTime = item.EffectiveTime.ToString();
+                        _clsPdfPlcVariable.TemperaturePV = item.TemperaturePV.ToString();
+                        _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
+                        _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
+                        _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
+                        _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString();
+                        clsPdfPlcVariableList.Add(_clsPdfPlcVariable);
                     }
 
 
-                    if (_plcCsvVariable.csvMainVariable != null)
+                    if (_clsCsvMainVariable1 != null)
                     {
-                        dtMain = CSVFunction.CreateSingleMainDataTable(_plcCsvVariable.csvMainVariable, "Record");
-                        DtList.Add(dtMain);
+                        dtMain1 = CSVFunction.CreateSingleMainDataTable(_plcCsvVariable.csvMainVariable, "Record", "JKS_Report.Text.CsvColumn_NameMainGE1.txt");
+                        DtList.Add(dtMain1);
                     }
-                    if (_plcCsvVariable.csvStationVariable.Count > 0)
+                    if (_clsCsvMainVariable2 != null)
                     {
-                        dtPLC = CSVFunction.CreateSinglePLCDataTable(_plcCsvVariable.csvStationVariable, "Record", "JKS_Report.Text.CsvColumnSymbol_Main_Single.txt");
+                        dtMain2 = CSVFunction.CreateSingleMainDataTable(_plcCsvVariable.csvMainVariable, "Record", "JKS_Report.Text.CsvColumn_NameMainGE2.txt");
+                        DtList.Add(dtMain2);
+                    }
+                    if (clsPdfPlcVariableList.Count > 0)
+                    {
+                        dtPLC = CSVFunction.CreateSinglePLCDataTable(clsPdfPlcVariableList, "Record", "JKS_Report.Text.CsvColumn_NameMainGE3.txt");
                         DtList.Add(dtPLC);
                     }
                     if (_plcCsvVariable.csvBarcodePalletA != null)
@@ -347,7 +345,7 @@ namespace JKS_Report.Function.API
 
                     if (DtList.Count > 0)
                     {
-                        CSVFunction.ToCSV(DtList, LoadingNo.ToString(),false);
+                        CSVFunction.ToCSV(DtList, _clsMainVariable.BasketBarcode, Lang, false);
                     }
                 }
             }
@@ -448,5 +446,6 @@ namespace JKS_Report.Function.API
 
             return result;
         }
+
     }
 }

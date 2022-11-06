@@ -44,7 +44,7 @@ namespace JKS_Report.Function.Tools
       
         public static void ExportToPdf(string Info, clsPdfFullDataVariable clsPdfFullDataVariable, clsLang clslang, clsSystemSetting clsSystemSetting, string language)
         {
-            string filePath = LibDBHelper.CreatePdfFile("Amsonic", Info, language,false);
+            string filePath = LibDBHelper.CreatePdfFile(clsPdfFullDataVariable.clsPdfMainVariable.BasketBarcode, language,false);
             Document document = new Document();
             //document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
             PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Append, FileAccess.Write));

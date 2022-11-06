@@ -122,9 +122,9 @@ namespace JKS_Report.Function.Tools
 
             return dataTable;
         }
-        public static void ToCSV(List<DataTable> dtDataTable, string Info,bool dateReport)
+        public static void ToCSV(List<DataTable> dtDataTable, string FileName, string Lang,bool dateReport)
         {
-            string filePath = LibDBHelper.CreateCsvFile("Amsonic", Info, dateReport);
+            string filePath = LibDBHelper.CreateCsvFile(FileName, Lang, dateReport);
 
             using (StreamWriter sw = new StreamWriter(filePath, true))
             {

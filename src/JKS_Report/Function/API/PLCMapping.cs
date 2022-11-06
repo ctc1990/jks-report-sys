@@ -296,7 +296,7 @@ namespace JKS_Report.Function.API
                 result.PalletD_WO7 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO7)).ToString();
                 result.PalletD_WO8 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO8)).ToString();
 
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station mapping End" + Environment.NewLine);
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station mapping End" + Environment.NewLine);
             }
             catch
             {
@@ -377,6 +377,25 @@ namespace JKS_Report.Function.API
                 throw;
             }
             return result;
+        }
+
+        public static clsReportAutoGenerate PlcReportAutoMapping(TcAdsClient adsClient)
+        {
+            clsReportAutoGenerate clsReportAutoGenerate = null;
+
+            try
+            {
+                string sLoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[1,1].sReservedInt";
+                
+                clsReportAutoGenerate = new clsReportAutoGenerate();
+                clsReportAutoGenerate.LoadingNo = (int)adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sLoadingNo));
+                clsReportAutoGenerate.Language = Globals.Language;
+            }
+            catch
+            {
+                throw;
+            }
+            return clsReportAutoGenerate;
         }
     }
 }

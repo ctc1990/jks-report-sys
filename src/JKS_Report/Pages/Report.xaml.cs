@@ -31,90 +31,8 @@ namespace JKS_Report.Pages
         {
             InitializeComponent();
         }       
-        private void PDF_Click(object sender, RoutedEventArgs e)
-        {
-            int LoadingNo = 0;
-            clsSystemSetting PreUpdate = new clsSystemSetting();
-
-            try
-            {
-                if (!string.IsNullOrEmpty(combo1.Text) && !string.IsNullOrEmpty(Title.Text) 
-                    && !string.IsNullOrEmpty(Machine.Text) && !string.IsNullOrEmpty(Software.Text))
-                {
-                    PreUpdate.Machine = Machine.Text;
-                    PreUpdate.Name = Title.Text;
-                    PreUpdate.Software = Software.Text;
-                    PreUpdate.ModifiedOn = DateTime.Now;
-
-                    if (!string.IsNullOrEmpty(LoadingNumber.Text))
-                    {
-                        int.TryParse(LoadingNumber.Text, out LoadingNo);
-                        if (LoadingNo > 0)
-                        {
-                            SingleReport.PDFGenerate(LoadingNo, combo1.Text, PreUpdate);
-                            MessageBoxResult result = System.Windows.MessageBox.Show("Single PDF Report Success Generated.", "Success");
-                        }
-                        else
-                        {
-                            MessageBoxResult result = System.Windows.MessageBox.Show("Interger value only.", "Error");
-                        }
-                    }
-
-                    if (DateFrom.SelectedDate.HasValue && DateTo.SelectedDate.HasValue)
-                    {
-                        DateReport.PDFGenerate(DateFrom.SelectedDate.Value, DateTo.SelectedDate.Value, combo1.Text, PreUpdate);
-                        MessageBoxResult result = System.Windows.MessageBox.Show("Date Range PDF Report Success Generated.", "Success");
-                    }
-                }
-                else
-                {
-                    MessageBoxResult result = System.Windows.MessageBox.Show("Please Fill in the value.", "Error");
-                }
+        
               
-            }
-            catch(Exception ex)
-            {
-                ErrorHelper.LogError("Report_PDF", ex.Source, ex.InnerException.Message, ex.StackTrace);
-            }
-                                   
-        }
-        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
-        }
-
-        private void CSV_Click(object sender, RoutedEventArgs e)
-        {
-            int LoadingNo = 0;
-
-            try
-            {
-                if (!string.IsNullOrEmpty(LoadingNumber.Text))
-                {
-                    int.TryParse(LoadingNumber.Text, out LoadingNo);
-                    if (LoadingNo > 0)
-                    {
-                        SingleReport.CSVGenerate(LoadingNo);
-                        MessageBoxResult result = System.Windows.MessageBox.Show("CSV Success Generated.", "Success");
-                    }
-                    else
-                    {
-                        MessageBoxResult result = System.Windows.MessageBox.Show("Interger value only.", "Error");
-                    }
-                }
-
-                if (DateFrom.SelectedDate.HasValue && DateTo.SelectedDate.HasValue)
-                {
-                    DateReport.CSVGenerate(DateFrom.SelectedDate.Value, DateTo.SelectedDate.Value);
-                    MessageBoxResult result = System.Windows.MessageBox.Show("CSV Success Generated.", "Success");
-                }
-            }
-            catch(Exception ex)
-            {
-                ErrorHelper.LogError("Report_CSV", ex.Source, ex.Message, ex.StackTrace);
-            }
-        }
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             clsSystemSetting record = new clsSystemSetting();
@@ -140,6 +58,11 @@ namespace JKS_Report.Pages
                     PreUpdate.Software = Software.Text;
                     PreUpdate.ModifiedOn = DateTime.Now;
                     RecordUpdate = LibDBHelper.UpdateSystemSetting(PreUpdate);
+
+                    if(RecordUpdate > 0)
+                    {
+                        System.Windows.MessageBox.Show("Saved Successful.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
             }
         }
@@ -200,6 +123,7 @@ namespace JKS_Report.Pages
                 Software.Text = _clsSystemSetting.Software;
                 Title.Text = _clsSystemSetting.Name;
                 SavePath.Text = _clsFilePath.Name;
+                Globals.Language = combo1.Text;
             }
             catch (Exception ex)
             {

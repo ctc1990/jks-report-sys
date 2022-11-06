@@ -312,7 +312,7 @@ namespace JKS_Report.Function.API
 
                         string date1 = dateFrom.ToString("yyyyMMdd");
                         string date2 = dateTo.ToString("yyyyMMdd");
-                        CSVFunction.ToCSV(DtList, date1 + "_" + date2,true);
+                        
                     }
                 }
             }

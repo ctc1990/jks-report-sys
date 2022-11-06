@@ -31,7 +31,7 @@ namespace JKS_Report
         public static string currentRecipe = "";    // Current Selected Recipe
         public static string currentPart = "";      // Current Selected Part
 
-
+        public static string Language;
         public static void PAGE_REQUEST()
         {
             if (PAGE_URL != null)
