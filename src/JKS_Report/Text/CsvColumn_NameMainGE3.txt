@@ -1,1 +1,1 @@
-﻿Programmablauf,Körbe seit Badwechsel,Startzeit,Endzeit,Station,Resultat,Sequenz Rezept,Effektive Zeit [s],Temperatur [˚C],Leistung Ultraschall Unten [%],Leistung Ultraschall Seite [%],Leitwert [µS/cm],Filterdruck [bar]
+﻿Startzeit,Endzeit,Station,Resultat,Sequenz Rezept,Effektive Zeit [s],Temperatur [˚C],Leistung Ultraschall Unten [%],Leistung Ultraschall Seite [%],Leitwert [µS/cm],Filterdruck [bar]

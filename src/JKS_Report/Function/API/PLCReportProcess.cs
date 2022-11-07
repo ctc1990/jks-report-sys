@@ -572,9 +572,10 @@ namespace JKS_Report.Function.API
                                 break;
                             #endregion
 
-                            case "ReportTriggerBit":
+                            case "Log_Configuration.start":
                                 if (binRead.ReadBoolean())
                                 {
+                                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Auto Report Bit Start" + Environment.NewLine);
                                     clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReportAutoMapping(adsClient);
                                     clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
 
@@ -682,7 +683,7 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]" });
 
-            mapping.Add(new Mapping { description = "ReportTriggerBit", input = "ReportTriggerBit" });
+            mapping.Add(new Mapping { description = "ReportTriggerBit", input = "Log_Configuration.start" });
         }
         public static void PlcDispose()
         {

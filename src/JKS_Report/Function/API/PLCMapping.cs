@@ -202,7 +202,7 @@ namespace JKS_Report.Function.API
                 plcMainVariableDeclaration.LoadingNo = ".DSV2_BufferBasketInfo.sReservedInt";
                 plcMainVariableDeclaration.ProgrammeBarcode = ".DSV2_BufferBasketInfo.ARsBarcodeData[3]";
                 plcMainVariableDeclaration.ProgrammeNo = ".DSV2_BufferBasketInfo.iProductRecipeNo";
-                plcMainVariableDeclaration.BasketNumber = ".DSV2_BufferBasketInfo.sDisplayBasketNumber";
+                plcMainVariableDeclaration.BasketNumber = ".diTotalBasketQty_Customer";
                 plcMainVariableDeclaration.BasketBarcode = ".DSV2_BufferBasketInfo.iBaskeNo";
 
                 plcMainVariableDeclaration.PalletA = ".DSV2_BufferBasketInfo.PalletBarcodeData[1]";
@@ -385,10 +385,21 @@ namespace JKS_Report.Function.API
 
             try
             {
-                string sLoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[1,1].sReservedInt";
-                
+                int iLoadingNo = 0;
+                string sUld1LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[1,1].sReservedInt";
+                string sUld2LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[2,1].sReservedInt";
+
+                if(!string.IsNullOrEmpty(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString()))
+                {
+                    iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString());
+                }
+                else
+                {
+                    iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString());
+                }
+
                 clsReportAutoGenerate = new clsReportAutoGenerate();
-                clsReportAutoGenerate.LoadingNo = (int)adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sLoadingNo));
+                clsReportAutoGenerate.LoadingNo = iLoadingNo;
                 clsReportAutoGenerate.Language = Globals.Language;
             }
             catch

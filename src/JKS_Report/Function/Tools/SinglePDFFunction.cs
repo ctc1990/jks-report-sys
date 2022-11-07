@@ -280,7 +280,7 @@ namespace JKS_Report.Function.Tools
                 Border = iTextSharp.text.Rectangle.BOTTOM_BORDER,
                 FixedHeight = 16f
             };
-            PdfPCell tb2cell44 = new PdfPCell(new Phrase(clsPdfFullDataVariable.clsPdfMainVariable.LoadingNo, second))
+            PdfPCell tb2cell44 = new PdfPCell(new Phrase(clsPdfFullDataVariable.clsPdfMainVariable.BasketBarcode, second))
             {
                 Border = iTextSharp.text.Rectangle.RIGHT_BORDER | iTextSharp.text.Rectangle.BOTTOM_BORDER,
                 Colspan = 3,

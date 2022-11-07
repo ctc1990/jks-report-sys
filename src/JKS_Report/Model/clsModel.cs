@@ -394,6 +394,11 @@ namespace JKS_Report.Model
         public string Language { get; set; }
     }
 
+    public class clsCsvMainVariable
+    {
+        public clsCsvMainVariable1 _clsCsvMainVariable1 { get; set; }
+        public clsCsvMainVariable2 _clsCsvMainVariable2 { get; set; }
+    }
     public class clsCsvMainVariable1
     {
         public string Machine { get; set; }
@@ -413,6 +418,22 @@ namespace JKS_Report.Model
         public string UnloadingId { get; set; }
         public string Operator { get; set; }
         public string BasketNumber { get; set; }
+        public string NumberOfBasket { get; set; }
+    }
+
+    public class clsCsvPlcVariable
+    {        
+        public string TimeIn { get; set; }
+        public string TimeOut { get; set; }
+        public string StationDescription { get; set; }
+        public string EffectiveTime { get; set; }
+        public string TemperaturePV { get; set; }
+        public string ConductivityPV { get; set; }
+        public string Quality { get; set; }
+        public string SequenceRecipe { get; set; }
+        public string UltrasonicBottomAPower { get; set; }
+        public string UltrasonicSideAPower { get; set; }
+        public string PumpFlow { get; set; }
     }
 
 }

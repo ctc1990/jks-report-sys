@@ -1,1 +1,1 @@
-﻿Chargen Nummer,Start Zeit,End Zeit,Rezept Nummer,Rezept Name,Ladestation,Entladestation,Benutzer,Korbunmmer
+﻿Chargen Nummer,Start Zeit,End Zeit,Rezept Nummer,Rezept Name,Ladestation,Entladestation,Benutzer,Korbnummer,Koerbe seit Badwechsel
