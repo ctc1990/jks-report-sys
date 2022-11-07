@@ -66,7 +66,7 @@ namespace JKS_Report.Pages
                 }
             }
         }
-        private void Browse_Click(object sender, RoutedEventArgs e)
+        private void Browse1_Click(object sender, RoutedEventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
             {
@@ -80,13 +80,37 @@ namespace JKS_Report.Pages
                     {
                         clsSystemSetting clsSystemSetting = new clsSystemSetting();
                         clsSystemSetting.Name = files;
-                        int record = LibDBHelper.UpdateFilePath(clsSystemSetting);
+                        int record = LibDBHelper.UpdateFilePath(clsSystemSetting,"FilePath1");
 
                         SavePath.Text = files;
                     }
                 }
             }
         }
+        private void Browse2_Click(object sender, RoutedEventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    string files = fbd.SelectedPath;
+
+                    if (SavePath1.Text != files)
+                    {
+                        clsSystemSetting clsSystemSetting = new clsSystemSetting();
+                        clsSystemSetting.Name = files;
+                        int record = LibDBHelper.UpdateFilePath(clsSystemSetting, "FilePath2");
+
+                        SavePath1.Text = files;
+                    }
+                }
+            }
+        }
+
+
+
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
             try
@@ -118,11 +142,24 @@ namespace JKS_Report.Pages
             {
                 PLCReportProcess.ReportingStart();
                 clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
-                clsSystemSetting _clsFilePath = LibDBHelper.getFilePath();
+                List<clsSystemSetting> _clsFilePath = LibDBHelper.getFilePath();
+
+                if(_clsFilePath.Count > 0)
+                {                   
+                    if(!string.IsNullOrEmpty(_clsFilePath[0].Name))
+                    {
+                        SavePath.Text = _clsFilePath[0].Name;
+                    }
+                    if (!string.IsNullOrEmpty(_clsFilePath[1].Name))
+                    {
+                        SavePath1.Text = _clsFilePath[1].Name;
+                    }
+                }
+
                 Machine.Text = _clsSystemSetting.Machine;
                 Software.Text = _clsSystemSetting.Software;
                 Title.Text = _clsSystemSetting.Name;
-                SavePath.Text = _clsFilePath.Name;
+                
                 Globals.Language = combo1.Text;
             }
             catch (Exception ex)

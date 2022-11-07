@@ -122,9 +122,9 @@ namespace JKS_Report.Function.Tools
 
             return dataTable;
         }
-        public static void ToCSV(List<DataTable> dtDataTable, string FileName, string Lang,bool dateReport)
+        public static void ToCSV(List<DataTable> dtDataTable, string FileName, string Lang,bool dateReport,string FilePath)
         {
-            string filePath = LibDBHelper.CreateCsvFile(FileName, Lang, dateReport);
+            string filePath = LibDBHelper.CreateCsvFile(FileName, Lang, dateReport, FilePath);
 
             using (StreamWriter sw = new StreamWriter(filePath, true))
             {

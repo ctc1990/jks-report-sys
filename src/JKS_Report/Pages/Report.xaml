@@ -184,6 +184,16 @@
                 Margin="150,10,10,10"
                 />
 
+                <TextBox Name="SavePath1"
+                Height="30" 
+                Width="200"
+                         FontSize="14" FontFamily="Georgia"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="0" Grid.Row="5"
+                Margin="150,10,10,10"
+                />
+
                 <CheckBox
                 Content="Stop Logging Service"
                 Canvas.Left="10" Canvas.Top="10"  
@@ -215,14 +225,24 @@
                 Click="Save_Click"/>
 
                 <Button Name="btnBrowse"  
-                Content=" Saving Path "                               
+                Content=" Saving Path 1 "                               
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="16" FontFamily="{DynamicResource Proxima}"  
                 FontWeight="Normal" Grid.Column="0" Grid.Row="4"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="10,10,0,0"
                 IsEnabled="True" 
-                Click="Browse_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
+                Click="Browse1_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
+
+                <Button Name="btnBrowse1"  
+                Content=" Saving Path 2 "                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="16" FontFamily="{DynamicResource Proxima}"  
+                FontWeight="Normal" Grid.Column="0" Grid.Row="5"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="10,10,0,0"
+                IsEnabled="True" 
+                Click="Browse2_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
 
                 <Rectangle Fill="#FFFFFF" HorizontalAlignment="Center" Height="49" Margin="0,9,0,0"  VerticalAlignment="Top" Width="369" Grid.Row="5" Grid.Column="1"/>
             </Grid>

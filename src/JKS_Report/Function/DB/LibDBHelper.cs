@@ -49,15 +49,13 @@ namespace JKS_Report.Function.DB
         {
             DataBaseConnection.Open();
         }
-        public static string CreatePdfFile(string sourceName, string lang, bool dateReport)
+        public static string CreatePdfFile(string sourceName, string lang, bool dateReport,string filepath)
         {
             bool writeLogHaveError = false;
 
-            //string LogPath = WebConfigurationManager.AppSettings.Get("PDFFilePath");
+            //string LogPath = WebConfigurationManager.AppSettings.Get("PDFFilePath");           
 
-            clsSystemSetting filepath = LibDBHelper.getFilePath();
-
-            string LogPath = filepath.Name + "\\PDF";
+            string LogPath = filepath + "\\PDF";
 
             string logFileDateStr = DateTime.Now.ToString("yyyyMMdd'-'HHmm");
 
@@ -137,14 +135,12 @@ namespace JKS_Report.Function.DB
 
             return todayLogFilePath;
         }
-        public static string CreateCsvFile(string sourceName, string lang, bool dateReport)
+        public static string CreateCsvFile(string sourceName, string lang, bool dateReport, string FilePath)
         {
             bool writeLogHaveError = false;
-            //string LogPath = WebConfigurationManager.AppSettings.Get("CSVFilePath");
+            //string LogPath = WebConfigurationManager.AppSettings.Get("CSVFilePath");          
 
-            clsSystemSetting filepath = LibDBHelper.getFilePath();
-
-            string LogPath = filepath.Name + "\\CSV";
+            string LogPath = FilePath + "\\CSV";
 
             string logFileDateStr = DateTime.Now.ToString("yyyyMMdd'-'HHmm");
 
@@ -246,9 +242,7 @@ namespace JKS_Report.Function.DB
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station insert start" + Environment.NewLine);
-
-
+                    
                     string Query = @"INSERT IGNORE INTO mainvariable "
                                 + "(`UserName`,`TimeIn`, `LoadingId`, `UnloadingId`, `BasketNumber`, `RecipeNo`, `RecipeDescription`, `LoadingNo`, `ProgrammeBarcode`, `ProgrammeNumber`, `BasketBarcode`, `LoadingTotalNo`, `CreatedOn`) VALUES "
                                 + "(@Username,@TimeIn ,@LoadingId,@UnloadingId,@BasketNumber, @RecipeNo,@RecipeDescription ,@LoadingNo,@ProgrammeBarcode,@ProgrammeNumber,@BasketBarcode, @LoadingTotalNo, @CreatedOn); SELECT LAST_INSERT_ID();";
@@ -268,9 +262,7 @@ namespace JKS_Report.Function.DB
                     parameters.Add("@LoadingTotalNo", _clsMainVariable.LoadingTotalNo, DbType.Int32, ParameterDirection.Input);
                     parameters.Add("@CreatedOn", _clsMainVariable.CreatedOn, DbType.DateTime, ParameterDirection.Input);
 
-                    result = connection.Query<int>(Query, parameters).FirstOrDefault();
-
-                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station insert end" + Environment.NewLine);
+                    result = connection.Query<int>(Query, parameters).FirstOrDefault();                  
                 }
             }
             catch
@@ -286,8 +278,7 @@ namespace JKS_Report.Function.DB
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
-                {
-                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station insert start" + Environment.NewLine);
+                {                   
                     //string Query = @"INSERT IGNORE INTO plcvariable "
                     //            + "(ReferenceId, StationNo, SequenceRecipe, SubRecipe, MinimumTime, MaximumTime, EffectiveTime,"
                     //            + " TemperatureSV, TemperaturePV, USonicSideAPowerSV, USonicSideAPowerPV, USonicSideAFrequency, USonicSideBPowerSV, USonicSideBPowerPV, "
@@ -371,12 +362,10 @@ namespace JKS_Report.Function.DB
                         Quality = _clsPlcVariable.Quality,
                         ActualTime = _clsPlcVariable.ActualTime,
                         CreatedOn = _clsPlcVariable.CreatedOn
-                    }).FirstOrDefault();
-
-                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station insert end" + Environment.NewLine);
+                    }).FirstOrDefault();                 
                 }
             }
-            catch (Exception ex)
+            catch
             {
 
                 throw;
@@ -518,15 +507,15 @@ namespace JKS_Report.Function.DB
 
             return result;
         }
-        public static clsSystemSetting getFilePath()
+        public static List<clsSystemSetting> getFilePath()
         {
-            clsSystemSetting result = null;
+            List<clsSystemSetting> result = null;
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    string query = @"SELECT * FROM systemsetting WHERE ReferenceKey = 'FilePath'";
-                    result = connection.Query<clsSystemSetting>(query).FirstOrDefault();
+                    string query = @"SELECT * FROM systemsetting WHERE ReferenceKey LIKE '%FilePath%'";
+                    result = connection.Query<clsSystemSetting>(query).ToList();
                 }
             }
             catch
@@ -535,23 +524,23 @@ namespace JKS_Report.Function.DB
             }
 
             return result;
-        }
-        public static int UpdateFilePath(clsSystemSetting _clsSystemSetting)
+        }       
+        public static int UpdateFilePath(clsSystemSetting _clsSystemSetting, string recordName)
         {
             int result = 0;
             try
             {
-
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
 
-                    string Query = @"UPDATE systemsetting SET Machine = @Machine, Name = @Name, Software = @Software, ModifiedOn = @ModifiedOn WHERE ReferenceKey = 'FilePath';";
+                    string Query = @"UPDATE systemsetting SET Machine = @Machine, Name = @Name, Software = @Software, ModifiedOn = @ModifiedOn WHERE ReferenceKey = @recordname;";
 
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@Machine", _clsSystemSetting.Machine, DbType.String, ParameterDirection.Input);
                     parameters.Add("@Name", _clsSystemSetting.Name, DbType.String, ParameterDirection.Input);
                     parameters.Add("@Software", _clsSystemSetting.Software, DbType.String, ParameterDirection.Input);
                     parameters.Add("@ModifiedOn", DateTime.Now, DbType.DateTime, ParameterDirection.Input);
+                    parameters.Add("@recordname", recordName, DbType.String, ParameterDirection.Input);
 
                     int regardId = connection.Query<int>(Query, parameters).FirstOrDefault();
 
@@ -567,7 +556,7 @@ namespace JKS_Report.Function.DB
             }
 
             return result;
-        }
+        }      
         public static int UpdateMainTimeRecord(string RecipeNo, string LoadingNo, string TimeOut)
         {
             int result = 0;
@@ -628,8 +617,7 @@ namespace JKS_Report.Function.DB
             clsStationVariable result = null;
             try
             {
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + StationNo.ToString() + " " + LoadingNo + Environment.NewLine);
-
+               
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
                     DynamicParameters parameters = new DynamicParameters();

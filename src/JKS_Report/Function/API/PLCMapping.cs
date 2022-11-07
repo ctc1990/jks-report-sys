@@ -136,7 +136,7 @@ namespace JKS_Report.Function.API
             {
                 if (!string.IsNullOrEmpty(stationNo))
                 {
-                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station mapping start" + Environment.NewLine);
+                    
                     _plcStationVariable.StationNo = Convert.ToInt32(stationNo);
                     _plcStationVariable.StationWithDesc = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".a" + stationNo + "_datalink[2].svalue")).ToString();
                     //_plcStationVariable.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].iBasketNo")).ToString();
@@ -175,7 +175,7 @@ namespace JKS_Report.Function.API
                     _plcStationVariable.Quality = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].sProductQuality")).ToString();
                     _plcStationVariable.ActualTime = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARDsStnSeqProcessCtrl[" + stationNo + "].Out_iCurrentProcessTime")).ToString();
 
-                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Single Station mapping end" + Environment.NewLine);
+                    
                 }
             }
             catch
@@ -192,8 +192,7 @@ namespace JKS_Report.Function.API
 
             try
             {
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station mapping start" + Environment.NewLine);
-
+                
                 plcMainVariableDeclaration.Username = ".sUserName";
                 plcMainVariableDeclaration.LoadingId = "1";
                 plcMainVariableDeclaration.UnloadingId = ".AR2sDSCv_LdConfirmBasketInfo[1,5].iUnloadingID";
@@ -296,7 +295,7 @@ namespace JKS_Report.Function.API
                 result.PalletD_WO7 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO7)).ToString();
                 result.PalletD_WO8 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO8)).ToString();
 
-                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Main Station mapping End" + Environment.NewLine);
+                
             }
             catch
             {
@@ -329,7 +328,7 @@ namespace JKS_Report.Function.API
             }
             return result;
         }
-
+         
         public static clsStnUpdate PlcMasterReadUldEndTime2(TcAdsClient adsClient)
         {
             clsStnUpdate result = null;
@@ -393,7 +392,7 @@ namespace JKS_Report.Function.API
                 {
                     iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString());
                 }
-                else
+                if (!string.IsNullOrEmpty(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString()))
                 {
                     iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString());
                 }

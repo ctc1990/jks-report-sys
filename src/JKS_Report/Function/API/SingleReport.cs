@@ -79,7 +79,16 @@ namespace JKS_Report.Function.API
                         _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
                         _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
                         _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
-                        _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString().Substring(0,5);
+
+                        if(item.PumpFlowPV > 0)
+                        {
+                            _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString().Substring(0, 5);
+                        }
+                        else
+                        {
+                            _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString();
+                        }
+                        
                         clsPdfPlcVariableList.Add(_clsPdfPlcVariable);
                     }
 
@@ -157,8 +166,17 @@ namespace JKS_Report.Function.API
                     language = "GE";
                 }
 
-                SinglePDFFunction.ExportToPdf(LoadingNo.ToString(), clsPdfFullDataVariable, clsLang, clsSystemSetting, language);
-                
+                List<clsSystemSetting> clsSystemSettings = LibDBHelper.getFilePath();
+
+                if(clsSystemSettings.Count > 0)
+                {
+                    foreach(var item in clsSystemSettings)
+                    {
+                        SinglePDFFunction.ExportToPdf(LoadingNo.ToString(), clsPdfFullDataVariable, clsLang, clsSystemSetting, language, item.Name);
+                    }
+                    
+                }
+                              
             }
             catch
             {
@@ -211,6 +229,7 @@ namespace JKS_Report.Function.API
                     _clsCsvMainVariable1.Date = DateTime.Now.ToString("yyyyMMdd'-'HH:mm");
                     
                     clsCsvMainVariable2 _clsCsvMainVariable2 = new clsCsvMainVariable2();
+                    _clsCsvMainVariable2.LoadNumber = _clsMainVariable.LoadingNo.ToString();
                     _clsCsvMainVariable2.Operator = _clsMainVariable.Username;
                     _clsCsvMainVariable2.BasketNumber = _clsMainVariable.BasketBarcode;
                     _clsCsvMainVariable2.LoadingId = _clsMainVariable.LoadingId.ToString();
@@ -219,6 +238,7 @@ namespace JKS_Report.Function.API
                     _clsCsvMainVariable2.TimeStart = _clsMainVariable.TimeIn;
                     _clsCsvMainVariable2.TimeEnd = _clsMainVariable.TimeOut;
                     _clsCsvMainVariable2.NumberOfBasket = _clsMainVariable.BasketNumber.ToString();
+                    _clsCsvMainVariable2.RecipeNumber = _clsMainVariable.RecipeNo.ToString();
 
 
                     if (!string.IsNullOrEmpty(_clsPartMemory.PalletA))
@@ -279,7 +299,8 @@ namespace JKS_Report.Function.API
                     {
                         clsCsvPlcVariable _clsPdfPlcVariable = new clsCsvPlcVariable();
                         _clsPdfPlcVariable.TimeIn = item.TimeIn.ToString();
-                        _clsPdfPlcVariable.TimeOut = item.TimeOut.ToString();                      
+                        _clsPdfPlcVariable.TimeOut = item.TimeOut.ToString();
+                        _clsPdfPlcVariable.StationDescription = item.Description.ToString();
                         _clsPdfPlcVariable.Quality = item.Quality;
                         _clsPdfPlcVariable.SequenceRecipe = item.SequenceRecipe.ToString();
                         _clsPdfPlcVariable.EffectiveTime = item.EffectiveTime.ToString();
@@ -287,7 +308,16 @@ namespace JKS_Report.Function.API
                         _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
                         _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
                         _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
-                        _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString().Substring(0,5);
+
+                        if (item.PumpFlowPV > 0)
+                        {
+                            _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString().Substring(0, 5);
+                        }
+                        else
+                        {
+                            _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString();
+                        }
+                      
                         clsPdfPlcVariableList.Add(_clsPdfPlcVariable);
                     }
 
@@ -349,7 +379,15 @@ namespace JKS_Report.Function.API
 
                     if (DtList.Count > 0)
                     {
-                        CSVFunction.ToCSV(DtList, _clsMainVariable.BasketBarcode, Lang, false);
+                        List<clsSystemSetting> clsSystemSettings = LibDBHelper.getFilePath();
+
+                        if (clsSystemSettings.Count > 0)
+                        {
+                            foreach (var item in clsSystemSettings)
+                            {
+                                CSVFunction.ToCSV(DtList, _clsMainVariable.BasketBarcode, Lang, false, item.Name);
+                            }
+                        }
                     }
                 }
             }

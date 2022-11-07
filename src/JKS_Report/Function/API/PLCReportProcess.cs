@@ -105,7 +105,7 @@ namespace JKS_Report.Function.API
                                         _clsMainVariable.BasketBarcode = string.IsNullOrEmpty(_plcMainVariable.BasketBarcode) ? "" : _plcMainVariable.BasketBarcode;
                                         _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
                                         _clsMainVariable.CreatedOn = DateTime.Now;
-                                        _clsMainVariable.TimeIn = DateTime.Now.ToString("HH:mm");
+                                        _clsMainVariable.TimeIn = DateTime.Now.ToString("HH:mm:ss");
 
                                         _clsPartMemory = new clsPartMemory();
                                         _clsPartMemory.PalletA = string.IsNullOrEmpty(_plcMainVariable.PalletA) ? "" : _plcMainVariable.PalletA;
