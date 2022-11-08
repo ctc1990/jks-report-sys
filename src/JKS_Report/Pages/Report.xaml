@@ -241,7 +241,7 @@
                 FontWeight="Normal" Grid.Column="0" Grid.Row="5"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="10,10,0,0"
-                IsEnabled="True" 
+                IsEnabled ="False" 
                 Click="Browse2_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
 
                 <Rectangle Fill="#FFFFFF" HorizontalAlignment="Center" Height="49" Margin="0,9,0,0"  VerticalAlignment="Top" Width="369" Grid.Row="5" Grid.Column="1"/>

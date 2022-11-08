@@ -40,7 +40,7 @@ namespace JKS_Report.Pages
             bool RecordneedUpdate = false;
             int RecordUpdate = 0;
             clsSystemSetting PreUpdate = new clsSystemSetting();
-
+           
             if (record != null)
             {
                 string sTitle = string.IsNullOrEmpty(record.Name) ? "" : record.Name;
@@ -62,7 +62,7 @@ namespace JKS_Report.Pages
                     if(RecordUpdate > 0)
                     {
                         System.Windows.MessageBox.Show("Saved Successful.", "Configuration", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                    }                    
                 }
             }
         }

@@ -173,13 +173,15 @@ namespace JKS_Report.Function.API
                     foreach(var item in clsSystemSettings)
                     {
                         SinglePDFFunction.ExportToPdf(LoadingNo.ToString(), clsPdfFullDataVariable, clsLang, clsSystemSetting, language, item.Name);
+                        File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + item.Name + Environment.NewLine);
                     }
                     
                 }
                               
             }
-            catch
+            catch(Exception ex)
             {
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + ex.StackTrace + Environment.NewLine);
                 throw;
             }                      
         }
