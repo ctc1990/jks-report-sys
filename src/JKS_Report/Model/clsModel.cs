@@ -426,13 +426,13 @@ namespace JKS_Report.Model
         public string TimeIn { get; set; }
         public string TimeOut { get; set; }
         public string StationDescription { get; set; }
-        public string EffectiveTime { get; set; }
-        public string TemperaturePV { get; set; }
-        public string ConductivityPV { get; set; }
         public string Quality { get; set; }
         public string SequenceRecipe { get; set; }
+        public string EffectiveTime { get; set; }
+        public string TemperaturePV { get; set; }                  
         public string UltrasonicBottomAPower { get; set; }
         public string UltrasonicSideAPower { get; set; }
+        public string ConductivityPV { get; set; }
         public string PumpFlow { get; set; }
     }
 

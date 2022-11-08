@@ -459,7 +459,7 @@ namespace JKS_Report.Function.API
                     result.LoadingID = "Ladestation:";
                     result.UnLoadingID = "Entladestation:";
                     result.Operator = "Benutzer:";
-                    result.BasketNumber = "Korbunmmer:";
+                    result.BasketNumber = "Korbnummer:";
                     result.station = new Station();
                     result.station.tProgramSequence = "Programmablauf";
                     result.station.NumberOfBasket = "Körbe seit Badwechsel:";
