@@ -378,7 +378,7 @@ namespace JKS_Report.Function.API
             return result;
         }
 
-        public static clsReportAutoGenerate PlcReportAutoMapping(TcAdsClient adsClient)
+        public static clsReportAutoGenerate PlcReport1AutoMapping(TcAdsClient adsClient)
         {
             clsReportAutoGenerate clsReportAutoGenerate = null;
 
@@ -386,12 +386,34 @@ namespace JKS_Report.Function.API
             {
                 int iLoadingNo = 0;
                 string sUld1LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[1,1].sReservedInt";
-                string sUld2LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[2,1].sReservedInt";
+                
 
                 if(!string.IsNullOrEmpty(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString()))
                 {
                     iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString());
                 }
+                
+                clsReportAutoGenerate = new clsReportAutoGenerate();
+                clsReportAutoGenerate.LoadingNo = iLoadingNo;
+                clsReportAutoGenerate.Language = Globals.Language;
+            }
+            catch
+            {
+                throw;
+            }
+            return clsReportAutoGenerate;
+        }
+
+        public static clsReportAutoGenerate PlcReport2AutoMapping(TcAdsClient adsClient)
+        {
+            clsReportAutoGenerate clsReportAutoGenerate = null;
+
+            try
+            {
+                int iLoadingNo = 0;
+                
+                string sUld2LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[2,1].sReservedInt";
+               
                 if (!string.IsNullOrEmpty(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString()))
                 {
                     iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString());

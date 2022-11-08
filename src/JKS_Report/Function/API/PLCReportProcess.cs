@@ -572,16 +572,30 @@ namespace JKS_Report.Function.API
                                 break;
                             #endregion
 
-                            case "Log_Configuration.start":
+                            case "Log_Configuration.bUld1ReportEn":
                                 if (binRead.ReadBoolean())
                                 {
-                                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Auto Report Bit Start" + Environment.NewLine);
-                                    clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReportAutoMapping(adsClient);
+                                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Auto Report Bit 1 Start" + Environment.NewLine);
+                                    clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReport1AutoMapping(adsClient);
                                     clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
 
                                     if (_clsReportAutoGenerate != null && _clsSystemSetting != null)
                                     {
                                         SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo,_clsReportAutoGenerate.Language, _clsSystemSetting);
+                                        SingleReport.CSVGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language);
+                                    }
+                                }
+                                break;
+                            case "Log_Configuration.bUld2ReportEn":
+                                if (binRead.ReadBoolean())
+                                {
+                                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Auto Report Bit 2 Start" + Environment.NewLine);
+                                    clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReport2AutoMapping(adsClient);
+                                    clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
+
+                                    if (_clsReportAutoGenerate != null && _clsSystemSetting != null)
+                                    {
+                                        SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language, _clsSystemSetting);
                                         SingleReport.CSVGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language);
                                     }
                                 }
@@ -683,7 +697,8 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]" });
 
-            mapping.Add(new Mapping { description = "ReportTriggerBit", input = "Log_Configuration.start" });
+            mapping.Add(new Mapping { description = "ReportTriggerBit1", input = "Log_Configuration.bUld1ReportEN" });
+            mapping.Add(new Mapping { description = "ReportTriggerBit2", input = "Log_Configuration.bUld2ReportEN" });
         }
         public static void PlcDispose()
         {
