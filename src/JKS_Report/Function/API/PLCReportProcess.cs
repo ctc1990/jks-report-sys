@@ -697,8 +697,8 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]" });
 
-            mapping.Add(new Mapping { description = "ReportTriggerBit1", input = "Log_Configuration.bUld1ReportEN" });
-            mapping.Add(new Mapping { description = "ReportTriggerBit2", input = "Log_Configuration.bUld2ReportEN" });
+            mapping.Add(new Mapping { description = "ReportTriggerBit1", input = "Log_Configuration.bUld1ReportEn" });
+            mapping.Add(new Mapping { description = "ReportTriggerBit2", input = "Log_Configuration.bUld2ReportEn" });
         }
         public static void PlcDispose()
         {
