@@ -106,7 +106,7 @@ namespace JKS_Report.Function.Tools
                 BackgroundColor = Colour,
                 HorizontalAlignment = 2
             };
-            PdfPCell tb1cell14 = new PdfPCell(new Phrase("1 of 1", first))
+            PdfPCell tb1cell14 = new PdfPCell(new Phrase("1 von 1", first))
             {
                 Border = iTextSharp.text.Rectangle.TOP_BORDER | iTextSharp.text.Rectangle.RIGHT_BORDER,
                 FixedHeight = 15f,
