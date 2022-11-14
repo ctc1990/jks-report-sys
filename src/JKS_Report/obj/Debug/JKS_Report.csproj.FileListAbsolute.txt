@@ -1176,4 +1176,3 @@ Z:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\JKS_Report.csproj.CoreCompileI
 Z:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\JKS_Report.csproj.CopyComplete
 Z:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\JKS_Report.exe
 Z:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\JKS_Report.pdb
-D:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\JKS_Report.csproj.AssemblyReference.cache

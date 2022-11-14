@@ -78,8 +78,16 @@ namespace JKS_Report.Function.API
                         _clsPdfPlcVariable.TemperaturePV = item.TemperaturePV.ToString();
                         _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
                         _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
-                        _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
 
+                        if(item.ConductivityPV > 0)
+                        {
+                            _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString().Substring(0, 5);
+                        }
+                        else
+                        {
+                            _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
+                        }
+                        
                         if(item.PumpFlowPV > 0)
                         {
                             _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString().Substring(0, 5);
@@ -309,8 +317,16 @@ namespace JKS_Report.Function.API
                         _clsPdfPlcVariable.TemperaturePV = item.TemperaturePV.ToString();
                         _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
                         _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
-                        _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
 
+                        if(item.ConductivityPV > 0)
+                        {
+                            _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString().Substring(0, 5);
+                        }
+                        else
+                        {
+                            _clsPdfPlcVariable.ConductivityPV = item.ConductivityPV.ToString();
+                        }
+                        
                         if (item.PumpFlowPV > 0)
                         {
                             _clsPdfPlcVariable.PumpFlow = item.PumpFlowPV.ToString().Substring(0, 5);
