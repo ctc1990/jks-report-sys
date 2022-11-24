@@ -33,7 +33,7 @@ namespace JKS_Report.Function.API
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo";
+                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo ORDER BY CreatedOn DESC LIMIT 1";
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@LoadingNo", LoadingNo, DbType.Int32, ParameterDirection.Input);
                     clsMainVariable _clsMainVariable = connection.Query<clsMainVariable>(Query, parameters).FirstOrDefault();
@@ -213,7 +213,7 @@ namespace JKS_Report.Function.API
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo";
+                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo ORDER BY CreatedOn DESC LIMIT 1";
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@LoadingNo", LoadingNo, DbType.Int32, ParameterDirection.Input);
                     clsMainVariable _clsMainVariable = connection.Query<clsMainVariable>(Query, parameters).FirstOrDefault();

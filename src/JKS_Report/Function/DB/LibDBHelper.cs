@@ -496,7 +496,7 @@ namespace JKS_Report.Function.DB
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    string query = @"SELECT * FROM mainvariable where LoadingNo = @LoadingNo AND RecipeNo = @RecipeNo";
+                    string query = @"SELECT * FROM mainvariable where LoadingNo = @LoadingNo AND RecipeNo = @RecipeNo ORDER BY CreatedOn DESC LIMIT 1";
                     result = connection.Query<clsMainVariable>(query, new { LoadingNo = loadingNo, recipeNo = recipeNo }).SingleOrDefault();
                 }
             }
@@ -562,12 +562,13 @@ namespace JKS_Report.Function.DB
             int result = 0;
             try
             {
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "UpdateMainTime : " + RecipeNo + "," + LoadingNo + ","+ TimeOut + Environment.NewLine);
                 if (!string.IsNullOrEmpty(RecipeNo))
                 {
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                     {
 
-                        string query = @"UPDATE mainvariable SET TimeOut = @TimeOut WHERE RecipeNo = @RecipeNo AND LoadingNo = @LoadingNo ";
+                        string query = @"UPDATE mainvariable SET TimeOut = @TimeOut WHERE RecipeNo = @RecipeNo AND LoadingNo = @LoadingNo ORDER BY CreatedOn DESC limit 1";
 
                         DynamicParameters parameters = new DynamicParameters();
                         parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
@@ -594,7 +595,7 @@ namespace JKS_Report.Function.DB
                 {
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                     {
-                        string query = @"UPDATE plcvariable SET TimeOut = @TimeOut WHERE StationNo = @StationNo AND RefLoadingNo = @LoadingNo ";
+                        string query = @"UPDATE plcvariable SET TimeOut = @TimeOut WHERE StationNo = @StationNo AND RefLoadingNo = @LoadingNo ORDER BY CreatedOn DESC limit 1";
 
                         DynamicParameters parameters = new DynamicParameters();
                         parameters.Add("@TimeOut", TimeOut, DbType.String, ParameterDirection.Input);
@@ -624,7 +625,7 @@ namespace JKS_Report.Function.DB
                     parameters.Add("@StationNo", StationNo, DbType.Int16, ParameterDirection.Input);
                     parameters.Add("@RefLoadingNo", LoadingNo, DbType.String, ParameterDirection.Input);
 
-                    string query = @"SELECT * FROM plcvariable WHERE RefLoadingNo = @RefLoadingNo AND StationNo = @StationNo";
+                    string query = @"SELECT * FROM plcvariable WHERE RefLoadingNo = @RefLoadingNo AND StationNo = @StationNo ORDER BY CreatedOn DESC limit 1";
                     result = connection.Query<clsStationVariable>(query, parameters).FirstOrDefault();
                 }
             }

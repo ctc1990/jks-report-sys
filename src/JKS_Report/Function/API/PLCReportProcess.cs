@@ -616,7 +616,7 @@ namespace JKS_Report.Function.API
         private static clsStationVariable stnPlcClsStationMapping(plcStationVariable _plcStationVariable)
         {
             clsStationVariable result = new clsStationVariable();
-
+            File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Get Main Id : " +  _plcStationVariable.RecipeNo + "," + _plcStationVariable.LoadingNo + Environment.NewLine);
             clsMainVariable mainRecord = LibDBHelper.getMainRecord(Convert.ToInt32(_plcStationVariable.RecipeNo), Convert.ToInt32(_plcStationVariable.LoadingNo));
 
             try

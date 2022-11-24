@@ -277,7 +277,6 @@ namespace JKS_Report.Function.Tools
 
             return dataTable;
         }
-
         public static DataTable CreateSingleMainDataTable2(clsCsvMainVariable2 list, string recordName, string MainSymbol = "")
         {
             var assembly = Assembly.GetExecutingAssembly();
