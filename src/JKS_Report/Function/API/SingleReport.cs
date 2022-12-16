@@ -33,12 +33,12 @@ namespace JKS_Report.Function.API
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo ORDER BY CreatedOn DESC LIMIT 1";
+                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo AND TimeOut IS NOT NULL ORDER BY CreatedOn DESC LIMIT 1";
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@LoadingNo", LoadingNo, DbType.Int32, ParameterDirection.Input);
                     clsMainVariable _clsMainVariable = connection.Query<clsMainVariable>(Query, parameters).FirstOrDefault();
 
-                    Query = "Select * from plcvariable where ReferenceId = @ReferenceId";
+                    Query = "Select * from plcvariable where ReferenceId = @ReferenceId AND TimeOut IS NOT NULL";
                     parameters = new DynamicParameters();
                     parameters.Add("@ReferenceId", _clsMainVariable.Id, DbType.Int32, ParameterDirection.Input);                   
                     List<clsStationVariable> _clsPlcVariableList = connection.Query<clsStationVariable>(Query, parameters).ToList();
@@ -213,12 +213,12 @@ namespace JKS_Report.Function.API
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo ORDER BY CreatedOn DESC LIMIT 1";
+                    string Query = "SELECT * FROM mainvariable WHERE LoadingNo = @LoadingNo AND TimeOut IS NOT NULL ORDER BY CreatedOn DESC LIMIT 1";
                     DynamicParameters parameters = new DynamicParameters();
                     parameters.Add("@LoadingNo", LoadingNo, DbType.Int32, ParameterDirection.Input);
                     clsMainVariable _clsMainVariable = connection.Query<clsMainVariable>(Query, parameters).FirstOrDefault();
 
-                    Query = "Select * from plcvariable where ReferenceId = @ReferenceId";
+                    Query = "Select * from plcvariable where ReferenceId = @ReferenceId AND TimeOut IS NOT NULL";
                     parameters = new DynamicParameters();
                     parameters.Add("@ReferenceId", _clsMainVariable.Id, DbType.Int32, ParameterDirection.Input);
                     List<clsStationVariable> _clsPlcVariableList = connection.Query<clsStationVariable>(Query, parameters).ToList();
