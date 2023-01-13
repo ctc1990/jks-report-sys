@@ -77,7 +77,7 @@ namespace JKS_Report.Function.API
                         _clsPdfPlcVariable.EffectiveTime = item.EffectiveTime.ToString();
                         _clsPdfPlcVariable.TemperaturePV = item.TemperaturePV.ToString();
                         _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
-                        _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
+                        _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicSideAPowerPV.ToString();
 
                         if(item.ConductivityPV > 0)
                         {
@@ -316,7 +316,7 @@ namespace JKS_Report.Function.API
                         _clsPdfPlcVariable.EffectiveTime = item.EffectiveTime.ToString();
                         _clsPdfPlcVariable.TemperaturePV = item.TemperaturePV.ToString();
                         _clsPdfPlcVariable.UltrasonicBottomAPower = item.USonicBottomAPowerPV.ToString();
-                        _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicBottomBPowerPV.ToString();
+                        _clsPdfPlcVariable.UltrasonicSideAPower = item.USonicSideAPowerPV.ToString();
 
                         if(item.ConductivityPV > 0)
                         {
