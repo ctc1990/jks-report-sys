@@ -42,9 +42,9 @@ namespace JKS_Report.Function.Tools
         static iTextSharp.text.Font fourthtitle = FontFactory.GetFont("Times New Roman", 10, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
         static iTextSharp.text.Font openbold = FontFactory.GetFont("Times New Roman", 9, iTextSharp.text.Font.BOLD, BaseColor.WHITE);
       
-        public static void ExportToPdf(string Info, clsPdfFullDataVariable clsPdfFullDataVariable, clsLang clslang, clsSystemSetting clsSystemSetting, string language)
+        public static void ExportToPdf(string Info, clsPdfFullDataVariable clsPdfFullDataVariable, clsLang clslang, clsSystemSetting clsSystemSetting, string language, string FilePath)
         {
-            string filePath = LibDBHelper.CreatePdfFile("Amsonic", Info, language,false);
+            string filePath = LibDBHelper.CreatePdfFile(clsPdfFullDataVariable.clsPdfMainVariable.BasketBarcode, language,false,FilePath);
             Document document = new Document();
             //document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
             PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Append, FileAccess.Write));
@@ -106,7 +106,7 @@ namespace JKS_Report.Function.Tools
                 BackgroundColor = Colour,
                 HorizontalAlignment = 2
             };
-            PdfPCell tb1cell14 = new PdfPCell(new Phrase("1 of 1", first))
+            PdfPCell tb1cell14 = new PdfPCell(new Phrase("1 von 1", first))
             {
                 Border = iTextSharp.text.Rectangle.TOP_BORDER | iTextSharp.text.Rectangle.RIGHT_BORDER,
                 FixedHeight = 15f,
@@ -280,7 +280,7 @@ namespace JKS_Report.Function.Tools
                 Border = iTextSharp.text.Rectangle.BOTTOM_BORDER,
                 FixedHeight = 16f
             };
-            PdfPCell tb2cell44 = new PdfPCell(new Phrase(clsPdfFullDataVariable.clsPdfMainVariable.LoadingNo, second))
+            PdfPCell tb2cell44 = new PdfPCell(new Phrase(clsPdfFullDataVariable.clsPdfMainVariable.BasketBarcode, second))
             {
                 Border = iTextSharp.text.Rectangle.RIGHT_BORDER | iTextSharp.text.Rectangle.BOTTOM_BORDER,
                 Colspan = 3,

@@ -73,522 +73,550 @@ namespace JKS_Report.Function.API
             clsPartMemory _clsPartMemory = null;
             plcStationVariable _plStationVariable = null;
 
-            for (int i = 0; i < mapping.Count(); i++)
+            try
             {
-                clsStationVariable _clsStationVariable = new clsStationVariable();
-
-                if (e.NotificationHandle == hconnect[i])
+                for (int i = 0; i < mapping.Count(); i++)
                 {
-                    switch (mapping[i].input)
+                    clsStationVariable _clsStationVariable = new clsStationVariable();
+
+                    if (e.NotificationHandle == hconnect[i])
                     {
-                        case "Log_Configuration.bfbBarcodeActivate_Loading":
-                            if (binRead.ReadBoolean())
-                            {                               
-                                _plcMainVariable = PLCMapping.PlcMainStationMapping(adsClient);
-
-                                if (_plcMainVariable != null)
+                        switch (mapping[i].input)
+                        {
+                            #region normal log
+                            case "Log_Configuration.bfbBarcodeActivate_Loading":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsMainVariable = new clsMainVariable();
-                                    _clsMainVariable.Username = string.IsNullOrEmpty(_plcMainVariable.Username) ? "" : _plcMainVariable.Username;
-                                    _clsMainVariable.LoadingId = string.IsNullOrEmpty(_plcMainVariable.LoadingId) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingId);
-                                    _clsMainVariable.UnloadingId = string.IsNullOrEmpty(_plcMainVariable.UnloadingId) ? 0 : Convert.ToInt32(_plcMainVariable.UnloadingId);                                  
-                                    _clsMainVariable.BasketNumber = string.IsNullOrEmpty(_plcMainVariable.Username) ? "" : _plcMainVariable.BasketNumber;                                   
-                                    _clsMainVariable.RecipeNo = string.IsNullOrEmpty(_plcMainVariable.RecipeNo) ? 0 : Convert.ToInt32(_plcMainVariable.RecipeNo);
-                                    _clsMainVariable.RecipeDescription = string.IsNullOrEmpty(_plcMainVariable.RecipeDescription) ? "" : _plcMainVariable.RecipeDescription;
-                                    _clsMainVariable.LoadingNo = string.IsNullOrEmpty(_plcMainVariable.LoadingNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingNo);
-                                    _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
-                                    _clsMainVariable.ProgrammeBarcode = string.IsNullOrEmpty(_plcMainVariable.ProgrammeBarcode) ? "" : _plcMainVariable.ProgrammeBarcode;
-                                    _clsMainVariable.ProgrammeNumber = string.IsNullOrEmpty(_plcMainVariable.ProgrammeNo) ? "" : _plcMainVariable.ProgrammeNo;
-                                    _clsMainVariable.BasketBarcode = string.IsNullOrEmpty(_plcMainVariable.BasketBarcode) ? "" : _plcMainVariable.BasketBarcode;
-                                    _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
-                                    _clsMainVariable.CreatedOn = DateTime.Now;
-                                    _clsMainVariable.TimeIn = DateTime.Now.ToString("HH:mm");
+                                    _plcMainVariable = PLCMapping.PlcMainStationMapping(adsClient);
 
-                                    _clsPartMemory = new clsPartMemory();
-                                    _clsPartMemory.PalletA = string.IsNullOrEmpty(_plcMainVariable.PalletA) ? "" : _plcMainVariable.PalletA;
-                                    _clsPartMemory.PalletA_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO1) ? "" : _plcMainVariable.PalletA_WO1;
-                                    _clsPartMemory.PalletA_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO2) ? "" : _plcMainVariable.PalletA_WO2;
-                                    _clsPartMemory.PalletA_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO3) ? "" : _plcMainVariable.PalletA_WO3;
-                                    _clsPartMemory.PalletA_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO4) ? "" : _plcMainVariable.PalletA_WO4;
-                                    _clsPartMemory.PalletA_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO5) ? "" : _plcMainVariable.PalletA_WO5;
-                                    _clsPartMemory.PalletA_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO6) ? "" : _plcMainVariable.PalletA_WO6;
-                                    _clsPartMemory.PalletA_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO7) ? "" : _plcMainVariable.PalletA_WO7;
-                                    _clsPartMemory.PalletA_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO8) ? "" : _plcMainVariable.PalletA_WO8;
-
-                                    _clsPartMemory.PalletB = string.IsNullOrEmpty(_plcMainVariable.PalletB) ? "" : _plcMainVariable.PalletB;
-                                    _clsPartMemory.PalletB_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO1) ? "" : _plcMainVariable.PalletB_WO1;
-                                    _clsPartMemory.PalletB_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO2) ? "" : _plcMainVariable.PalletB_WO2;
-                                    _clsPartMemory.PalletB_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO3) ? "" : _plcMainVariable.PalletB_WO3;
-                                    _clsPartMemory.PalletB_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO4) ? "" : _plcMainVariable.PalletB_WO4;
-                                    _clsPartMemory.PalletB_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO5) ? "" : _plcMainVariable.PalletB_WO5;
-                                    _clsPartMemory.PalletB_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO6) ? "" : _plcMainVariable.PalletB_WO6;
-                                    _clsPartMemory.PalletB_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO7) ? "" : _plcMainVariable.PalletB_WO7;
-                                    _clsPartMemory.PalletB_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO8) ? "" : _plcMainVariable.PalletB_WO8;
-
-                                    _clsPartMemory.PalletC = string.IsNullOrEmpty(_plcMainVariable.PalletC) ? "" : _plcMainVariable.PalletC;
-                                    _clsPartMemory.PalletC_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO1) ? "" : _plcMainVariable.PalletC_WO1;
-                                    _clsPartMemory.PalletC_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO2) ? "" : _plcMainVariable.PalletC_WO2;
-                                    _clsPartMemory.PalletC_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO3) ? "" : _plcMainVariable.PalletC_WO3;
-                                    _clsPartMemory.PalletC_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO4) ? "" : _plcMainVariable.PalletC_WO4;
-                                    _clsPartMemory.PalletC_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO5) ? "" : _plcMainVariable.PalletC_WO5;
-                                    _clsPartMemory.PalletC_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO6) ? "" : _plcMainVariable.PalletC_WO6;
-                                    _clsPartMemory.PalletC_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO7) ? "" : _plcMainVariable.PalletC_WO7;
-                                    _clsPartMemory.PalletC_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO8) ? "" : _plcMainVariable.PalletC_WO8;
-
-                                    _clsPartMemory.PalletD = string.IsNullOrEmpty(_plcMainVariable.PalletD) ? "" : _plcMainVariable.PalletD;
-                                    _clsPartMemory.PalletD_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO1) ? "" : _plcMainVariable.PalletD_WO1;
-                                    _clsPartMemory.PalletD_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO2) ? "" : _plcMainVariable.PalletD_WO2;
-                                    _clsPartMemory.PalletD_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO3) ? "" : _plcMainVariable.PalletD_WO3;
-                                    _clsPartMemory.PalletD_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO4) ? "" : _plcMainVariable.PalletD_WO4;
-                                    _clsPartMemory.PalletD_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO5) ? "" : _plcMainVariable.PalletD_WO5;
-                                    _clsPartMemory.PalletD_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO6) ? "" : _plcMainVariable.PalletD_WO6;
-                                    _clsPartMemory.PalletD_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO7) ? "" : _plcMainVariable.PalletD_WO7;
-                                    _clsPartMemory.PalletD_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO8) ? "" : _plcMainVariable.PalletD_WO8;
-                                }
-
-                                if (_clsMainVariable != null)
-                                {
-                                    int maindone = LibDBHelper.MainStationRecord(_clsMainVariable);
-
-                                    if (maindone > 0)
+                                    if (_plcMainVariable != null)
                                     {
-                                        _clsPartMemory.ReferenceID = maindone;
-                                        int partdone = LibDBHelper.BarcodeMemory(_clsPartMemory);
+                                        _clsMainVariable = new clsMainVariable();
+                                        _clsMainVariable.Username = string.IsNullOrEmpty(_plcMainVariable.Username) ? "" : _plcMainVariable.Username;
+                                        _clsMainVariable.LoadingId = string.IsNullOrEmpty(_plcMainVariable.LoadingId) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingId);
+                                        _clsMainVariable.UnloadingId = string.IsNullOrEmpty(_plcMainVariable.UnloadingId) ? 0 : Convert.ToInt32(_plcMainVariable.UnloadingId);
+                                        _clsMainVariable.BasketNumber = string.IsNullOrEmpty(_plcMainVariable.Username) ? "" : _plcMainVariable.BasketNumber;
+                                        _clsMainVariable.RecipeNo = string.IsNullOrEmpty(_plcMainVariable.RecipeNo) ? 0 : Convert.ToInt32(_plcMainVariable.RecipeNo);
+                                        _clsMainVariable.RecipeDescription = string.IsNullOrEmpty(_plcMainVariable.RecipeDescription) ? "" : _plcMainVariable.RecipeDescription;
+                                        _clsMainVariable.LoadingNo = string.IsNullOrEmpty(_plcMainVariable.LoadingNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingNo);
+                                        _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
+                                        _clsMainVariable.ProgrammeBarcode = string.IsNullOrEmpty(_plcMainVariable.ProgrammeBarcode) ? "" : _plcMainVariable.ProgrammeBarcode;
+                                        _clsMainVariable.ProgrammeNumber = string.IsNullOrEmpty(_plcMainVariable.ProgrammeNo) ? "" : _plcMainVariable.ProgrammeNo;
+                                        _clsMainVariable.BasketBarcode = string.IsNullOrEmpty(_plcMainVariable.BasketBarcode) ? "" : _plcMainVariable.BasketBarcode;
+                                        _clsMainVariable.LoadingTotalNo = string.IsNullOrEmpty(_plcMainVariable.LoadingTotalNo) ? 0 : Convert.ToInt32(_plcMainVariable.LoadingTotalNo);
+                                        _clsMainVariable.CreatedOn = DateTime.Now;
+                                        _clsMainVariable.TimeIn = DateTime.Now.ToString("HH:mm:ss");
+
+                                        _clsPartMemory = new clsPartMemory();
+                                        _clsPartMemory.PalletA = string.IsNullOrEmpty(_plcMainVariable.PalletA) ? "" : _plcMainVariable.PalletA;
+                                        _clsPartMemory.PalletA_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO1) ? "" : _plcMainVariable.PalletA_WO1;
+                                        _clsPartMemory.PalletA_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO2) ? "" : _plcMainVariable.PalletA_WO2;
+                                        _clsPartMemory.PalletA_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO3) ? "" : _plcMainVariable.PalletA_WO3;
+                                        _clsPartMemory.PalletA_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO4) ? "" : _plcMainVariable.PalletA_WO4;
+                                        _clsPartMemory.PalletA_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO5) ? "" : _plcMainVariable.PalletA_WO5;
+                                        _clsPartMemory.PalletA_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO6) ? "" : _plcMainVariable.PalletA_WO6;
+                                        _clsPartMemory.PalletA_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO7) ? "" : _plcMainVariable.PalletA_WO7;
+                                        _clsPartMemory.PalletA_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO8) ? "" : _plcMainVariable.PalletA_WO8;
+
+                                        _clsPartMemory.PalletB = string.IsNullOrEmpty(_plcMainVariable.PalletB) ? "" : _plcMainVariable.PalletB;
+                                        _clsPartMemory.PalletB_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO1) ? "" : _plcMainVariable.PalletB_WO1;
+                                        _clsPartMemory.PalletB_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO2) ? "" : _plcMainVariable.PalletB_WO2;
+                                        _clsPartMemory.PalletB_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO3) ? "" : _plcMainVariable.PalletB_WO3;
+                                        _clsPartMemory.PalletB_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO4) ? "" : _plcMainVariable.PalletB_WO4;
+                                        _clsPartMemory.PalletB_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO5) ? "" : _plcMainVariable.PalletB_WO5;
+                                        _clsPartMemory.PalletB_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO6) ? "" : _plcMainVariable.PalletB_WO6;
+                                        _clsPartMemory.PalletB_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO7) ? "" : _plcMainVariable.PalletB_WO7;
+                                        _clsPartMemory.PalletB_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO8) ? "" : _plcMainVariable.PalletB_WO8;
+
+                                        _clsPartMemory.PalletC = string.IsNullOrEmpty(_plcMainVariable.PalletC) ? "" : _plcMainVariable.PalletC;
+                                        _clsPartMemory.PalletC_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO1) ? "" : _plcMainVariable.PalletC_WO1;
+                                        _clsPartMemory.PalletC_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO2) ? "" : _plcMainVariable.PalletC_WO2;
+                                        _clsPartMemory.PalletC_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO3) ? "" : _plcMainVariable.PalletC_WO3;
+                                        _clsPartMemory.PalletC_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO4) ? "" : _plcMainVariable.PalletC_WO4;
+                                        _clsPartMemory.PalletC_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO5) ? "" : _plcMainVariable.PalletC_WO5;
+                                        _clsPartMemory.PalletC_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO6) ? "" : _plcMainVariable.PalletC_WO6;
+                                        _clsPartMemory.PalletC_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO7) ? "" : _plcMainVariable.PalletC_WO7;
+                                        _clsPartMemory.PalletC_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO8) ? "" : _plcMainVariable.PalletC_WO8;
+
+                                        _clsPartMemory.PalletD = string.IsNullOrEmpty(_plcMainVariable.PalletD) ? "" : _plcMainVariable.PalletD;
+                                        _clsPartMemory.PalletD_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO1) ? "" : _plcMainVariable.PalletD_WO1;
+                                        _clsPartMemory.PalletD_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO2) ? "" : _plcMainVariable.PalletD_WO2;
+                                        _clsPartMemory.PalletD_WO3 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO3) ? "" : _plcMainVariable.PalletD_WO3;
+                                        _clsPartMemory.PalletD_WO4 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO4) ? "" : _plcMainVariable.PalletD_WO4;
+                                        _clsPartMemory.PalletD_WO5 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO5) ? "" : _plcMainVariable.PalletD_WO5;
+                                        _clsPartMemory.PalletD_WO6 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO6) ? "" : _plcMainVariable.PalletD_WO6;
+                                        _clsPartMemory.PalletD_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO7) ? "" : _plcMainVariable.PalletD_WO7;
+                                        _clsPartMemory.PalletD_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO8) ? "" : _plcMainVariable.PalletD_WO8;
+                                    }
+
+                                    if (_clsMainVariable != null)
+                                    {
+                                        int maindone = LibDBHelper.MainStationRecord(_clsMainVariable);
+
+                                        if (maindone > 0)
+                                        {
+                                            _clsPartMemory.ReferenceID = maindone;
+                                            int partdone = LibDBHelper.BarcodeMemory(_clsPartMemory);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb1_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                              
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("1", adsClient);
-                                
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb1_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
-                                    
-                                    if (_clsStationVariable != null)
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("1", adsClient);
+
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb2_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                              
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("2", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb2_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("2", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb3_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                             
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("3", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb3_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("3", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb4_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                                
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("4", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb4_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("4", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb5_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                               
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("5", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb5_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("5", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb6_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                             
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("6", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb6_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("6", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb7_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {                              
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("7", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb7_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("7", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb8_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("8", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb8_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("8", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb9_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("9", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb9_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("9", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb10_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("10", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb10_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("10", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb11_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("11", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb11_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("11", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_Configuration.fb12_dataLog.bActivate":
-                            if (binRead.ReadBoolean())
-                            {
-                                _plStationVariable = PLCMapping.PlcSingleStationMapping("12", adsClient);
-
-                                if (_plStationVariable != null)
+                                break;
+                            case "Log_Configuration.fb12_dataLog.bActivate":
+                                if (binRead.ReadBoolean())
                                 {
-                                    _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+                                    _plStationVariable = PLCMapping.PlcSingleStationMapping("12", adsClient);
 
-                                    if (_clsStationVariable != null)
+                                    if (_plStationVariable != null)
                                     {
-                                        int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        _clsStationVariable = stnPlcClsStationMapping(_plStationVariable);
+
+                                        if (_clsStationVariable != null)
+                                        {
+                                            int done = LibDBHelper.SingleStationRecord(_clsStationVariable);
+                                        }
                                     }
                                 }
-                            }
-                            break;                        
-                        case "Log_BasketTimeInOut.ARbUldBasketInActivate[1]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARbUldBasketInActivate1" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime1(adsClient);
+                                break;
+                            #endregion
 
-                                if(clsStnUpdate != null)
-                                {
-                                    int done = LibDBHelper.UpdateMainTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo,clsStnUpdate.TimeOut);
-                                }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbUldBasketInActivate[2]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARbUldBasketInActivate2" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime2(adsClient);
+                            #region log end time
+                            case "Log_BasketTimeInOut.ARbUldBasketInActivate[1]":
+                                if (binRead.ReadBoolean())
+                                {                                   
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime1(adsClient);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    int done = LibDBHelper.UpdateMainTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
-                                }
-                            }
-                            break;                       
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[1]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[1]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 1);
-
-                                if(clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if(record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        int done = LibDBHelper.UpdateMainTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[2]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[2]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 2);
+                                break;
+                            case "Log_BasketTimeInOut.ARbUldBasketInActivate[2]":
+                                if (binRead.ReadBoolean())
+                                {                                   
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime2(adsClient);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        int done = LibDBHelper.UpdateMainTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[3]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[3]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 3);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[1]":
+                                if (binRead.ReadBoolean())
+                                {                                  
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 1);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(1, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(1, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[4]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[4]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 4);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[2]":
+                                if (binRead.ReadBoolean())
+                                {                                    
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 2);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(2, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(2, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[5]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[5]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 5);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[3]":
+                                if (binRead.ReadBoolean())
+                                {                                    
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 3);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(3, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(3, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[6]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[6]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 6);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[4]":
+                                if (binRead.ReadBoolean())
+                                {                                    
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 4);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(4, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(4, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[7]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[7]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 7);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[5]":
+                                if (binRead.ReadBoolean())
+                                {                                   
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 5);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(5, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(5, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[8]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[8]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 8);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[6]":
+                                if (binRead.ReadBoolean())
+                                {                                  
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 6);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(6, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(6, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[9]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[9]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 9);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[7]":
+                                if (binRead.ReadBoolean())
+                                {                                  
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 7);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(7, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(7, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[10]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 10);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[8]":
+                                if (binRead.ReadBoolean())
+                                {                                   
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 8);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(8, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(8, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[11]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 11);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[9]":
+                                if (binRead.ReadBoolean())
+                                {                                    
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 9);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(9, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(9, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        case "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]":
-                            if (binRead.ReadBoolean())
-                            {
-                                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "ARtsStnBasketOutTime[12]" + Environment.NewLine);
-                                clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 12);
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]":
+                                if (binRead.ReadBoolean())
+                                {                                   
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 10);
 
-                                if (clsStnUpdate != null)
-                                {
-                                    clsStationVariable record = LibDBHelper.GetStationRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo);
-
-                                    if (record != null)
+                                    if (clsStnUpdate != null)
                                     {
-                                        int done = LibDBHelper.UpdateStationTimeRecord(clsStnUpdate.RecipeNo, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(10, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(10, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                        default:
-                            binRead.ReadBoolean();
-                            break;
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]":
+                                if (binRead.ReadBoolean())
+                                {                                  
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 11);
+
+                                    if (clsStnUpdate != null)
+                                    {
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(11, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(11, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
+                                    }
+                                }
+                                break;
+                            case "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]":
+                                if (binRead.ReadBoolean())
+                                {                                   
+                                    clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 12);
+
+                                    if (clsStnUpdate != null)
+                                    {
+                                        clsStationVariable record = LibDBHelper.GetStationRecord(12, clsStnUpdate.LoadingNo);
+
+                                        if (record != null)
+                                        {
+                                            int done = LibDBHelper.UpdateStationTimeRecord(12, clsStnUpdate.LoadingNo, clsStnUpdate.TimeOut);
+                                        }
+                                    }
+                                }
+                                break;
+                            #endregion
+
+                            case "Log_Configuration.bUld1ReportEn":
+                                if (binRead.ReadBoolean())
+                                {
+                                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Auto Report Bit 1 Start" + Environment.NewLine);
+                                    clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReport1AutoMapping(adsClient);
+                                    clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
+
+                                    if (_clsReportAutoGenerate != null && _clsSystemSetting != null)
+                                    {
+                                        SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo,_clsReportAutoGenerate.Language, _clsSystemSetting);
+                                        SingleReport.CSVGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language);
+                                    }
+                                }
+                                break;
+                            case "Log_Configuration.bUld2ReportEn":
+                                if (binRead.ReadBoolean())
+                                {
+                                    File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Auto Report Bit 2 Start" + Environment.NewLine);
+                                    clsReportAutoGenerate _clsReportAutoGenerate = PLCMapping.PlcReport2AutoMapping(adsClient);
+                                    clsSystemSetting _clsSystemSetting = LibDBHelper.getSystemSettings();
+
+                                    if (_clsReportAutoGenerate != null && _clsSystemSetting != null)
+                                    {
+                                        SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language, _clsSystemSetting);
+                                        SingleReport.CSVGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language);
+                                    }
+                                }
+                                break;
+                            default:
+                                binRead.ReadBoolean();
+                                break;
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {               
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + ex.StackTrace + Environment.NewLine);
+                ErrorHelper.LogError("System Error", ex.Source, ex.Message, ex.StackTrace);
             }
         }
         private static clsStationVariable stnPlcClsStationMapping(plcStationVariable _plcStationVariable)
         {
             clsStationVariable result = new clsStationVariable();
-
+            File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Get Main Id : " +  _plcStationVariable.RecipeNo + "," + _plcStationVariable.LoadingNo + Environment.NewLine);
             clsMainVariable mainRecord = LibDBHelper.getMainRecord(Convert.ToInt32(_plcStationVariable.RecipeNo), Convert.ToInt32(_plcStationVariable.LoadingNo));
 
             try
@@ -668,14 +696,24 @@ namespace JKS_Report.Function.API
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger10", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger11", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]" });
             mapping.Add(new Mapping { description = "BasketTimeOutTrigger12", input = "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]" });
+
+            mapping.Add(new Mapping { description = "ReportTriggerBit1", input = "Log_Configuration.bUld1ReportEn" });
+            mapping.Add(new Mapping { description = "ReportTriggerBit2", input = "Log_Configuration.bUld2ReportEn" });
         }
         public static void PlcDispose()
         {
-            if (adsClient != null)
+            try
             {
-                adsClient.Disconnect();
-                adsClient.Dispose();
-                MessageBoxResult result = MessageBox.Show("ADS Disconnected and Dispose.", "Success");
+                if (adsClient != null)
+                {
+                    adsClient.Disconnect();
+                    adsClient.Dispose();
+                    MessageBoxResult result = MessageBox.Show("ADS Disconnected and Dispose.", "Success");
+                }
+            }
+            catch
+            {
+                throw;
             }
         }
     }

@@ -136,6 +136,7 @@ namespace JKS_Report.Function.API
             {
                 if (!string.IsNullOrEmpty(stationNo))
                 {
+                    
                     _plcStationVariable.StationNo = Convert.ToInt32(stationNo);
                     _plcStationVariable.StationWithDesc = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".a" + stationNo + "_datalink[2].svalue")).ToString();
                     //_plcStationVariable.LoadingNo = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].iBasketNo")).ToString();
@@ -173,6 +174,8 @@ namespace JKS_Report.Function.API
                     _plcStationVariable.PhPV = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARrStnPhPV[" + stationNo + "]")).ToString();
                     _plcStationVariable.Quality = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".DSStnBasketInfo[" + stationNo + "].sProductQuality")).ToString();
                     _plcStationVariable.ActualTime = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".ARDsStnSeqProcessCtrl[" + stationNo + "].Out_iCurrentProcessTime")).ToString();
+
+                    
                 }
             }
             catch
@@ -192,13 +195,13 @@ namespace JKS_Report.Function.API
                 
                 plcMainVariableDeclaration.Username = ".sUserName";
                 plcMainVariableDeclaration.LoadingId = "1";
-                plcMainVariableDeclaration.UnloadingId = ".AR2sDSCv_LdConfirmBasketInfo[1, 5].iUnloadingID";
+                plcMainVariableDeclaration.UnloadingId = ".AR2sDSCv_LdConfirmBasketInfo[1,5].iUnloadingID";
                 plcMainVariableDeclaration.RecipeNo = ".DSV2_BufferBasketInfo.iProductRecipeNo";
                 plcMainVariableDeclaration.RecipeDescription = ".DSV2_BufferBasketInfo.sProgramDescription";
                 plcMainVariableDeclaration.LoadingNo = ".DSV2_BufferBasketInfo.sReservedInt";
                 plcMainVariableDeclaration.ProgrammeBarcode = ".DSV2_BufferBasketInfo.ARsBarcodeData[3]";
                 plcMainVariableDeclaration.ProgrammeNo = ".DSV2_BufferBasketInfo.iProductRecipeNo";
-                plcMainVariableDeclaration.BasketNumber = ".DSV2_BufferBasketInfo.sDisplayBasketNumber";
+                plcMainVariableDeclaration.BasketNumber = ".diTotalBasketQty_Customer";
                 plcMainVariableDeclaration.BasketBarcode = ".DSV2_BufferBasketInfo.iBaskeNo";
 
                 plcMainVariableDeclaration.PalletA = ".DSV2_BufferBasketInfo.PalletBarcodeData[1]";
@@ -291,6 +294,8 @@ namespace JKS_Report.Function.API
                 result.PalletD_WO6 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO6)).ToString();
                 result.PalletD_WO7 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO7)).ToString();
                 result.PalletD_WO8 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO8)).ToString();
+
+                
             }
             catch
             {
@@ -323,7 +328,7 @@ namespace JKS_Report.Function.API
             }
             return result;
         }
-
+         
         public static clsStnUpdate PlcMasterReadUldEndTime2(TcAdsClient adsClient)
         {
             clsStnUpdate result = null;
@@ -371,6 +376,58 @@ namespace JKS_Report.Function.API
                 throw;
             }
             return result;
+        }
+
+        public static clsReportAutoGenerate PlcReport1AutoMapping(TcAdsClient adsClient)
+        {
+            clsReportAutoGenerate clsReportAutoGenerate = null;
+
+            try
+            {
+                int iLoadingNo = 0;
+                string sUld1LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[1,1].sReservedInt";
+                
+
+                if(!string.IsNullOrEmpty(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString()))
+                {
+                    iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld1LoadingNo)).ToString());
+                }
+                
+                clsReportAutoGenerate = new clsReportAutoGenerate();
+                clsReportAutoGenerate.LoadingNo = iLoadingNo;
+                clsReportAutoGenerate.Language = Globals.Language;
+            }
+            catch
+            {
+                throw;
+            }
+            return clsReportAutoGenerate;
+        }
+
+        public static clsReportAutoGenerate PlcReport2AutoMapping(TcAdsClient adsClient)
+        {
+            clsReportAutoGenerate clsReportAutoGenerate = null;
+
+            try
+            {
+                int iLoadingNo = 0;
+                
+                string sUld2LoadingNo = ".AR2sDSCv_UldConfirmBasketInfo[2,1].sReservedInt";
+               
+                if (!string.IsNullOrEmpty(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString()))
+                {
+                    iLoadingNo = Convert.ToInt16(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(sUld2LoadingNo)).ToString());
+                }
+
+                clsReportAutoGenerate = new clsReportAutoGenerate();
+                clsReportAutoGenerate.LoadingNo = iLoadingNo;
+                clsReportAutoGenerate.Language = Globals.Language;
+            }
+            catch
+            {
+                throw;
+            }
+            return clsReportAutoGenerate;
         }
     }
 }

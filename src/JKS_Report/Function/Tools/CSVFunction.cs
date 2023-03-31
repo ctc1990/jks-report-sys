@@ -122,9 +122,9 @@ namespace JKS_Report.Function.Tools
 
             return dataTable;
         }
-        public static void ToCSV(List<DataTable> dtDataTable, string Info,bool dateReport)
+        public static void ToCSV(List<DataTable> dtDataTable, string FileName, string Lang,bool dateReport,string FilePath)
         {
-            string filePath = LibDBHelper.CreateCsvFile("Amsonic", Info, dateReport);
+            string filePath = LibDBHelper.CreateCsvFile(FileName, Lang, dateReport, FilePath);
 
             using (StreamWriter sw = new StreamWriter(filePath, true))
             {
@@ -236,7 +236,7 @@ namespace JKS_Report.Function.Tools
 
             return dataTable;
         }
-        public static DataTable CreateSingleMainDataTable(clsCsvMainVariableSingle list, string recordName, string MainSymbol = "")
+        public static DataTable CreateSingleMainDataTable1(clsCsvMainVariable1 list, string recordName, string MainSymbol = "")
         {
             var assembly = Assembly.GetExecutingAssembly();
 
@@ -252,18 +252,59 @@ namespace JKS_Report.Function.Tools
                 }
             }
 
-            Type type = typeof(clsCsvMainVariableSingle);
+            Type type = typeof(clsCsvMainVariable1);
             var properties = type.GetProperties();
 
             DataTable dataTable = new DataTable();
             dataTable.TableName = recordName;
-            foreach (PropertyInfo info in properties)
-            {
-                dataTable.Columns.Add(info.Name);
-            }
+            
             if (MainSymbolList != null)
             {
-                dataTable.Rows.Add(MainSymbolList);
+                for(int i = 0; i < MainSymbolList.Length; i++)
+                {
+                    dataTable.Columns.Add(MainSymbolList[i]);
+                }                
+            }
+
+            object[] values = new object[properties.Length];
+            for (int i = 0; i < properties.Length; i++)
+            {
+                values[i] = properties[i].GetValue(list);
+            }
+
+            dataTable.Rows.Add(values);
+
+
+            return dataTable;
+        }
+        public static DataTable CreateSingleMainDataTable2(clsCsvMainVariable2 list, string recordName, string MainSymbol = "")
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            string[] MainSymbolList = null;
+
+
+            if (!string.IsNullOrEmpty(MainSymbol))
+            {
+                using (Stream stream = assembly.GetManifestResourceStream(MainSymbol))
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    string result = reader.ReadToEnd();
+                    MainSymbolList = result.Split(',');
+                }
+            }
+
+            Type type = typeof(clsCsvMainVariable2);
+            var properties = type.GetProperties();
+
+            DataTable dataTable = new DataTable();
+            dataTable.TableName = recordName;
+
+            if (MainSymbolList != null)
+            {
+                for (int i = 0; i < MainSymbolList.Length; i++)
+                {
+                    dataTable.Columns.Add(MainSymbolList[i]);
+                }
             }
 
             object[] values = new object[properties.Length];

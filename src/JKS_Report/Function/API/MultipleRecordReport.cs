@@ -35,10 +35,10 @@ namespace JKS_Report.Function.API
 
         public static void ExportToPdf(string Info, List<clsPdfFullDataVariable> clsPdfFullDataVariableList, clsLang clslang, clsSystemSetting clsSystemSetting, string language)
         {
-            string filePath = LibDBHelper.CreatePdfFile("Amsonic", Info, language,true);
+            //string filePath = LibDBHelper.CreatePdfFile("Amsonic", language,true);
             Document document = new Document();
             //document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
-            writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Append, FileAccess.Write));
+            //writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Append, FileAccess.Write));
             writer.PageEvent = new PDFTemplate();
             document.Open();
             iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);

@@ -98,7 +98,7 @@
 
 
                 <Label Name="Label11"  
-                Content="Report Generation Configuration"
+                Content="Report Variable Configuration"
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="16" FontFamily="Georgia"  
                 FontWeight="Bold"
@@ -106,54 +106,12 @@
                 VerticalAlignment="Top"
                 HorizontalAlignment="Center" Margin="0,10,0,0"/>
 
-                <Label Name="Label12"  
-                Content="Report Variable Configuration"
-                Canvas.Left="10" Canvas.Top="10"  
-                FontSize="16" FontFamily="Georgia"  
-                FontWeight="Bold"
-                Grid.Row="0" Grid.Column="1"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center" Margin="0,10,0,0"/>
-
-                <Label Name="Label13"  
-                Content="Report Generation Control"
-                Canvas.Left="10" Canvas.Top="10"  
-                FontSize="16" FontFamily="Georgia"  
-                FontWeight="Bold"
-                Grid.Row="0" Grid.Column="2"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center" Margin="0,10,0,0"/>
-
-                <Label Name="Label1"  
-                Content="Date From :"
-                Canvas.Left="10" Canvas.Top="10"  
-                FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold"
-                Grid.Row="1" Grid.Column="0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left" Margin="0,10,0,0"/>
-
-                <Label Name="Label2"  
-                Content="Date To :"                               
-                Canvas.Left="10" Canvas.Top="10"  
-                FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="0" Grid.Row="2"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left" Margin="0,10,0,0"/>
-
-                <Label Name="Label3"  
-                Content="Loading Number :"                               
-                Canvas.Left="10" Canvas.Top="10"  
-                FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="0" Grid.Row="3"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left" Margin="0,10,0,0"/>
 
                 <Label Name="Label5"  
                 Content="Title :"                               
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="1" Grid.Row="1"
+                FontWeight="Bold" Grid.Column="0" Grid.Row="1"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="0,10,0,0"/>
 
@@ -161,7 +119,7 @@
                 Content="Machine :"                               
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="1" Grid.Row="2"
+                FontWeight="Bold" Grid.Column="0" Grid.Row="2"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="0,10,0,0"/>
 
@@ -169,7 +127,7 @@
                 Content="Software :"                               
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="1" Grid.Row="3"
+                FontWeight="Bold" Grid.Column="0" Grid.Row="3"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="0,10,0,0"/>
 
@@ -177,40 +135,14 @@
                 Content="Report Language :"                               
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="10" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="0" Grid.Row="5"
+                FontWeight="Bold" Grid.Column="1" Grid.Row="5"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="250,10,0,0"/>
 
 
 
 
-                <DatePicker Name="DateFrom" 
-                 Height="30" 
-                 Width="200"
-                HorizontalAlignment="Left"
-                Grid.Column="0" Grid.Row="1" 
-                Margin="150,10,0,0"
-                VerticalAlignment="Top"/>
 
-                <DatePicker Name="DateTo" 
-                 Height="30" 
-                 Width="200"                
-                HorizontalAlignment="Left"
-                Grid.Column="0" Grid.Row="2" 
-                Margin="150,10,0,0"
-                VerticalAlignment="Top"               
-                />
-
-                <TextBox Name="LoadingNumber"
-                Height="30" 
-                Width="200"
-                FontSize="14" FontFamily="Georgia" FontWeight="Bold"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Grid.Column="0" Grid.Row="3" 
-                Margin="150,10,0,105"
-                PreviewTextInput="PreviewTextInput"
-                />
 
                 <TextBox Name="Title"
                 Height="30" 
@@ -218,7 +150,7 @@
                 FontSize="14" FontFamily="Georgia"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Grid.Column="1" Grid.Row="1" 
+                Grid.Column="0" Grid.Row="1" 
                 Margin="150,10,0,0"               
                 />
 
@@ -228,7 +160,7 @@
                          FontSize="14" FontFamily="Georgia"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Grid.Column="1" Grid.Row="2"
+                Grid.Column="0" Grid.Row="2"
                 Margin="150,10,0,0"
                 />
 
@@ -238,7 +170,7 @@
                          FontSize="14" FontFamily="Georgia"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Grid.Column="1" Grid.Row="3"
+                Grid.Column="0" Grid.Row="3"
                 Margin="150,10,0,0"
                 />
 
@@ -248,7 +180,17 @@
                          FontSize="14" FontFamily="Georgia"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Grid.Column="1" Grid.Row="4"
+                Grid.Column="0" Grid.Row="4"
+                Margin="150,10,10,10"
+                />
+
+                <TextBox Name="SavePath1"
+                Height="30" 
+                Width="200"
+                         FontSize="14" FontFamily="Georgia"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Column="0" Grid.Row="5"
                 Margin="150,10,10,10"
                 />
 
@@ -256,7 +198,7 @@
                 Content="Stop Logging Service"
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="0" Grid.Row="5"
+                FontWeight="Bold" Grid.Column="1" Grid.Row="5"
                 HorizontalAlignment="Left"
                 Margin="10,10,0,0"
                 VerticalAlignment="Top"
@@ -266,7 +208,7 @@
                 <ComboBox Name="combo1"
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="14" FontFamily="Georgia"  
-                FontWeight="Bold" Grid.Column="0" Grid.Row="5"
+                FontWeight="Bold" Grid.Column="1" Grid.Row="5"
                 HorizontalAlignment="Left"
                 Margin="255,35,0,0"
                 VerticalAlignment="Top">
@@ -278,40 +220,31 @@
                 Name="btnSave"
                 Style="{StaticResource StandardButton}"
                 IsEnabled="True" 
-                Grid.Column="1" Grid.Row="3"
+                Grid.Column="0" Grid.Row="3"
                 VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,90,10,10"
                 Click="Save_Click"/>
 
                 <Button Name="btnBrowse"  
-                Content=" Saving Path "                               
+                Content=" Saving Path 1 "                               
                 Canvas.Left="10" Canvas.Top="10"  
                 FontSize="16" FontFamily="{DynamicResource Proxima}"  
-                FontWeight="Normal" Grid.Column="1" Grid.Row="4"
+                FontWeight="Normal" Grid.Column="0" Grid.Row="4"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left" Margin="10,10,0,0"
                 IsEnabled="True" 
-                Click="Browse_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
+                Click="Browse1_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
 
-                <StackPanel Grid.Row="3" Grid.Column="3" Grid.RowSpan="1" Orientation="Vertical" HorizontalAlignment="Right">
-                    <Button Content="PDF"
-                Name="btnPDFGenerate"
-                Style="{StaticResource StandardButton}"
-                IsEnabled="True"
-                Grid.Row="0" Grid.Column="2"
-                VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"
-                Click="PDF_Click"/>
-                    <Button Content="CSV"
-                Name="btnCSVGenerate"
-                Style="{StaticResource StandardButton}"
-                IsEnabled="True"
-                Grid.Row="1" Grid.Column="2"
-                VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10"
-                Click="CSV_Click"/>
-                </StackPanel>
-                <Rectangle Fill="#FFFFFF" HorizontalAlignment="Center" Height="80" Margin="0,38,0,0" Grid.RowSpan="3"  VerticalAlignment="Top" Width="354"/>
+                <Button Name="btnBrowse1"  
+                Content=" Saving Path 2 "                               
+                Canvas.Left="10" Canvas.Top="10"  
+                FontSize="16" FontFamily="{DynamicResource Proxima}"  
+                FontWeight="Normal" Grid.Column="0" Grid.Row="5"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Margin="10,10,0,0"
+                IsEnabled ="False" 
+                Click="Browse2_Click" Background="{DynamicResource GreenBlueColor}" FontStyle="Normal" Foreground="{DynamicResource CWhite}"/>
 
-
-
+                <Rectangle Fill="#FFFFFF" HorizontalAlignment="Center" Height="49" Margin="0,9,0,0"  VerticalAlignment="Top" Width="369" Grid.Row="5" Grid.Column="1"/>
             </Grid>
         </Grid>
     </Grid>
