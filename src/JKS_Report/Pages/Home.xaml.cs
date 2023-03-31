@@ -40,7 +40,7 @@ namespace JKS_Report.Pages
         private void Page_loaded(object sender, RoutedEventArgs e)
         {
             try
-            {               
+            {            
                 PLCReportProcess.ReportingStart();
             }
             catch (Exception ex)

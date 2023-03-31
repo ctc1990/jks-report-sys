@@ -1,7 +1,9 @@
-﻿using System;
+﻿using JKS_Report.Function.DB;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -51,5 +53,16 @@ namespace JKS_Report
 
     public partial class App : Application
     {
+        public App()
+        {
+            this.DispatcherUnhandledException += App_DispatcherUnhandledException;
+        }
+
+        private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            string errorMessage = string.Format("An unhandled exception occurred: {0}", e.Exception.Message);
+            ErrorHelper.LogError("Application Unexpected Closed", "", errorMessage);
+            e.Handled = true; // Set Handled to true to prevent the application from crashing
+        }
     }
 }
