@@ -71,6 +71,7 @@ namespace JKS_Report.Model
     public class clsPartMemory
     {
         public long ReferenceID { get; set; }
+        public bool PalletAActivated { get; set; }
         public string PalletA { get; set; }
         public string PalletA_WO1 { get; set; }
         public string PalletA_WO2 { get; set; }
@@ -80,6 +81,7 @@ namespace JKS_Report.Model
         public string PalletA_WO6 { get; set; }
         public string PalletA_WO7 { get; set; }
         public string PalletA_WO8 { get; set; }
+        public bool PalletBActivated { get; set; }
         public string PalletB { get; set; }
         public string PalletB_WO1 { get; set; }
         public string PalletB_WO2 { get; set; }
@@ -89,6 +91,7 @@ namespace JKS_Report.Model
         public string PalletB_WO6 { get; set; }
         public string PalletB_WO7 { get; set; }
         public string PalletB_WO8 { get; set; }
+        public bool PalletCActivated { get; set; }
         public string PalletC { get; set; }
         public string PalletC_WO1 { get; set; }
         public string PalletC_WO2 { get; set; }
@@ -98,6 +101,7 @@ namespace JKS_Report.Model
         public string PalletC_WO6 { get; set; }
         public string PalletC_WO7 { get; set; }
         public string PalletC_WO8 { get; set; }
+        public bool PalletDActivated { get; set; }
         public string PalletD { get; set; }
         public string PalletD_WO1 { get; set; }
         public string PalletD_WO2 { get; set; }
@@ -120,7 +124,8 @@ namespace JKS_Report.Model
         public string LoadingTotalNo { get; set; }
         public string ProgrammeBarcode { get; set; }       
         public string ProgrammeNo { get; set; }
-        public string BasketBarcode { get; set; }        
+        public string BasketBarcode { get; set; }
+        public bool PalletCDActivated { get; set; }
         public string PalletA { get; set; }
         public string PalletA_WO1 { get; set; }
         public string PalletA_WO2 { get; set; }
@@ -129,7 +134,7 @@ namespace JKS_Report.Model
         public string PalletA_WO5 { get; set; }
         public string PalletA_WO6 { get; set; }
         public string PalletA_WO7 { get; set; }
-        public string PalletA_WO8 { get; set; }
+        public string PalletA_WO8 { get; set; }        
         public string PalletB { get; set; }
         public string PalletB_WO1 { get; set; }
         public string PalletB_WO2 { get; set; }
@@ -138,7 +143,7 @@ namespace JKS_Report.Model
         public string PalletB_WO5 { get; set; }
         public string PalletB_WO6 { get; set; }
         public string PalletB_WO7 { get; set; }
-        public string PalletB_WO8 { get; set; }
+        public string PalletB_WO8 { get; set; }       
         public string PalletC { get; set; }
         public string PalletC_WO1 { get; set; }
         public string PalletC_WO2 { get; set; }
@@ -241,6 +246,7 @@ namespace JKS_Report.Model
     }
     public class clsPdfBarcodePalletA
     {
+        public bool PalletAActivated { get; set; }
         public string PalletA { get; set; }
         public string PalletA_WO1 { get; set; }
         public string PalletA_WO2 { get; set; }
@@ -253,6 +259,7 @@ namespace JKS_Report.Model
     }
     public class clsPdfBarcodePalletB
     {
+        public bool PalletBActivated { get; set; }
         public string PalletB { get; set; }
         public string PalletB_WO1 { get; set; }
         public string PalletB_WO2 { get; set; }
@@ -265,6 +272,7 @@ namespace JKS_Report.Model
     }
     public class clsPdfBarcodePalletC
     {
+        public bool PalletCActivated { get; set; }
         public string PalletC { get; set; }
         public string PalletC_WO1 { get; set; }
         public string PalletC_WO2 { get; set; }
@@ -277,6 +285,7 @@ namespace JKS_Report.Model
     }
     public class clsPdfBarcodePalletD
     {
+        public bool PalletDActivated { get; set; }
         public string PalletD { get; set; }
         public string PalletD_WO1 { get; set; }
         public string PalletD_WO2 { get; set; }

@@ -383,12 +383,13 @@ namespace JKS_Report.Function.DB
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                     {
                         string Query = "INSERT IGNORE INTO `partmemory` " +
-                                       "(`ReferenceId`, `PalletA`, `PalletA_WO1`, `PalletA_WO2`, `PalletA_WO3`, `PalletA_WO4`, `PalletA_WO5`, `PalletA_WO6`, `PalletA_WO7`, `PalletA_WO8`, `PalletB_WO8`, `PalletC_WO8`, `PalletD_WO8`, `PalletB`, `PalletB_WO1`, `PalletB_WO2`, `PalletB_WO3`, `PalletB_WO4`, `PalletB_WO5`, `PalletB_WO6`, `PalletB_WO7`, `PalletC`, `PalletC_WO1`, `PalletC_WO2`, `PalletC_WO3`, `PalletC_WO4`, `PalletC_WO5`, `PalletC_WO6`, `PalletC_WO7`, `PalletD`, `PalletD_WO1`, `PalletD_WO2`, `PalletD_WO3`, `PalletD_WO4`, `PalletD_WO5`, `PalletD_WO6`, `PalletD_WO7`) " +
+                                       "(`ReferenceId`, `PalletAActivated`, `PalletBActivated`, `PalletCActivated`, `PalletDActivated`,`PalletA`, `PalletA_WO1`, `PalletA_WO2`, `PalletA_WO3`, `PalletA_WO4`, `PalletA_WO5`, `PalletA_WO6`, `PalletA_WO7`, `PalletA_WO8`, `PalletB_WO8`, `PalletC_WO8`, `PalletD_WO8`, `PalletB`, `PalletB_WO1`, `PalletB_WO2`, `PalletB_WO3`, `PalletB_WO4`, `PalletB_WO5`, `PalletB_WO6`, `PalletB_WO7`, `PalletC`, `PalletC_WO1`, `PalletC_WO2`, `PalletC_WO3`, `PalletC_WO4`, `PalletC_WO5`, `PalletC_WO6`, `PalletC_WO7`, `PalletD`, `PalletD_WO1`, `PalletD_WO2`, `PalletD_WO3`, `PalletD_WO4`, `PalletD_WO5`, `PalletD_WO6`, `PalletD_WO7`) " +
                                        " VALUES " +
-                                       "(@ReferenceId, @PalletA, @PalletA_WO1, @PalletA_WO2, @PalletA_WO3, @PalletA_WO4, @PalletA_WO5, @PalletA_WO6, @PalletA_WO7, @PalletA_WO8, @PalletB_WO8, @PalletC_WO8, @PalletD_WO8, @PalletB, @PalletB_WO1, @PalletB_WO2, @PalletB_WO3, @PalletB_WO4, @PalletB_WO5, @PalletB_WO6, @PalletB_WO7, @PalletC, @PalletC_WO1, @PalletC_WO2, @PalletC_WO3, PalletC_WO4, @PalletC_WO5, @PalletC_WO6, @PalletC_WO7, @PalletD, @PalletD_WO1, @PalletD_WO2, PalletD_WO3, @PalletD_WO4, @PalletD_WO5, @PalletD_WO6, @PalletD_WO7)";
+                                       "(@ReferenceId, @PalletAActivated, @PalletBActivated, @PalletCActivated, @PalletDActivated, @PalletA, @PalletA_WO1, @PalletA_WO2, @PalletA_WO3, @PalletA_WO4, @PalletA_WO5, @PalletA_WO6, @PalletA_WO7, @PalletA_WO8, @PalletB_WO8, @PalletC_WO8, @PalletD_WO8, @PalletB, @PalletB_WO1, @PalletB_WO2, @PalletB_WO3, @PalletB_WO4, @PalletB_WO5, @PalletB_WO6, @PalletB_WO7, @PalletC, @PalletC_WO1, @PalletC_WO2, @PalletC_WO3, PalletC_WO4, @PalletC_WO5, @PalletC_WO6, @PalletC_WO7, @PalletD, @PalletD_WO1, @PalletD_WO2, PalletD_WO3, @PalletD_WO4, @PalletD_WO5, @PalletD_WO6, @PalletD_WO7)";
 
                         DynamicParameters parameters = new DynamicParameters();
                         parameters.Add("@ReferenceId", _clsPartMemory.ReferenceID, DbType.Int64, ParameterDirection.Input);
+                        parameters.Add("@PalletAActivated", _clsPartMemory.PalletAActivated, DbType.Boolean, ParameterDirection.Input);
                         parameters.Add("@PalletA", _clsPartMemory.PalletA, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletA_WO1", _clsPartMemory.PalletA_WO1, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletA_WO2", _clsPartMemory.PalletA_WO2, DbType.String, ParameterDirection.Input);
@@ -399,6 +400,7 @@ namespace JKS_Report.Function.DB
                         parameters.Add("@PalletA_WO7", _clsPartMemory.PalletA_WO7, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletA_WO8", _clsPartMemory.PalletA_WO8, DbType.String, ParameterDirection.Input);
 
+                        parameters.Add("@PalletBActivated", _clsPartMemory.PalletBActivated, DbType.Boolean, ParameterDirection.Input);
                         parameters.Add("@PalletB", _clsPartMemory.PalletB, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletB_WO1", _clsPartMemory.PalletB_WO1, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletB_WO2", _clsPartMemory.PalletB_WO2, DbType.String, ParameterDirection.Input);
@@ -409,6 +411,7 @@ namespace JKS_Report.Function.DB
                         parameters.Add("@PalletB_WO7", _clsPartMemory.PalletB_WO7, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletB_WO8", _clsPartMemory.PalletB_WO8, DbType.String, ParameterDirection.Input);
 
+                        parameters.Add("@PalletCActivated", _clsPartMemory.PalletCActivated, DbType.Boolean, ParameterDirection.Input);
                         parameters.Add("@PalletC", _clsPartMemory.PalletC, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletC_WO1", _clsPartMemory.PalletC_WO1, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletC_WO2", _clsPartMemory.PalletC_WO2, DbType.String, ParameterDirection.Input);
@@ -419,6 +422,7 @@ namespace JKS_Report.Function.DB
                         parameters.Add("@PalletC_WO7", _clsPartMemory.PalletC_WO7, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletC_WO8", _clsPartMemory.PalletC_WO8, DbType.String, ParameterDirection.Input);
 
+                        parameters.Add("@PalletDActivated", _clsPartMemory.PalletDActivated, DbType.Boolean, ParameterDirection.Input);
                         parameters.Add("@PalletD", _clsPartMemory.PalletD, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletD_WO1", _clsPartMemory.PalletD_WO1, DbType.String, ParameterDirection.Input);
                         parameters.Add("@PalletD_WO2", _clsPartMemory.PalletD_WO2, DbType.String, ParameterDirection.Input);

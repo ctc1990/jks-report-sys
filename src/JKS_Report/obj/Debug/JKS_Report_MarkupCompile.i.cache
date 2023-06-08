@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\
+Z:\GitLab\jks-report-sys\src\JKS_Report\obj\Debug\
 JKS_Report
 none
 false
 DEBUG;TRACE
-D:\GitLab\jks-report-sys\src\JKS_Report\App.xaml
+Z:\GitLab\jks-report-sys\src\JKS_Report\App.xaml
 17-1307902027
 65-542154568
-272069070348
-54-721331304
+30357887372
+541229830732
 Dictionaries\Animations.xaml;Dictionaries\Buttons.xaml;Dictionaries\Colors.xaml;Dictionaries\DataGrid.xaml;Dictionaries\Dimensions.xaml;Dictionaries\Fonts.xaml;Dictionaries\FormControls.xaml;Dictionaries\Graph.xaml;Dictionaries\Info.xaml;Dictionaries\ManualModeStyle.xaml;Dictionaries\RangeSlider.xaml;Dictionaries\ScrollViewer.xaml;Dictionaries\Texts.xaml;MainWindow.xaml;Pages\Report.xaml;Pages\Home.xaml;Pages\Index.xaml;
 
-False
+True
 
