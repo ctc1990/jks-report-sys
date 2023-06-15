@@ -130,8 +130,10 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletB_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO7) ? "" : _plcMainVariable.PalletB_WO7;
                                         _clsPartMemory.PalletB_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO8) ? "" : _plcMainVariable.PalletB_WO8;
 
-
-                                        _clsPartMemory.PalletCActivated = _plcMainVariable.PalletCDActivated;
+                                        if(_plcMainVariable.PalletCDActivated)
+                                        {
+                                            _clsPartMemory.PalletCActivated = false;
+                                        }                                        
                                         _clsPartMemory.PalletC = string.IsNullOrEmpty(_plcMainVariable.PalletC) ? "" : _plcMainVariable.PalletC;
                                         _clsPartMemory.PalletC_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO1) ? "" : _plcMainVariable.PalletC_WO1;
                                         _clsPartMemory.PalletC_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO2) ? "" : _plcMainVariable.PalletC_WO2;
@@ -142,7 +144,10 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletC_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO7) ? "" : _plcMainVariable.PalletC_WO7;
                                         _clsPartMemory.PalletC_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO8) ? "" : _plcMainVariable.PalletC_WO8;
 
-                                        _clsPartMemory.PalletDActivated = _plcMainVariable.PalletCDActivated;
+                                        if (_plcMainVariable.PalletCDActivated)
+                                        {
+                                            _clsPartMemory.PalletDActivated = false;
+                                        }
                                         _clsPartMemory.PalletD = string.IsNullOrEmpty(_plcMainVariable.PalletD) ? "" : _plcMainVariable.PalletD;
                                         _clsPartMemory.PalletD_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO1) ? "" : _plcMainVariable.PalletD_WO1;
                                         _clsPartMemory.PalletD_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO2) ? "" : _plcMainVariable.PalletD_WO2;
