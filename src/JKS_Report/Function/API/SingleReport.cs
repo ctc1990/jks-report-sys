@@ -110,7 +110,8 @@ namespace JKS_Report.Function.API
                         clsPdfFullDataVariable.clsPdfBarcodesPalletD = new clsPdfBarcodePalletD();
 
                         if (!string.IsNullOrEmpty(_clsPartMemory.PalletA))
-                        {                          
+                        {
+                            clsPdfFullDataVariable.clsPdfBarcodesPalletA.PalletAActivated = _clsPartMemory.PalletAActivated;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletA.PalletA = _clsPartMemory.PalletA;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletA.PalletA_WO1 = _clsPartMemory.PalletA_WO1;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletA.PalletA_WO2 = _clsPartMemory.PalletA_WO2;
@@ -123,7 +124,7 @@ namespace JKS_Report.Function.API
                         }
                         if (!string.IsNullOrEmpty(_clsPartMemory.PalletB))
                         {
-                            
+                            clsPdfFullDataVariable.clsPdfBarcodesPalletB.PalletBActivated = _clsPartMemory.PalletBActivated;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletB.PalletB = _clsPartMemory.PalletB;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletB.PalletB_WO1 = _clsPartMemory.PalletB_WO1;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletB.PalletB_WO2 = _clsPartMemory.PalletB_WO2;
@@ -136,7 +137,7 @@ namespace JKS_Report.Function.API
                         }
                         if (!string.IsNullOrEmpty(_clsPartMemory.PalletC))
                         {
-                            
+                            clsPdfFullDataVariable.clsPdfBarcodesPalletC.PalletCActivated = _clsPartMemory.PalletCActivated;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletC.PalletC = _clsPartMemory.PalletC;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletC.PalletC_WO1 = _clsPartMemory.PalletC_WO1;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletC.PalletC_WO2 = _clsPartMemory.PalletC_WO2;
@@ -149,7 +150,7 @@ namespace JKS_Report.Function.API
                         }
                         if (!string.IsNullOrEmpty(_clsPartMemory.PalletD))
                         {
-                            
+                            clsPdfFullDataVariable.clsPdfBarcodesPalletD.PalletDActivated = _clsPartMemory.PalletDActivated;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletD.PalletD = _clsPartMemory.PalletD;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletD.PalletD_WO1 = _clsPartMemory.PalletD_WO1;
                             clsPdfFullDataVariable.clsPdfBarcodesPalletD.PalletD_WO2 = _clsPartMemory.PalletD_WO2;
@@ -254,6 +255,7 @@ namespace JKS_Report.Function.API
                     if (!string.IsNullOrEmpty(_clsPartMemory.PalletA))
                     {
                         _plcCsvVariable.csvBarcodePalletA = new clsPdfBarcodePalletA();
+                        _plcCsvVariable.csvBarcodePalletA.PalletAActivated = _clsPartMemory.PalletAActivated;
                         _plcCsvVariable.csvBarcodePalletA.PalletA_WO1 = _clsPartMemory.PalletA_WO1;
                         _plcCsvVariable.csvBarcodePalletA.PalletA_WO2 = _clsPartMemory.PalletA_WO2;
                         _plcCsvVariable.csvBarcodePalletA.PalletA_WO3 = _clsPartMemory.PalletA_WO3;
@@ -267,6 +269,7 @@ namespace JKS_Report.Function.API
                     if (!string.IsNullOrEmpty(_clsPartMemory.PalletB))
                     {
                         _plcCsvVariable.csvBarcodePalletB = new clsPdfBarcodePalletB();
+                        _plcCsvVariable.csvBarcodePalletB.PalletBActivated = _clsPartMemory.PalletBActivated;
                         _plcCsvVariable.csvBarcodePalletB.PalletB_WO1 = _clsPartMemory.PalletB_WO1;
                         _plcCsvVariable.csvBarcodePalletB.PalletB_WO2 = _clsPartMemory.PalletB_WO2;
                         _plcCsvVariable.csvBarcodePalletB.PalletB_WO3 = _clsPartMemory.PalletB_WO3;
@@ -280,6 +283,7 @@ namespace JKS_Report.Function.API
                     if (!string.IsNullOrEmpty(_clsPartMemory.PalletC))
                     {
                         _plcCsvVariable.csvBarcodePalletC = new clsPdfBarcodePalletC();
+                        _plcCsvVariable.csvBarcodePalletC.PalletCActivated = _clsPartMemory.PalletCActivated;
                         _plcCsvVariable.csvBarcodePalletC.PalletC_WO1 = _clsPartMemory.PalletC_WO1;
                         _plcCsvVariable.csvBarcodePalletC.PalletC_WO2 = _clsPartMemory.PalletC_WO2;
                         _plcCsvVariable.csvBarcodePalletC.PalletC_WO3 = _clsPartMemory.PalletC_WO3;
@@ -293,6 +297,7 @@ namespace JKS_Report.Function.API
                     if (!string.IsNullOrEmpty(_clsPartMemory.PalletD))
                     {
                         _plcCsvVariable.csvBarcodePalletD = new clsPdfBarcodePalletD();
+                        _plcCsvVariable.csvBarcodePalletD.PalletDActivated = _clsPartMemory.PalletDActivated;
                         _plcCsvVariable.csvBarcodePalletD.PalletD_WO1 = _clsPartMemory.PalletD_WO1;
                         _plcCsvVariable.csvBarcodePalletD.PalletD_WO2 = _clsPartMemory.PalletD_WO2;
                         _plcCsvVariable.csvBarcodePalletD.PalletD_WO3 = _clsPartMemory.PalletD_WO3;

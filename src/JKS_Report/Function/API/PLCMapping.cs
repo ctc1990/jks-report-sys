@@ -223,7 +223,7 @@ namespace JKS_Report.Function.API
                 plcMainVariableDeclaration.PalletB_WO6 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[2,6]";
                 plcMainVariableDeclaration.PalletB_WO7 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[2,7]";
                 plcMainVariableDeclaration.PalletB_WO8 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[2,8]";
-
+              
                 plcMainVariableDeclaration.PalletC = ".DSV2_BufferBasketInfo.PalletBarcodeData[3]";
                 plcMainVariableDeclaration.PalletC_WO1 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[3,1]";
                 plcMainVariableDeclaration.PalletC_WO2 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[3,2]";
@@ -233,7 +233,7 @@ namespace JKS_Report.Function.API
                 plcMainVariableDeclaration.PalletC_WO6 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[3,6]";
                 plcMainVariableDeclaration.PalletC_WO7 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[3,7]";
                 plcMainVariableDeclaration.PalletC_WO8 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[3,8]";
-
+             
                 plcMainVariableDeclaration.PalletD = ".DSV2_BufferBasketInfo.PalletBarcodeData[4]";
                 plcMainVariableDeclaration.PalletD_WO1 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[4,1]";
                 plcMainVariableDeclaration.PalletD_WO2 = ".DSV2_BufferBasketInfo.PalletWOBarcodeData[4,2]";
@@ -255,6 +255,7 @@ namespace JKS_Report.Function.API
                 result.BasketNumber = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.BasketNumber)).ToString();
                 result.BasketBarcode = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.BasketBarcode)).ToString();
 
+                result.PalletCDActivated = Convert.ToBoolean(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".bBarcodePalletDeactivated")).ToString());
                 result.PalletA = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletA)).ToString();
                 result.PalletA_WO1 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletA_WO1)).ToString();
                 result.PalletA_WO2 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletA_WO2)).ToString();
@@ -274,7 +275,7 @@ namespace JKS_Report.Function.API
                 result.PalletB_WO6 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletB_WO6)).ToString();
                 result.PalletB_WO7 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletB_WO7)).ToString();
                 result.PalletB_WO8 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletB_WO8)).ToString();
-
+                
                 result.PalletC = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletC)).ToString();
                 result.PalletC_WO1 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletC_WO1)).ToString();
                 result.PalletC_WO2 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletC_WO2)).ToString();
@@ -284,7 +285,7 @@ namespace JKS_Report.Function.API
                 result.PalletC_WO6 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletC_WO6)).ToString();
                 result.PalletC_WO7 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletC_WO7)).ToString();
                 result.PalletC_WO8 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletC_WO8)).ToString();
-
+               
                 result.PalletD = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD)).ToString();
                 result.PalletD_WO1 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO1)).ToString();
                 result.PalletD_WO2 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletD_WO2)).ToString();

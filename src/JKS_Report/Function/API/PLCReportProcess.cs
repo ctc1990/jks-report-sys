@@ -108,6 +108,7 @@ namespace JKS_Report.Function.API
                                         _clsMainVariable.TimeIn = DateTime.Now.ToString("HH:mm:ss");
 
                                         _clsPartMemory = new clsPartMemory();
+                                        _clsPartMemory.PalletAActivated = true;
                                         _clsPartMemory.PalletA = string.IsNullOrEmpty(_plcMainVariable.PalletA) ? "" : _plcMainVariable.PalletA;
                                         _clsPartMemory.PalletA_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO1) ? "" : _plcMainVariable.PalletA_WO1;
                                         _clsPartMemory.PalletA_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO2) ? "" : _plcMainVariable.PalletA_WO2;
@@ -118,6 +119,7 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletA_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO7) ? "" : _plcMainVariable.PalletA_WO7;
                                         _clsPartMemory.PalletA_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletA_WO8) ? "" : _plcMainVariable.PalletA_WO8;
 
+                                        _clsPartMemory.PalletBActivated = true;
                                         _clsPartMemory.PalletB = string.IsNullOrEmpty(_plcMainVariable.PalletB) ? "" : _plcMainVariable.PalletB;
                                         _clsPartMemory.PalletB_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO1) ? "" : _plcMainVariable.PalletB_WO1;
                                         _clsPartMemory.PalletB_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO2) ? "" : _plcMainVariable.PalletB_WO2;
@@ -128,6 +130,8 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletB_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO7) ? "" : _plcMainVariable.PalletB_WO7;
                                         _clsPartMemory.PalletB_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO8) ? "" : _plcMainVariable.PalletB_WO8;
 
+
+                                        _clsPartMemory.PalletCActivated = _plcMainVariable.PalletCDActivated;
                                         _clsPartMemory.PalletC = string.IsNullOrEmpty(_plcMainVariable.PalletC) ? "" : _plcMainVariable.PalletC;
                                         _clsPartMemory.PalletC_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO1) ? "" : _plcMainVariable.PalletC_WO1;
                                         _clsPartMemory.PalletC_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO2) ? "" : _plcMainVariable.PalletC_WO2;
@@ -138,6 +142,7 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletC_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO7) ? "" : _plcMainVariable.PalletC_WO7;
                                         _clsPartMemory.PalletC_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO8) ? "" : _plcMainVariable.PalletC_WO8;
 
+                                        _clsPartMemory.PalletDActivated = _plcMainVariable.PalletCDActivated;
                                         _clsPartMemory.PalletD = string.IsNullOrEmpty(_plcMainVariable.PalletD) ? "" : _plcMainVariable.PalletD;
                                         _clsPartMemory.PalletD_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO1) ? "" : _plcMainVariable.PalletD_WO1;
                                         _clsPartMemory.PalletD_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO2) ? "" : _plcMainVariable.PalletD_WO2;

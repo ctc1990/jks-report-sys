@@ -404,8 +404,8 @@ namespace JKS_Report.Function.Tools
             document.Add(tablesixth);
             #endregion
 
-            document = BarcodeTableColumnGenerator(clslang,document);
-
+            document = BarcodeTableColumnGeneratorForPallet(clslang,document);
+            document = BarcodeTableColumnGeneratorForNumber(clsPdfFullDataVariable,clslang, document);
             document = BarcodeTableGenerator(clsPdfFullDataVariable,document);
 
             document.Close();
@@ -581,7 +581,7 @@ namespace JKS_Report.Function.Tools
             }
             return document;
         }
-        public static Document BarcodeTableColumnGenerator(clsLang clslang, Document document)
+        public static Document BarcodeTableColumnGeneratorForPallet(clsLang clslang, Document document)
         {
             PdfPTable tablesixth = new PdfPTable(5);
             tablesixth.HorizontalAlignment = 2;
@@ -593,7 +593,7 @@ namespace JKS_Report.Function.Tools
             float[] sizefourth = new float[] { 10f, 40f, 40f, 40f, 40f };
             tablesixth.SetWidths(sizefourth);
 
-            PdfPCell tb6cell11 = new PdfPCell(new Phrase(clslang.barcode.No, fourth));
+            PdfPCell tb6cell11 = new PdfPCell(new Phrase(" ", fourth));
             tb6cell11.HorizontalAlignment = 1;
             tb6cell11.VerticalAlignment = Element.ALIGN_MIDDLE;
             tb6cell11.FixedHeight = data_height;
@@ -610,6 +610,60 @@ namespace JKS_Report.Function.Tools
             tb6cell14.VerticalAlignment = Element.ALIGN_MIDDLE;
             tb6cell14.FixedHeight = data_height;
             PdfPCell tb6cell15 = new PdfPCell(new Phrase(clslang.barcode.PalletD, fourth));
+            tb6cell15.HorizontalAlignment = 1;
+            tb6cell15.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tb6cell15.FixedHeight = data_height;
+
+            tablesixth.AddCell(tb6cell11);
+            tablesixth.AddCell(tb6cell12);
+            tablesixth.AddCell(tb6cell13);
+            tablesixth.AddCell(tb6cell14);
+            tablesixth.AddCell(tb6cell15);
+
+            document.Add(tablesixth);
+            return document;
+        }
+        public static Document BarcodeTableColumnGeneratorForNumber(clsPdfFullDataVariable clsPdfFullDataVariable,clsLang clslang, Document document)
+        {
+            PdfPTable tablesixth = new PdfPTable(5);
+            tablesixth.HorizontalAlignment = 2;
+            //tablefourth.SpacingBefore = 20f;
+            tablesixth.TotalWidth = 500;
+            tablesixth.LockedWidth = true;
+            iTextSharp.text.Font fourth = FontFactory.GetFont("Times New Roman", 6, BaseColor.BLACK);
+            float data_height = 15f;
+            float[] sizefourth = new float[] { 10f, 40f, 40f, 40f, 40f };
+            tablesixth.SetWidths(sizefourth);
+
+            PdfPCell tb6cell11 = new PdfPCell(new Phrase(clslang.barcode.No, fourth));
+            tb6cell11.HorizontalAlignment = 1;
+            tb6cell11.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tb6cell11.FixedHeight = data_height;
+            PdfPCell tb6cell12 = new PdfPCell(new Phrase("Activated", fourth));
+            tb6cell12.HorizontalAlignment = 1;
+            tb6cell12.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tb6cell12.FixedHeight = data_height;
+            PdfPCell tb6cell13 = new PdfPCell(new Phrase("Activated", fourth));
+            tb6cell13.HorizontalAlignment = 1;
+            tb6cell13.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tb6cell13.FixedHeight = data_height;
+
+            string palletCD = string.Empty;           
+            if (clsPdfFullDataVariable.clsPdfBarcodesPalletC.PalletCActivated)
+            {
+                palletCD = "Activated";
+            }
+            else
+            {
+                palletCD = "Deactivated";
+            }
+
+            PdfPCell tb6cell14 = new PdfPCell(new Phrase(palletCD, fourth));
+            tb6cell14.HorizontalAlignment = 1;
+            tb6cell14.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tb6cell14.FixedHeight = data_height;
+
+            PdfPCell tb6cell15 = new PdfPCell(new Phrase(palletCD, fourth));
             tb6cell15.HorizontalAlignment = 1;
             tb6cell15.VerticalAlignment = Element.ALIGN_MIDDLE;
             tb6cell15.FixedHeight = data_height;
