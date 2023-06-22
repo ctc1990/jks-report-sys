@@ -42,15 +42,15 @@ namespace JKS_Report.Function.API
                 adsDataStream = new AdsStream(mapping.Count());
                 hconnect = new int[mapping.Count()];
                 bitMap = new bool[mapping.Count()];
-              
+
                 binRead = new BinaryReader(adsDataStream, Encoding.ASCII);
-                adsClient.Connect(AMSNetID,Convert.ToInt32(AMSPort));
+                adsClient.Connect(AMSNetID, Convert.ToInt32(AMSPort));
                 for (int i = 0; i < mapping.Count(); i++)
-                {                   
+                {
                     hconnect[i] = adsClient.AddDeviceNotification(mapping[i].input, adsDataStream, i, 1, AdsTransMode.OnChange, 50, 0, null);
                     //File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + hconnect[i].ToString() + Environment.NewLine);
                 }
-                    
+
 
 
                 adsClient.AdsNotification += new AdsNotificationEventHandler(StatusOnChange);
@@ -130,10 +130,7 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletB_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO7) ? "" : _plcMainVariable.PalletB_WO7;
                                         _clsPartMemory.PalletB_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletB_WO8) ? "" : _plcMainVariable.PalletB_WO8;
 
-                                        if(_plcMainVariable.PalletCDActivated)
-                                        {
-                                            _clsPartMemory.PalletCActivated = false;
-                                        }                                        
+                                        _clsPartMemory.PalletCActivated = _plcMainVariable.PalletCDActivated;
                                         _clsPartMemory.PalletC = string.IsNullOrEmpty(_plcMainVariable.PalletC) ? "" : _plcMainVariable.PalletC;
                                         _clsPartMemory.PalletC_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO1) ? "" : _plcMainVariable.PalletC_WO1;
                                         _clsPartMemory.PalletC_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO2) ? "" : _plcMainVariable.PalletC_WO2;
@@ -144,10 +141,9 @@ namespace JKS_Report.Function.API
                                         _clsPartMemory.PalletC_WO7 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO7) ? "" : _plcMainVariable.PalletC_WO7;
                                         _clsPartMemory.PalletC_WO8 = string.IsNullOrEmpty(_plcMainVariable.PalletC_WO8) ? "" : _plcMainVariable.PalletC_WO8;
 
-                                        if (_plcMainVariable.PalletCDActivated)
-                                        {
-                                            _clsPartMemory.PalletDActivated = false;
-                                        }
+                                        File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "pallet CD Bit :" + _plcMainVariable.PalletCDActivated.ToString() + Environment.NewLine);
+
+                                        _clsPartMemory.PalletDActivated = _plcMainVariable.PalletCDActivated;
                                         _clsPartMemory.PalletD = string.IsNullOrEmpty(_plcMainVariable.PalletD) ? "" : _plcMainVariable.PalletD;
                                         _clsPartMemory.PalletD_WO1 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO1) ? "" : _plcMainVariable.PalletD_WO1;
                                         _clsPartMemory.PalletD_WO2 = string.IsNullOrEmpty(_plcMainVariable.PalletD_WO2) ? "" : _plcMainVariable.PalletD_WO2;
@@ -368,7 +364,7 @@ namespace JKS_Report.Function.API
                             #region log end time
                             case "Log_BasketTimeInOut.ARbUldBasketInActivate[1]":
                                 if (binRead.ReadBoolean())
-                                {                                   
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime1(adsClient);
 
                                     if (clsStnUpdate != null)
@@ -379,7 +375,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbUldBasketInActivate[2]":
                                 if (binRead.ReadBoolean())
-                                {                                   
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcMasterReadUldEndTime2(adsClient);
 
                                     if (clsStnUpdate != null)
@@ -390,7 +386,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[1]":
                                 if (binRead.ReadBoolean())
-                                {                                  
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 1);
 
                                     if (clsStnUpdate != null)
@@ -406,7 +402,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[2]":
                                 if (binRead.ReadBoolean())
-                                {                                    
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 2);
 
                                     if (clsStnUpdate != null)
@@ -422,7 +418,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[3]":
                                 if (binRead.ReadBoolean())
-                                {                                    
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 3);
 
                                     if (clsStnUpdate != null)
@@ -438,7 +434,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[4]":
                                 if (binRead.ReadBoolean())
-                                {                                    
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 4);
 
                                     if (clsStnUpdate != null)
@@ -454,7 +450,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[5]":
                                 if (binRead.ReadBoolean())
-                                {                                   
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 5);
 
                                     if (clsStnUpdate != null)
@@ -470,7 +466,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[6]":
                                 if (binRead.ReadBoolean())
-                                {                                  
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 6);
 
                                     if (clsStnUpdate != null)
@@ -486,7 +482,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[7]":
                                 if (binRead.ReadBoolean())
-                                {                                  
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 7);
 
                                     if (clsStnUpdate != null)
@@ -502,7 +498,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[8]":
                                 if (binRead.ReadBoolean())
-                                {                                   
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 8);
 
                                     if (clsStnUpdate != null)
@@ -518,7 +514,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[9]":
                                 if (binRead.ReadBoolean())
-                                {                                    
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 9);
 
                                     if (clsStnUpdate != null)
@@ -534,7 +530,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[10]":
                                 if (binRead.ReadBoolean())
-                                {                                   
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 10);
 
                                     if (clsStnUpdate != null)
@@ -550,7 +546,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[11]":
                                 if (binRead.ReadBoolean())
-                                {                                  
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 11);
 
                                     if (clsStnUpdate != null)
@@ -566,7 +562,7 @@ namespace JKS_Report.Function.API
                                 break;
                             case "Log_BasketTimeInOut.ARbStnBasketOutActivate[12]":
                                 if (binRead.ReadBoolean())
-                                {                                   
+                                {
                                     clsStnUpdate clsStnUpdate = PLCMapping.PlcStationReadEndTime(adsClient, 12);
 
                                     if (clsStnUpdate != null)
@@ -591,7 +587,7 @@ namespace JKS_Report.Function.API
 
                                     if (_clsReportAutoGenerate != null && _clsSystemSetting != null)
                                     {
-                                        SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo,_clsReportAutoGenerate.Language, _clsSystemSetting);
+                                        SingleReport.PDFGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language, _clsSystemSetting);
                                         SingleReport.CSVGenerate(_clsReportAutoGenerate.LoadingNo, _clsReportAutoGenerate.Language);
                                     }
                                 }
@@ -617,8 +613,8 @@ namespace JKS_Report.Function.API
                     }
                 }
             }
-            catch(Exception ex)
-            {               
+            catch (Exception ex)
+            {
                 File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + ex.StackTrace + Environment.NewLine);
                 ErrorHelper.LogError("System Error", ex.Source, ex.Message, ex.StackTrace);
             }
@@ -626,7 +622,7 @@ namespace JKS_Report.Function.API
         private static clsStationVariable stnPlcClsStationMapping(plcStationVariable _plcStationVariable)
         {
             clsStationVariable result = new clsStationVariable();
-            File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Get Main Id : " +  _plcStationVariable.RecipeNo + "," + _plcStationVariable.LoadingNo + Environment.NewLine);
+            File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + "Get Main Id : " + _plcStationVariable.RecipeNo + "," + _plcStationVariable.LoadingNo + Environment.NewLine);
             clsMainVariable mainRecord = LibDBHelper.getMainRecord(Convert.ToInt32(_plcStationVariable.RecipeNo), Convert.ToInt32(_plcStationVariable.LoadingNo));
 
             try
@@ -668,7 +664,7 @@ namespace JKS_Report.Function.API
                 result.CreatedOn = DateTime.Now;
             }
             catch
-            {               
+            {
                 throw;
             }
             return result;
