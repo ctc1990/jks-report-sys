@@ -163,7 +163,8 @@ namespace JKS_Report.Function.API
                         }
                     }
                 }
-
+                File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + "Loading Id :" + clsPdfFullDataVariable.clsPdfMainVariable.LoadingNo + " Pallet CD bit : " + clsPdfFullDataVariable.clsPdfBarcodesPalletD.PalletDActivated.ToString() + Environment.NewLine);
+            
                 clsLang clsLang = ReportLanguage(Lang);
                 string language = "";
                 if(Lang.ToLower() == "english")
@@ -179,12 +180,12 @@ namespace JKS_Report.Function.API
 
                 if(clsSystemSettings.Count > 0)
                 {
-                    foreach(var item in clsSystemSettings)
+                    foreach (var item in clsSystemSettings)
                     {
                         SinglePDFFunction.ExportToPdf(LoadingNo.ToString(), clsPdfFullDataVariable, clsLang, clsSystemSetting, language, item.Name);
                         File.AppendAllText(@"C:\JKS\Setup\debug.txt", DateTime.Now.ToString() + " " + item.Name + Environment.NewLine);
+
                     }
-                    
                 }
                               
             }

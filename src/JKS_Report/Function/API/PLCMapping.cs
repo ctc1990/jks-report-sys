@@ -255,7 +255,15 @@ namespace JKS_Report.Function.API
                 result.BasketNumber = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.BasketNumber)).ToString();
                 result.BasketBarcode = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.BasketBarcode)).ToString();
 
-                result.PalletCDActivated = Convert.ToBoolean(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".bBarcodePalletDeactivated")).ToString());
+                if(Convert.ToBoolean(adsClient.ReadSymbol(adsClient.ReadSymbolInfo(".bBarcodePalletDeactivated")).ToString()))
+                {
+                    result.PalletCDActivated = false;
+                }
+                else
+                {
+                    result.PalletCDActivated = true;
+                }
+                
                 result.PalletA = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletA)).ToString();
                 result.PalletA_WO1 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletA_WO1)).ToString();
                 result.PalletA_WO2 = adsClient.ReadSymbol(adsClient.ReadSymbolInfo(plcMainVariableDeclaration.PalletA_WO2)).ToString();

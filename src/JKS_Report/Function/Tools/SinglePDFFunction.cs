@@ -639,11 +639,11 @@ namespace JKS_Report.Function.Tools
             tb6cell11.HorizontalAlignment = 1;
             tb6cell11.VerticalAlignment = Element.ALIGN_MIDDLE;
             tb6cell11.FixedHeight = data_height;
-            PdfPCell tb6cell12 = new PdfPCell(new Phrase("Activated", fourth));
+            PdfPCell tb6cell12 = new PdfPCell(new Phrase("aktiviert", fourth));
             tb6cell12.HorizontalAlignment = 1;
             tb6cell12.VerticalAlignment = Element.ALIGN_MIDDLE;
             tb6cell12.FixedHeight = data_height;
-            PdfPCell tb6cell13 = new PdfPCell(new Phrase("Activated", fourth));
+            PdfPCell tb6cell13 = new PdfPCell(new Phrase("aktiviert", fourth));
             tb6cell13.HorizontalAlignment = 1;
             tb6cell13.VerticalAlignment = Element.ALIGN_MIDDLE;
             tb6cell13.FixedHeight = data_height;
@@ -651,11 +651,11 @@ namespace JKS_Report.Function.Tools
             string palletCD = string.Empty;           
             if (clsPdfFullDataVariable.clsPdfBarcodesPalletC.PalletCActivated)
             {
-                palletCD = "Activated";
+                palletCD = "aktiviert";
             }
             else
             {
-                palletCD = "Deactivated";
+                palletCD = "deaktiviert";
             }
 
             PdfPCell tb6cell14 = new PdfPCell(new Phrase(palletCD, fourth));
